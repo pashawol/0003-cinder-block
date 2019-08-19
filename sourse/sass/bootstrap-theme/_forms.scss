@@ -168,7 +168,7 @@ textarea.form-control {
 // horizontal forms, use the predefined grid classes.
 
 .form-group {
-  margin-bottom: $form-group-margin-bottom;
+  margin-bottom: $form-group-margin-bottom * 2;
 }
 
 .form-text {

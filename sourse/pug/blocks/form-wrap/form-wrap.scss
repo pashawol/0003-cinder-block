@@ -1,7 +1,12 @@
 .form-wrap{
  	&__input-wrap{
 			@extend .form-group;
+			text-align: left;
 			
+			label{
+				width: 100%;
+				display: block;
+			}
 		}
 		&__input{
 			@extend .form-control;
@@ -9,30 +14,36 @@
 		 resize: none;
  	}
  	&__btn{
- 		cursor: pointer;
- 	}
- 	label{
- 		width: 100%;
- 		display: block;
- 	}
+		 cursor: pointer;
+		 margin-top: rem(40);
+		 margin-bottom: rem(20);
+		 @extend .btn;
+		 @extend .btn-primary;
+		 @extend .btn-block;
+		 margin-left: auto;
+		 margin-right: auto;
+		 max-width: rem(358);
+		}
+		&__title{
+			@extend .h6;
+			color: #5d5d5d;display: block;
+			padding-bottom: rem(10);
+			@include media-breakpoint-up(md) {
+
+				text-align: left;
+			}
+			text-align: center;
+		}
+		&__polite{
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: rem(348);
+			font-size: rem(13);
+	 }
 }
 
-
-.parsley-error{
-	border-image: none;
-	border: 2px solid  red !important;
-	color: red;
-	outline: 0 !important;
-	 
-}
-.parsley-success{
-	border: 2px solid  #00d600 !important;
-
-}
-.parsley-errors-list{
-	color: red;
-}
-
+ 
 // 
 @include media-breakpoint-up(xl) {}
 
@@ -69,7 +80,55 @@
 
 @include media-breakpoint-down(xs) {}
 
+.type-company{
+	margin-bottom: rem(29);
+	position: relative;
+	&__input{
+		position: absolute;
+		opacity: 0;
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		border: 0;
+		padding: 0;
+		clip: rect(0 0 0 0 );
+		overflow: hidden;
+		top: 100%;
+	}
+	text-align: center;
+	color: $secondary;
+	cursor: pointer;
+	@include mt;
+	&:hover{
+		@extend .text-body;
+	}
+	&__input:checked ~ &__text{
 
+	}
+	&__input:checked ~ &__icon-wrap{
+		background-color: $success;
+		color: #ffffff;
+	}
+	&__icon-wrap{
+		width: rem(92px);
+		height: rem(92px);
+		background-color: #f4f4f4;
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: rem(50);
+		margin-bottom: rem(25);
+		@include mt;
+		.icon{
+			font-size: rem(42);
+		}
+	}
+	&__text{
+		// max-width: rem(110);
+	}
+}
 
 
 .custom-input{

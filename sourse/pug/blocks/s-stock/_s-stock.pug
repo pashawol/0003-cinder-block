@@ -1,0 +1,27 @@
+mixin s-stock()
+	// start s-stock
+	+b.s-stock.bg-wrap#s-stock&attributes(attributes)
+		+pic("stock-bg",'jpg','bg')(class="picture-bg")
+		.container.lazy-background.section
+			.row
+				.col-md-auto
+					+e.title.lazy-background  &laquo;Скидку 100 рублей сделаете?&raquo;
+					.d-none.d-md-block
+						+e.sm-text Посмотрите видео, где мы&nbsp;все объясняем
+						+e.video.bg-wrap(data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk")
+							+pic("stock-video",'jpg','bg')(class="picture-bg")
+				.col-md-auto
+					+e.man
+						+pic("stock-img",'png')
+				.col
+					+e.text-block
+						p Сейчас сложно найти качественный шлакоблок из-за простоты его производства и&nbsp;велик риск купить кустарно сделанный шлакоблок. Хрупкий, с&nbsp;неровными краями и&nbsp;сколами.
+
+						p Вместо экономии в&nbsp;100&nbsp;рублей, вы&nbsp;увеличите расходы на&nbsp;цемент, чтобы заполнить пустоты, а&nbsp;потом еще на&nbsp;отделочный материал или штукатурку, чтобы закрыть &laquo;красоту&raquo; стен, также вы&nbsp;потратите еще и&nbsp;300&nbsp;рублей, чтобы докупить вместо поломанного + его доставить (потеря денег и&nbsp;времени)
+						+e.text-block-foot.row
+							.col-xl-auto.col-lg.col-auto.d-none.d-sm-block
+								+pic("autograf",'jpg','','lazy',0)
+							.col-auto
+								.fw-500 Константин Торшин, 
+								| руководитель «А Блок»
+	// end s-stock

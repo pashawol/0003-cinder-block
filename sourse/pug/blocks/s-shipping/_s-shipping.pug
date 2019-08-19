@@ -1,0 +1,37 @@
+mixin s-shipping()
+	// start s-shipping
+	+b.SECTION.s-shipping.section#s-shipping&attributes(attributes)
+		.container
+			.row
+				.co-lg-5.col-md-6
+					+b.section-title
+						h2 
+							strong.text-primary Отправим заказ
+
+							| 
+							| в&nbsp;тот&nbsp;же день
+					ul
+						li
+							.before
+								+icon('check')
+							| Доставляем манипуляторами &mdash;&nbsp;всегда в&nbsp;срок
+						li
+							.before
+								+icon('check')
+							| При желании можете оплатить
+							| 
+							a(href="#").link-tdu заказ наличными водителю
+					+e.block.lazy-background
+						+e.block-head
+							+icon('ruble')
+							+icon('ruble')
+							+icon('ruble')
+						+e.block-text Если покупаете шлакоблоки 
+							| 
+							+icon('snowflake') 
+							| 
+							| зимой, то&nbsp;можете оставить их&nbsp;на&nbsp;хранение у&nbsp;нас. Бесплатно. До&nbsp;начала стройки.
+				.col
+					+e.img-wrap
+						+pic("shipping-img","jpg","","lazy",0)
+	// end s-shipping

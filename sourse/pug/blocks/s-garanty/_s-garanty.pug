@@ -1,0 +1,37 @@
+mixin s-garanty()
+	// start s-garanty
+	+b.SECTION.s-garanty.section#s-garanty&attributes(attributes)
+		.container
+			.row
+				.col-md-6
+					+b.section-title
+						h2 
+							strong.text-primary Гарантируем прочность
+							| 
+							| и&nbsp;точную геометрию каждого блока
+						+e.text Достигаем нужной прочности и&nbsp;геометрии за&nbsp;счет: 
+					ul
+						li
+							.before
+								+icon('check')
+							| Точного дозирования цемента в&nbsp;смеси
+						li
+							.before
+								+icon('check')
+							| Регулярной замены формообразующих матриц. 
+							| 
+							span.text-secondary Об&nbsp;углы наших блоков можно порезаться!
+						li
+							.before
+								+icon('check')
+							| Соблюдения 
+							| 
+							a(href="#").link-tdu технологии производства и&nbsp;хранения
+				.col.d-flex.flex-column
+					+e.img-wrap
+						+pic("s-garanty-img","jpg","","lazy",0)
+					+e.block.order-md-first
+						.text-success 2 500 м
+							sup 3
+						+e.block-text шлакоблока в&nbsp;месяц производим на&nbsp;современном оборудовании&nbsp;&mdash; станках &laquo;Рифей&raquo;
+	// end s-garanty

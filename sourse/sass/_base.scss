@@ -11,7 +11,7 @@ html {
 	overflow: hidden;
 	width: 100%;
 	height: 100%;
-	background-position: center 0 ;
+	background-position: center 0;
 	opacity: 0;
 	// opacity: 0.7;
 } 
@@ -20,7 +20,15 @@ html {
 
 body,
 html {
-	font-size: $em-base;
+
+	@include media-breakpoint-up(xl) {	
+		font-size: $em-base;
+	}
+
+	@include media-breakpoint-up(md) {
+		font-size: 14px;
+	}
+	font-size: 13px;
 	// @include font-size(1rem);
 }
 
@@ -43,15 +51,30 @@ body {
 }
 .section { 
 	@include bgs; 
-		padding-top: rem(40px);
-		padding-bottom: rem(40px); 
+		padding-top: rem(60px);
+		padding-bottom: rem(70px); 
+		@include media-breakpoint-down(sm) {
+			padding-top: rem(60px / 2);
+			padding-bottom: rem(70px / 2); 
+		}
 }
 
-.section-title {
-	@extend .h2;
-	padding-bottom: em(10); 
-	>h2 {
-		font-size: inherit;
+.section-title { 
+	font-weight: 500;
+	@extend .h4;
+	line-height: 1.22;
+	padding-bottom: rem(30);
+	&__text{
+		@extend .text-secondary;
+		
+	}
+	h2 { 
+		font-weight: 500;
+		@include media-breakpoint-up(md) {
+
+			padding-bottom: rem(30);
+		}
+		padding-bottom: rem(10);
 		
 		@include media-breakpoint-up(md) {}
 	}
@@ -246,30 +269,36 @@ transition: all 0.3s ease-out;
 	transform: translateY(-50%);
 	z-index: 2;
 	cursor: pointer;
+	border-radius: 50%;
+	width: rem(34);
+	height: rem(34);
+	@extend .btn-success;
+	text-align: center;
+	line-height: rem(30);
+	box-shadow: none !important;
+	cursor: pointer;
+	svg{
+	 
+			fill: #ffffff !important; 
+			width: rem(6 * 2);
+			height: rem(11 * 2);
+	}
 
 	i {
 		line-height: 1;
 
-	}
-
-	cursor: pointer;
+	} 
 
 	&.l {
 		left: 0;
 		svg {
 			@include transform(rotateY(180deg));
 		}
-	}
-
+	} 
 	&.r {
 		right: 0;
 
-	}
-
-	svg {
-		width: 17px;
-		height: auto;
-	}
+	} 
 }
 
 input,
@@ -436,8 +465,10 @@ picture{
 	display: block;
 	// display: flex;
 	width: 100%;
-	height: 100%;
- 
+	// height: 100%;
+	img{
+		@extend .res-i;
+	}
 	img.object-fit-js{
 		height: 100%;
 		width: 100%;
@@ -451,4 +482,29 @@ picture{
 	object-fit: cover;
 	object-position: top;
 	font-family: 'object-fit: cover; object-position: top;';
+}
+.picture-bg{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	img{
+		height: 100%;
+	}
+
+}
+.bg-wrap{
+	position: relative;
+	z-index: 2;
+}
+
+.link-tdu{
+	border-bottom: 1px dashed;
+	text-decoration: none !important;
+	@include mt;
+	&:hover{
+		// border-color: transparent;
+	}
 }

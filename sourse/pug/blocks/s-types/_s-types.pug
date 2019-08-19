@@ -1,0 +1,33 @@
+mixin s-types()
+	// start s-types
+	+b.SECTION.s-types.section#s-types&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 
+					strong.text-primary Производим шлакоблок для любых&nbsp;строений:  
+					| 
+					| жилых помещений, хозяйственных построек и&nbsp;заборов
+				+e.text Чем меньше пустотность, тем выше прочность блока
+			+e.block.lazy-background
+				+e.row-wrap
+					.row
+						mixin item(i,t,p, pr)
+							.col-sm-auto
+								+e.item(data-bg=`img/@2x/s-type-${i}.png`)
+									+e.head
+										+e.title= t
+										+e.text= p
+										block
+										if pr
+											+e.price= pr
+							// /.col-sm-auto
+						+item("1",'Для коттеджей','с пустотностью',"30%")
+						+item("2",'для бань, хозпостроек','с пустотностью','50%')
+						+item("3",'Для заборов ','изготавливаем блоки с различной поверхностью')
+					+e.text-block(href="#")
+						+icon("info") 
+						span.link-tdu
+							strong О чем нужно знать
+							| 
+							| при строительстве из&nbsp;шлакоблока
+	// end s-types

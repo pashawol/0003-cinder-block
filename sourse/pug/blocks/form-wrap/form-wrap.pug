@@ -20,9 +20,15 @@ mixin input(placeholder,  t='text', label, name= t)
 
 
 //- wrapper for form
-mixin form-wrap()
+mixin form-wrap(order)
 	+b.form-wrap&attributes(attributes)
 		form
+			if !order 
+				input(type='hidden', class="order", name='order', value=`Заявка  с сайта` ) 
+			else
+				input(type='hidden', class="order", name='order', value= order ) 
+			input(type="hidden" class='utm_source' name='utm_source')
+			input(type="hidden" class='utm_term' name='utm_term')
 			block
 //- /wrapper for form
 
@@ -46,6 +52,5 @@ mixin add-file(n)
 
 
 mixin polite()
-	+e.polite
-		+in-c()(checked)
-			+e.SMALL.text.text-secondary Согласен на обработку и хранение моих персональных данных в соответствии с условиями
+	+e.polite.text-secondary  Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих персональных данных и&nbsp;соглашаетесь с&nbsp;
+		a(href="privacy-policy.pdf" target="_blank").tdu.text-secondary Политикой конфиденциальности

@@ -1,9 +1,79 @@
 mixin s-form()
 	// start s-form
-	+b.s-form.section.block-with-lazy#s-form&attributes(attributes)
+	+b.s-form.section#s-form.bg-wrap&attributes(attributes)
+		+pic("form-bg",'jpg','bg')(class="picture-bg")
 		.container
-			+b.section-title.text-center
-				h2 s-form
-				
 			.row
+				.col-lg-6
+					+b.section-title
+						h2 
+							strong.text-primary  Получите полный каталог 
+							| 
+							| и&nbsp;прайс на шлакоблок &laquo;А&nbsp;Блок&raquo;
+					+e.text.lazy-background Мы&nbsp;также рассчитаем объем и&nbsp;стоимость материала, исходя из&nbsp;площади строения
+				.col
+					+form-wrap()
+						.tabs
+							+e.group
+								+e.group-title Куда отправить прайс и&nbsp;каталог?
+								
+								.tabs__caption
+									.tabs__btn.active
+										+icon('tel2')
+										| SMS
+									.tabs__btn
+										+icon('email')
+										| E-mail
+									
+									.tabs__btn
+										+icon('whatsapp')
+										| WhatsApp
+									.tabs__btn
+										+icon('viber')
+										| Viber
+							
+							+e.group-title Какую компанию вы&nbsp;представляете?
+							.row.justify-content-between
+								+b.LABEL.type-company.col-md-auto.col-6
+									+e.INPUT.input(type="radio" name="type-company[]" value="Строительная компания" required)
+									+e.icon-wrap
+										+icon("brickwall-form")
+									+e.text Строительная
+										| 
+										br
+										|  компания
+								
+								+b.LABEL.type-company.col-md-auto.col-6
+									+e.INPUT.input(type="radio" name="type-company[]" value="Строительная компания" )
+									+e.icon-wrap
+										+icon("shopping-bag")
+									+e.text Торговая
+										| 
+										br
+										|  компания
+								+b.LABEL.type-company.col-md-auto.col-6
+									+e.INPUT.input(type="radio" name="type-company[]" value="Строительная компания" )
+									+e.icon-wrap
+										+icon("users")
+									+e.text Я частное
+										| 
+										br
+										|  лицо
+
+							.tabs__wrap
+								.tabs__content.active
+									+input("+7 (900) 444-44-44","tel",'Введите телефон:',"tel")(required)
+								
+								.tabs__content
+									+input("email@email.info","email",'Введите email:')
+								
+								.tabs__content
+									+input("+7 (900) 444-44-44","tel",'Введите whatsapp:',"whatsapp")
+								
+								.tabs__content
+									+input("+7 (900) 444-44-44","tel",'Введите viber:',"viber")
+								
+							+input("Иван","text",'Как к вам обращаться?',"name")(required)
+							+e.btn(type="submit")  Получить каталог и прайс
+							+polite
 	// end s-form

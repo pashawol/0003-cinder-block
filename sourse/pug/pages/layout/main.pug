@@ -23,19 +23,20 @@ html(lang="ru")
 		meta(http-equiv="X-UA-Compatible" content="IE=edge")
 		meta(name="viewport", content="width=device-width, shrink-to-fit=no")
 		meta(property='og:image', content='path/to/image.jpg')
-		link(rel='shortcut icon',   type="image/png",  href='img/favicon/favicon.png')
+		link(rel='shortcut icon',   type="image/ico",  href='img/favicon/favicon.ico')
 		
 		// Custom Browsers Color
-		meta(name='theme-color', content='#3361d8')
+		meta(name='theme-color', content='#1c8dcc')
 		
-		link(rel="stylesheet", href="libs/magnificPopup/magnific-popup.css")
+		//- link(rel="stylesheet", href="libs/magnificPopup/magnific-popup.css")
 		//- link(rel="stylesheet", href="libs/swiper-4.2.0/swiper.min.css")
-		link(rel="stylesheet", href="libs/slick/slick.css")
+		//- link(rel="stylesheet", href="libs/slick/slick.css")
 		//- link(rel="stylesheet", href="libs/Easy-Responsive-Tab-Accordion-Control-Plugin-For-jQuery/easy-responsive-tabs.css")
 
 		//- link(rel="stylesheet", href="css/main.css")
 		link(rel="stylesheet", href="css/main.min.css")
-	body
+	block variables
+	body(class= mainPage)
 		.main-wrapper
 			block pagecontent
 				h3 content
@@ -56,7 +57,7 @@ html(lang="ru")
 		// полифил для object-fit
 		script(src="libs/object-fit-images/dist/ofi.min.js")
 		// modal libs
-		script(src="libs/magnificPopup/jquery.magnific-popup.min.js")
+		//- script(src="libs/magnificPopup/jquery.magnific-popup.min.js")
 		// modal libs
 		// slider libs
 		script(src="libs/slick/slick.min.js")
@@ -75,9 +76,22 @@ html(lang="ru")
 		//- /custom input range libs
 
 		//- mask for  input  libs 
+
+		script(src="libs/fancybox/jquery.fancybox.min.js")
 		script(src="libs/jquery.inputmask.bundle.min.js")
 		//- / mask for  input  libs
 
 		//- script(src="js/scripts.min.js")
 
 		script(src="js/common.js")
+		<svg class="invisible">
+			<linearGradient id="success-gradient"  x1="0%" y1="0%"    x2="0%" y2="100%">
+			<stop offset="0%"   stop-color="#8eb930"/>
+			<stop offset="100%"  stop-color="#a2d032"/>
+			</linearGradient>
+			<linearGradient id="primary-gradient" gradientUnits="userSpaceOnUse" x1="165.4035" y1="344.0104" x2="165.4035" y2="397.3238" gradientTransform="matrix(1 0 0 -1 0 504)">
+				<stop  offset="0" style="stop-color:#1B8ACA"/>
+				<stop  offset="0.4976" style="stop-color:#27A9E5"/>
+				<stop  offset="1" style="stop-color:#31C5FC"/>
+			</linearGradient>
+		</svg>

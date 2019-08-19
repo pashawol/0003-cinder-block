@@ -1,5 +1,12 @@
 .header{
-	
+  background-color: #e5e8ea;
+  img{
+    @include media-breakpoint-up(sm) {
+
+      object-position: top center;
+    }
+    object-position: top right;
+  }
   // 
   @include media-breakpoint-up(xl) {}
 

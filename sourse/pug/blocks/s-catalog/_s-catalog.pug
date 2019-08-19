@@ -1,0 +1,59 @@
+mixin prod(img,title,subtitle,price,classs="col-lg-3 col-sm-6",size,at="подробнее",al="#")
+	+e.col(class= classs)
+		+b.prod-item
+			+e.img-wrap(href="#")
+				img(src="#" data-lazy=`img/@2x/${img}`, alt="")
+			+e.title= title
+				if subtitle
+					+e.sub= subtitle
+			if size
+				+e.size= size
+			if block
+				table
+					block
+			if price
+				+e.price= price
+			+e.btn(href= al)&attributes(attributes)= at
+	// /+e.col
+	// если используется таблица с характеристиками
+mixin prod-tr(t1, t2)
+	tr
+		td= t1
+		td= t2
+mixin s-catalog()
+	// start s-catalog
+	+b.SECTION.s-catalog--main-page.section#s-catalog&attributes(attributes)
+		.container
+			+b.section-title.text-lg-left.text-center
+				.row.justify-content-center
+					.col-lg-auto
+						h2 В ассортименте
+							| 
+							strong.text-primary более 20 позиций
+					.col-lg.col-sm-auto
+						+e.text Можете сделать любой фасад
+					.col-auto.row.text-left
+						.col-auto
+							+icon("pantone")
+						.col.h6 Делаем шлакоблок любых цветов
+				
+			+e.slider--js
+				+prod("s-catalog-1.jpg","Шлакоблок 50%","пустотности «А Блок»","От 1600 руб.*","")
+					each t2, t1 in {'Размер:':'390х190х188 см','Цвет:':'серый, красный'}
+						+prod-tr(t1,t2)
+				+prod("s-catalog-2.jpg","Шлакоблок 50%","пустотности «А Блок»","От 1600 руб.*","")
+					each t2, t1 in {'Размер:':'390х190х188 см','Цвет:':'серый, красный'}
+						+prod-tr(t1,t2)
+				+prod("s-catalog-3.jpg","Шлакоблок 50%","пустотности «А Блок»","От 1600 руб.*","")
+					each t2, t1 in {'Размер:':'390х190х188 см','Цвет:':'серый, красный'}
+						+prod-tr(t1,t2)
+				+prod("s-catalog-4.jpg","Шлакоблок 50%","пустотности «А Блок»","От 1600 руб.*","")
+					each t2, t1 in {'Размер:':'390х190х188 см','Цвет:':'серый, красный'}
+						+prod-tr(t1,t2)
+			+e.foot-text.text-secondary *Стоимость за&nbsp;1&nbsp;поддон, 60&nbsp;шт.
+			+e.foot-block
+				+e.btn--foot.btn-primary(href='#') Смотреть весь шлакоблок
+				+e.foot-block-text 
+					+icon("info")
+					div В&nbsp;каталоге вы&nbsp;также можете выбрать фасадный камень и&nbsp;сопутствующие стройматериалы
+	// end s-catalog

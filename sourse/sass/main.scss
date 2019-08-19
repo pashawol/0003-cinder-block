@@ -8,6 +8,8 @@ $output-bourbon-deprecation-warnings: false;
 @import "fonts";
 @import "../../public/img/svg/_sprite";
 @import "bootstrap-theme/bootstrap";
+@import "../libs/fancybox/jquery.fancybox.min.css";
+@import "../libs/slick/slick.css";
 // @import "../libs/animate";
 // @import "fontawesome-pro-5.0.8/web-fonts-with-css/scss/fontawesome";
 // @import "fontawesome-pro-5.0.8/web-fonts-with-css/scss/fa-brands";
