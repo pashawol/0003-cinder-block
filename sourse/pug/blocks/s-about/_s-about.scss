@@ -1,4 +1,139 @@
 .s-about {
+	padding-bottom: 0;
+	background-color: #caaa95;
+	position: relative;
+	// z-index: 2;
+	&.visible{
+		@include bg("bg.jpg");
+		&::after{
+			content: '';
+		pointer-events: none;
+		// z-index: -1;
+		@include bg("shadow.png");
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: rem(1725);
+		height: 100%;
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+	}
+}
+	&__col-text{
+		z-index: 2;
+		padding-left: 5px;
+		padding-top: rem(10);
+	}
+	&__text-block{
+		padding-left: rem(55);
+		padding-bottom: rem(20);
+	}
+	h2{
+		position: relative;
+		z-index: 2;
+	}
+	p{
+
+		@extend .h6;
+		margin-bottom: rem(35);
+	}
+
+	&__man{
+		text-align: center;
+		@include media-breakpoint-up(lg) {
+
+			padding-top: rem(115);
+			margin-left: rem(-220);
+			padding-bottom: 0;
+		}
+		margin-left: -10%;
+		padding-bottom: rem(35);
+	}
+	.form-wrap{
+		padding-bottom: rem(30);
+		&__row{
+			@include roww(5);
+		}
+		&__input{
+			height: auto;
+			@extend .h6;
+			padding: (1.4175rem * 1.2) 1.25rem;
+		}
+		&__btn{
+			margin-top: 0;
+			position: relative;
+			max-width: 100%;
+			@include media-breakpoint-up(lg) {
+
+				&.visible::after{
+					content: '';
+				position: absolute;
+				@include bg("clock.png");
+				width: rem(125px);
+				height: rem(166px);
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				bottom: 0;
+				left: 88%;
+				opacity: 1;
+				top: auto;
+				
+			}
+		}
+		}
+		&__input-wrap{
+			margin-bottom: 1rem;
+		}
+		&__polite{
+
+			max-width: none;
+			text-align: left;
+			max-width: rem(470);
+			margin-left: 0;
+			color: #6f6f6f !important;
+			a{
+				color: #6f6f6f !important;
+
+			}
+		}
+
+	}
+	.container{
+		position: relative;
+	}
+	&__block{
+		position: absolute;
+		left: rem(30);
+		@include media-breakpoint-up(md) {
+
+			bottom: rem(70);
+		}
+		bottom: rem(10);
+		z-index: 3;
+	}
+
+	&__text{
+		box-shadow: 0 0 $small 2px rgba(44, 44, 44, 0.33);
+		border-radius: $border-radius;
+		background-color: #ffffff;
+		padding: rem(18) 0;
+		margin-bottom: 0;
+		font-weight: 600;
+		text-align: center;
+		width: rem(230);
+		position: relative;
+		&--name{
+			background-image: linear-gradient(to top, #8eb930 0%, #a2d032 100%);
+			color: #ffffff;
+			z-index: 3;
+			margin-bottom: rem(-5);
+			@extend .h6;
+		}
+		&--prof{
+			width: rem(241);
+			margin-left: rem(30);
+		}
+	}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

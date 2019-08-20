@@ -109,14 +109,14 @@ jQuery(document).ready(function ($) {
 				}  },
 				
 				{ 
-				breakpoint: 768,
+				breakpoint: 767.98,
 				settings: {
 					slidesToShow: 3, 
 					// infinite: false, 
 				}  },
 				
 				{ 
-				breakpoint: 576,
+				breakpoint: 575.98,
 				settings: {
 					slidesToShow: 2, 
 					// infinite: false, 
