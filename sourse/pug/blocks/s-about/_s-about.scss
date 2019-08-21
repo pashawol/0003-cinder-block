@@ -52,7 +52,7 @@
 	.form-wrap{
 		padding-bottom: rem(30);
 		&__row{
-			@include roww(5);
+			@include roww(12);
 		}
 		&__input{
 			height: auto;

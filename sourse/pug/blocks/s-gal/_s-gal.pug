@@ -3,7 +3,37 @@ mixin s-gal()
 	+b.SECTION.s-gal.section#s-gal&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 s-gal
-				
-			.row
+				h2 
+					strong.text-primary Постройки из&nbsp;нашего
+					| 
+					| шлакоблока
+			
+			+e.slider--lg.slider-for
+				mixin slide(i,t)
+
+					+e.slide
+						+e.img-wrap-wrap
+							+e.img-wrap--lg(data-fancybox="gal-sl" href= i)
+								img.res-i.object-fit-js(src="#"  data-lazy= i, alt="")
+						+e.title= t
+				+slide('img/@2x/gal.jpg','Дом в поселке Раздолье')
+				+slide('img/@2x/gal.jpg','Дом в поселке Раздолье')
+				+slide('img/@2x/gal.jpg','Дом в поселке Раздолье')
+				+slide('img/@2x/gal.jpg','Дом в поселке Раздолье')
+				+slide('img/@2x/gal.jpg','Дом в поселке Раздолье')
+				+slide('img/@2x/gal.jpg','Дом в поселке Раздолье')
+				+slide('img/@2x/gal.jpg','Дом в поселке Раздолье')
+			.d-none.d-md-block
+				+e.slider--sm.slider-nav
+					mixin slide(i)
+						+e.slide--sm: +e.img-wrap--sm()
+							img.res-i.object-fit-js(src="#"  data-lazy= i, alt="")
+					+slide('img/@2x/gal.jpg')
+					+slide('img/@2x/gal.jpg')
+					+slide('img/@2x/gal.jpg')
+					+slide('img/@2x/gal.jpg')
+					+slide('img/@2x/gal.jpg')
+					+slide('img/@2x/gal.jpg')
+					+slide('img/@2x/gal.jpg')
+			
 	// end s-gal

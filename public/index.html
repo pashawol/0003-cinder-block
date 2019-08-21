@@ -56,7 +56,11 @@
               <div class="col-xl-auto col-md">
                 <div class="row">
                   <div class="top-line__col col-auto">
-                    <div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+                    <div class="toggle-menu-mobile"><span></span>
+                      <ul>
+                        <li><a href="#">Каталог</a></li>
+                        <li><a href="#">Доставка и оплата</a></li>
+                      </ul>
                     </div>
                   </div>
                   <div class="top-line__col col-xl-auto col"><a class="top-line__logo" href="/">
@@ -163,7 +167,7 @@
                   <div class="col-auto">
                     <div class="header-block__item header-block__item--2">
                       <div class="header-block__title">Работаем
-                      </div><a class="header-block__link link-tdu" href="#">круглый год</a>
+                      </div><a class="header-block__link link-modal link-tdu" data-src="#modal-storage" href="javascript:;">круглый год</a>
                     </div>
                   </div>
                 </div>
@@ -208,7 +212,7 @@
                       <use xlink:href="img/svg/sprite.svg#check"></use>
                     </svg>
                   </div>Соблюдения 
-                   <a class="link-tdu" href="#">технологии производства и&nbsp;хранения</a>
+                   <a class="link-modal link-tdu" data-src="#modal-tech" href="javascript:;">технологии производства и&nbsp;хранения</a>
                 </li>
               </ul>
             </div>
@@ -338,8 +342,7 @@
                 <div class="section-title__text">Марка прочности неоднократно подтверждалась протоколом испытаний
                 </div>
               </div>
-              <div class="s-strength__foot row">
-                <div class="col-lg-auto col-md col-auto">
+              <div class="s-strength__foot row"><a class="col-lg-auto col-md col-auto" data-fancybox="sert" href="img/@2x/gal.jpg">
                   <!-- picture-->
                   <picture class="lazy"> 
                     <source srcset="#" data-srcset="img/@2x/webp/5-layers.webp" type="image/webp" media="(min-width:576px)"/>
@@ -347,8 +350,7 @@
                     <source srcset="#" data-srcset="img/@2x/5-layers.png" type="image/png" media="(min-width:576px)"/>
                     <source srcset="#" data-srcset="img/@1x/5-layers.png" type="image/png"/><img src="#" data-src="img/@2x/5-layers.png" alt=""/>
                   </picture>
-                  <!-- /picture-->
-                </div>
+                  <!-- /picture--></a>
                 <div class="col-auto">
                   <div class="before">
                     <svg class="icon icon-check ">
@@ -422,7 +424,7 @@
                     </div>
                   </div>
                   <!-- /.col-sm-auto-->
-              </div><a class="s-types__text-block" href="#">
+              </div><a class="s-types__text-block link-modal" data-src="#modal-know" href="javascript:;">
               <svg class="icon icon-info ">
                 <use xlink:href="img/svg/sprite.svg#info"></use>
               </svg><span class="link-tdu"><strong>О чем нужно знать</strong> 
@@ -438,7 +440,7 @@
           <div class="row justify-content-center justify-content-lg-start">
             <div class="col-lg-auto text-lg-left text-center">
               <div class="s-prices__title">
-                Получите полный <a href="#">каталог и&nbsp;прайс на&nbsp;шлакоблок</a>
+                Получите полный <a class="scroll-link" href="#s-form">каталог и&nbsp;прайс на&nbsp;шлакоблок</a>
               </div>
               <div class="s-prices__text">или выберите нужный из&nbsp;каталога
               </div>
@@ -451,7 +453,7 @@
               </picture>
               <!-- /picture-->
             </div>
-            <div class="col-auto"><a class="s-prices__btn" href="#">Выбрать шлакоблок</a>
+            <div class="col-auto"><a class="s-prices__btn scroll-link" href="#s-catalog">Выбрать шлакоблок</a>
             </div>
           </div>
         </div>
@@ -722,6 +724,15 @@
                         Я частное <br/> лицо</span>
                       </label>
                     </div>
+                    <div class="form-wrap__input-wrap">
+                      <label><span class="form-wrap__title">Как к вам обращаться?</span><input class="form-wrap__input" type="text" placeholder="Иван" name="name" required="required"/>
+                      </label>
+                    </div>
+                    <!-- +e.input-wrap-->
+                    <button class="form-wrap__btn" type="submit"> Получить каталог и прайс
+                    </button>
+                    <div class="form-wrap__polite text-secondary"> Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих персональных данных и&nbsp;соглашаетесь с&nbsp;<a class="tdu text-secondary" href="privacy-policy.pdf" target="_blank">Политикой конфиденциальности</a>
+                    </div>
                     <div class="tabs__wrap">
                       <div class="tabs__content active">
                         <div class="form-wrap__input-wrap">
@@ -751,15 +762,6 @@
                         </div>
                         <!-- +e.input-wrap-->
                       </div>
-                    </div>
-                    <div class="form-wrap__input-wrap">
-                      <label><span class="form-wrap__title">Как к вам обращаться?</span><input class="form-wrap__input" type="text" placeholder="Иван" name="name" required="required"/>
-                      </label>
-                    </div>
-                    <!-- +e.input-wrap-->
-                    <button class="form-wrap__btn" type="submit"> Получить каталог и прайс
-                    </button>
-                    <div class="form-wrap__polite text-secondary"> Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих персональных данных и&nbsp;соглашаетесь с&nbsp;<a class="tdu text-secondary" href="privacy-policy.pdf" target="_blank">Политикой конфиденциальности</a>
                     </div>
                   </div>
                 </form>
@@ -793,7 +795,7 @@
                       <use xlink:href="img/svg/sprite.svg#check"></use>
                     </svg>
                   </div>При желании можете оплатить
-                   <a class="link-tdu" href="#">заказ наличными водителю</a>
+                   <a class="link-modal link-tdu" data-src="#modal-pay" href="javascript:;">заказ наличными водителю</a>
                 </li>
               </ul>
               <div class="s-shipping__block lazy-background">
@@ -911,11 +913,74 @@
       <!-- end s-about-->
       <!-- start s-rew-->
       <section class="s-rew section" id="s-rew">
-        <div class="container">
+        <div class="container lazy-background">
           <div class="section-title text-center">
-            <h2>s-rew</h2>
+            <h2><strong class="text-primary">Клиенты довольны</strong> 
+              качеством&nbsp;и сотрудничеством
+            </h2>
           </div>
-          <div class="row"></div>
+          <div class="row">
+            <div class="col-6"></div>
+            <div class="col">
+              <div class="control-wrap"></div>
+            </div>
+          </div>
+          <div class="s-rew__slider s-rew__slider--js">
+            <div class="s-rew__slide">
+              <div class="s-rew__item">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="s-rew__video-wrap"><a class="s-rew__video" data-fancybox="rew-sl" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk"><img class="res-i object-fit-js" src="#" data-lazy="img/@2x/rew-img.jpg" alt=""/></a>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="s-rew__title">«Сотрудничаем почти 10 лет, менять поставщика не собираемся»
+                    </div>
+                    <p>В какой бы месяц мы не заказывали материалы, поставки всегда в срок и в нужном объеме. Если срочно нужен материал еще, то поставляют обычно на следующий день. К качеству претензий ни у нас, ни у жильцов нет.</p>
+                    <div class="s-rew__foot"> <strong>Иван Иванов,  </strong> строительная <br/>компания «ЖилСтрой»
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /+e.slide-->
+            <div class="s-rew__slide">
+              <div class="s-rew__item">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="s-rew__video-wrap"><a class="s-rew__video" data-fancybox="rew-sl" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk"><img class="res-i object-fit-js" src="#" data-lazy="img/@2x/rew-img.jpg" alt=""/></a>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="s-rew__title">«Сотрудничаем почти 10 лет, менять поставщика не собираемся»
+                    </div>
+                    <p>В какой бы месяц мы не заказывали материалы, поставки всегда в срок и в нужном объеме. Если срочно нужен материал еще, то поставляют обычно на следующий день. К качеству претензий ни у нас, ни у жильцов нет.</p>
+                    <div class="s-rew__foot"> <strong>Иван Иванов,  </strong> строительная <br/>компания «ЖилСтрой»
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /+e.slide-->
+            <div class="s-rew__slide">
+              <div class="s-rew__item">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="s-rew__video-wrap"><a class="s-rew__video" data-fancybox="rew-sl" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk"><img class="res-i object-fit-js" src="#" data-lazy="img/@2x/rew-img.jpg" alt=""/></a>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="s-rew__title">«Сотрудничаем почти 10 лет, менять поставщика не собираемся»
+                    </div>
+                    <p>В какой бы месяц мы не заказывали материалы, поставки всегда в срок и в нужном объеме. Если срочно нужен материал еще, то поставляют обычно на следующий день. К качеству претензий ни у нас, ни у жильцов нет.</p>
+                    <div class="s-rew__foot"> <strong>Иван Иванов,  </strong> строительная <br/>компания «ЖилСтрой»
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /+e.slide-->
+          </div>
         </div>
       </section>
       <!-- end s-rew-->
@@ -923,49 +988,592 @@
       <section class="s-gal section" id="s-gal">
         <div class="container">
           <div class="section-title text-center">
-            <h2>s-gal</h2>
+            <h2> <strong class="text-primary">Постройки из&nbsp;нашего</strong> 
+              шлакоблока
+            </h2>
           </div>
-          <div class="row"></div>
+          <div class="s-gal__slider s-gal__slider--lg slider-for">
+            <div class="s-gal__slide">
+              <div class="s-gal__img-wrap-wrap"><a class="s-gal__img-wrap s-gal__img-wrap--lg" data-fancybox="gal-sl" href="img/@2x/gal.jpg"><img class="res-i object-fit-js" src="#" data-lazy="img/@2x/gal.jpg" alt=""/></a>
+              </div>
+              <div class="s-gal__title">Дом в поселке Раздолье
+              </div>
+            </div>
+            <div class="s-gal__slide">
+              <div class="s-gal__img-wrap-wrap"><a class="s-gal__img-wrap s-gal__img-wrap--lg" data-fancybox="gal-sl" href="img/@2x/gal.jpg"><img class="res-i object-fit-js" src="#" data-lazy="img/@2x/gal.jpg" alt=""/></a>
+              </div>
+              <div class="s-gal__title">Дом в поселке Раздолье
+              </div>
+            </div>
+            <div class="s-gal__slide">
+              <div class="s-gal__img-wrap-wrap"><a class="s-gal__img-wrap s-gal__img-wrap--lg" data-fancybox="gal-sl" href="img/@2x/gal.jpg"><img class="res-i object-fit-js" src="#" data-lazy="img/@2x/gal.jpg" alt=""/></a>
+              </div>
+              <div class="s-gal__title">Дом в поселке Раздолье
+              </div>
+            </div>
+            <div class="s-gal__slide">
+              <div class="s-gal__img-wrap-wrap"><a class="s-gal__img-wrap s-gal__img-wrap--lg" data-fancybox="gal-sl" href="img/@2x/gal.jpg"><img class="res-i object-fit-js" src="#" data-lazy="img/@2x/gal.jpg" alt=""/></a>
+              </div>
+              <div class="s-gal__title">Дом в поселке Раздолье
+              </div>
+            </div>
+            <div class="s-gal__slide">
+              <div class="s-gal__img-wrap-wrap"><a class="s-gal__img-wrap s-gal__img-wrap--lg" data-fancybox="gal-sl" href="img/@2x/gal.jpg"><img class="res-i object-fit-js" src="#" data-lazy="img/@2x/gal.jpg" alt=""/></a>
+              </div>
+              <div class="s-gal__title">Дом в поселке Раздолье
+              </div>
+            </div>
+            <div class="s-gal__slide">
+              <div class="s-gal__img-wrap-wrap"><a class="s-gal__img-wrap s-gal__img-wrap--lg" data-fancybox="gal-sl" href="img/@2x/gal.jpg"><img class="res-i object-fit-js" src="#" data-lazy="img/@2x/gal.jpg" alt=""/></a>
+              </div>
+              <div class="s-gal__title">Дом в поселке Раздолье
+              </div>
+            </div>
+            <div class="s-gal__slide">
+              <div class="s-gal__img-wrap-wrap"><a class="s-gal__img-wrap s-gal__img-wrap--lg" data-fancybox="gal-sl" href="img/@2x/gal.jpg"><img class="res-i object-fit-js" src="#" data-lazy="img/@2x/gal.jpg" alt=""/></a>
+              </div>
+              <div class="s-gal__title">Дом в поселке Раздолье
+              </div>
+            </div>
+          </div>
+          <div class="d-none d-md-block">
+            <div class="s-gal__slider s-gal__slider--sm slider-nav">
+              <div class="s-gal__slide s-gal__slide--sm">
+                <div class="s-gal__img-wrap s-gal__img-wrap--sm"><img class="res-i object-fit-js" src="#" data-lazy="img/@2x/gal.jpg" alt=""/>
+                </div>
+              </div>
+              <div class="s-gal__slide s-gal__slide--sm">
+                <div class="s-gal__img-wrap s-gal__img-wrap--sm"><img class="res-i object-fit-js" src="#" data-lazy="img/@2x/gal.jpg" alt=""/>
+                </div>
+              </div>
+              <div class="s-gal__slide s-gal__slide--sm">
+                <div class="s-gal__img-wrap s-gal__img-wrap--sm"><img class="res-i object-fit-js" src="#" data-lazy="img/@2x/gal.jpg" alt=""/>
+                </div>
+              </div>
+              <div class="s-gal__slide s-gal__slide--sm">
+                <div class="s-gal__img-wrap s-gal__img-wrap--sm"><img class="res-i object-fit-js" src="#" data-lazy="img/@2x/gal.jpg" alt=""/>
+                </div>
+              </div>
+              <div class="s-gal__slide s-gal__slide--sm">
+                <div class="s-gal__img-wrap s-gal__img-wrap--sm"><img class="res-i object-fit-js" src="#" data-lazy="img/@2x/gal.jpg" alt=""/>
+                </div>
+              </div>
+              <div class="s-gal__slide s-gal__slide--sm">
+                <div class="s-gal__img-wrap s-gal__img-wrap--sm"><img class="res-i object-fit-js" src="#" data-lazy="img/@2x/gal.jpg" alt=""/>
+                </div>
+              </div>
+              <div class="s-gal__slide s-gal__slide--sm">
+                <div class="s-gal__img-wrap s-gal__img-wrap--sm"><img class="res-i object-fit-js" src="#" data-lazy="img/@2x/gal.jpg" alt=""/>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <!-- end s-gal-->
       <!-- start s-contact-->
       <div class="s-contact section block-with-lazy" id="s-contact">
         <div class="container">
-          <div class="section-title text-center">
-            <h2>s-contact</h2>
+          <div class="section-title d-md-none text-center">
+            <h2><strong class="text-primary"> Приезжайте к&nbsp;нам</strong> 
+              на&nbsp;производство,
+            </h2>
+            <div class="section-title__text">чтобы лично проверить качество шлакоблока и&nbsp;обсудить поставку
+            </div>
           </div>
-          <div class="row"></div>
+          <div class="row">
+            <div class="col-md-6 align-self-end">
+              <script>
+                var map;
+                function initMap() {
+                		map = new google.maps.Map(document.getElementById('map'), {
+                		zoom: 15,
+                		//- center: new google.maps.LatLng(53.98205856875258,88.80421049999992),
+                		center: new google.maps.LatLng(53.38863407106368,59.082403),
+                		mapTypeId: 'roadmap',
+                		styles: [
+                			{
+                					"featureType": "all",
+                					"elementType": "all",
+                					"stylers": [
+                							{
+                									"hue": "#ff0000"
+                							},
+                							{
+                									"gamma": "0.00"
+                							},
+                							{
+                									"lightness": "0"
+                							},
+                							{
+                									"saturation": "1"
+                							}
+                					]
+                			},
+                			{
+                					"featureType": "administrative",
+                					"elementType": "labels.text.fill",
+                					"stylers": [
+                							{
+                									"color": "#444444"
+                							}
+                					]
+                			},
+                			{
+                					"featureType": "landscape",
+                					"elementType": "all",
+                					"stylers": [
+                							{
+                									"color": "#f2f2f2"
+                							}
+                					]
+                			},
+                			{
+                					"featureType": "poi",
+                					"elementType": "all",
+                					"stylers": [
+                							{
+                									"visibility": "off"
+                							}
+                					]
+                			},
+                			{
+                					"featureType": "road",
+                					"elementType": "all",
+                					"stylers": [
+                							{
+                									"saturation": -100
+                							},
+                							{
+                									"lightness": 45
+                							}
+                					]
+                			},
+                			{
+                					"featureType": "road.highway",
+                					"elementType": "all",
+                					"stylers": [
+                							{
+                									"visibility": "simplified"
+                							}
+                					]
+                			},
+                			{
+                					"featureType": "road.arterial",
+                					"elementType": "labels.icon",
+                					"stylers": [
+                							{
+                									"visibility": "off"
+                							}
+                					]
+                			},
+                			{
+                					"featureType": "transit",
+                					"elementType": "all",
+                					"stylers": [
+                							{
+                									"visibility": "off"
+                							}
+                					]
+                			},
+                			{
+                					"featureType": "water",
+                					"elementType": "all",
+                					"stylers": [
+                							{
+                									"color": "#ffffff"
+                							},
+                							{
+                									"visibility": "on"
+                							}
+                					]
+                			}
+                	]
+                });
+                var iconBase = 'img/svg/mark.svg';
+                var icons = {
+                
+                info: {
+                icon: iconBase
+                }
+                };
+                var features = [
+                {
+                position: new google.maps.LatLng(53.38863407106368,59.082403),
+                type: 'info',
+                title: 'г. Красноярск',
+                }, 
+                //- {
+                //- position: new google.maps.LatLng(54.999397069703306,82.95985649999986),
+                //- type: 'info',
+                //- title: 'г. Новосибирск',
+                //- },  
+                ];
+                // Create markers.
+                features.forEach(function(feature) {
+                var marker = new google.maps.Marker({
+                position: feature.position,
+                icon: icons[feature.type].icon,
+                map: map,
+                title: feature.title,
+                //- title: title
+                });
+                });
+                }
+              </script>
+              <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnoRp8wBQeCZLL8k4R-vckP_wDGVR2k10&amp;callback=initMap"></script>
+              <div class="s-contact__map-wrap lazy-background"><a class="s-contact__img-wrap s-contact__img-wrap--lg" data-fancybox="gal-cont" href="img/@2x/gal.jpg">
+                <!-- picture-->
+                <picture class="lazy pciture-bg"> 
+                  <source srcset="#" data-srcset="img/@2x/webp/gal.webp" type="image/webp" media="(min-width:576px)"/>
+                  <source srcset="#" data-srcset="img/@1x/webp/gal.webp" type="image/webp"/>
+                  <source srcset="#" data-srcset="img/@2x/gal.jpg" type="image/jpg" media="(min-width:576px)"/>
+                  <source srcset="#" data-srcset="img/@1x/gal.jpg" type="image/jpg"/><img src="#" data-src="img/@2x/gal.jpg" alt=""/>
+                </picture>
+                <!-- /picture--></a>
+                <div id="map"></div>
+              </div>
+            </div>
+            <div class="s-contact__col col-md-6 order-md-first">
+              <div class="section-title d-none d-md-block">
+                <h2><strong class="text-primary"> Приезжайте к&nbsp;нам</strong> 
+                  на&nbsp;производство,
+                </h2>
+                <div class="section-title__text">чтобы лично проверить качество шлакоблока и&nbsp;обсудить поставку
+                </div>
+              </div>
+              <table>
+                <tr>
+                  <td>
+                    <div class="s-contact__icon-wrap">
+                      <svg class="icon icon-mark ">
+                        <use xlink:href="img/svg/sprite.svg#mark"></use>
+                      </svg>
+                    </div>
+                  </td>
+                  <td class="s-contact__title">Адрес:
+                  </td>
+                  <td class="s-contact__text">Магнитогорск, ул.Вайнера, д.2А
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="s-contact__icon-wrap">
+                      <svg class="icon icon-telephone ">
+                        <use xlink:href="img/svg/sprite.svg#telephone"></use>
+                      </svg>
+                    </div>
+                  </td>
+                  <td class="s-contact__title">Телефон:
+                  </td>
+                  <td class="s-contact__text"><a href="tel:+7(3519)45-52-03">+7 (3519) 45-52-03</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="s-contact__icon-wrap">
+                      <svg class="icon icon-mail2 ">
+                        <use xlink:href="img/svg/sprite.svg#mail2"></use>
+                      </svg>
+                    </div>
+                  </td>
+                  <td class="s-contact__title">Email:
+                  </td>
+                  <td class="s-contact__text"> <a href="mailto:info@a-block.ru">info@a-block.ru</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="s-contact__icon-wrap">
+                      <svg class="icon icon-clock ">
+                        <use xlink:href="img/svg/sprite.svg#clock"></use>
+                      </svg>
+                    </div>
+                  </td>
+                  <td class="s-contact__title">Работаем
+                    <div class="s-contact__small">ежедневно
+                    </div>
+                  </td>
+                  <td class="s-contact__text">с 9:00 до 20:00
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
       <!-- end s-contact-->
       <footer class="footer block-with-lazy">
         <div class="container">
-          <h2>footer</h2>
+          <div class="row">
+            <div class="footer__col col-sm-auto">
+              <div class="footer__text">
+                <div class="footer__icon-wrap">
+                  <svg class="icon icon-mark ">
+                    <use xlink:href="img/svg/sprite.svg#mark"></use>
+                  </svg>
+                </div>
+                <div>г.&nbsp;Магнитогорск,<br/> Вайнера, 2А</div>
+              </div>
+            </div>
+            <div class="footer__col col-sm-auto col-6 d-none d-sm-block">
+              <ul>
+                <li><a href="#">Каталог</a></li>
+                <li><a href="#">Доставка и оплата</a></li>
+                <li><a href="#">Калькулятор</a></li>
+              </ul>
+            </div>
+            <div class="footer__col col-sm-auto">
+              <div class="footer__text footer__text--tel">
+                <div class="footer__icon-wrap">
+                  <svg class="icon icon-tel ">
+                    <use xlink:href="img/svg/sprite.svg#tel"></use>
+                  </svg>
+                </div>
+                <div><a class="footer__tel" href="tel:+7351945-52-03">+7 3519 45-52-03 </a>
+                </div>
+              </div><a class="footer__btn link-modal" data-src="#modal-call" href="javascript:;" data-order="Заказать звонок в шапке">Перезвоните мне</a>
+            </div>
+            <div class="col-lg-auto col-md order-md-first">
+              <div class="row"> 
+                <div class="footer__col col-xl-auto col"><a class="footer__logo" href="/">
+                  <!-- picture-->
+                  <picture class="lazy"> 
+                    <source srcset="#" data-srcset="img/@2x/webp/logo.webp" type="image/webp"/>
+                    <!-- /webp images  --><img src="#" data-src="img/@2x/logo.png" alt=""/>
+                  </picture>
+                  <!-- /picture-->
+                  <div class="footer__logo-text">Производство шлакоблока и&nbsp;тротуарной плитки
+                    <div class="text-secondary">Работаем с 2006 года</div>
+                  </div></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__policy text-md-left text-center"><a class="text-body tdu" href="#">Политика конфиденциальности</a>
+          </div>
         </div>
       </footer>
     </div>
-    <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-call">
+    <div class="form-wrap modal-win modal-form" id="modal-call">
       <form>
         <input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
         <input class="utm_source" type="hidden" name="utm_source"/>
         <input class="utm_term" type="hidden" name="utm_term"/>
-        <div class="text-center">
-          <div class="form-wrap__title h3 ttu">Обратный звонок
+        <div class="row no-gutters">
+          <div class="col-6 section-bg d-none d-lg-block" data-bg="img/@2x/modal-1.jpg"></div>
+          <div class="col">
+            <div class="form-wrap__top-title">Укажите контактные данные 
+              <div class="form-wrap__text form-wrap__text--lg">и&nbsp;удобное время для звонка
+              </div>
+            </div>
+            <div class="form-wrap__text form-wrap__text--sm">Специалист компании &laquo;АБлок&raquo; Зоя позвонит  вам прямо сейчас или в&nbsp;другое рабочее время: мы&nbsp;работаем ежедневно с&nbsp;09:00 до&nbsp;20:00
+            </div>
+            <input class="order" type="hidden" name="order" value=""/>
+            <div class="form-wrap__input-wrap">
+              <label><span class="form-wrap__title">Как к вам обращаться?</span><input class="form-wrap__input" type="text" placeholder="Иван" name="name" required="required"/>
+              </label>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="form-wrap__input-wrap">
+              <label><span class="form-wrap__title">Введите Ваш номер телефона для связи</span><input class="form-wrap__input" type="tel" placeholder="Ваш номер телефона" name="tel" required="required"/>
+              </label>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="form-wrap__title"> Выберите время для звонка
+            </div>
+            <label class="custom-input-time"><input class="custom-input-time__input" type="checkbox" name="scr8-time"/><span class="custom-input-time__lab"></span><span class="custom-input-time__text custom-input-time__text--now"> <span class="d-none d-sm-inline">Позвонить сейчас</span><span class="d-sm-none">Сейчас</span></span><span class="custom-input-time__text custom-input-time__text--time"> <span class="d-none d-sm-inline">Позвонить по времени</span><span class="d-sm-none">По времени</span></span>
+            </label>
+            <div class="toggle-wrap-input-js">
+              <div class="form-wrap__input-wrap"><input class="form-wrap__input" type="text" placeholder="Например, 10 апреля в 14:00" name="time"/>
+              </div>
+              <!-- +e.input-wrap-->
+            </div>
+            <button class="form-wrap__btn" type="submit">Перезвоните мне 
+            </button>
+            <div class="form-wrap__polite text-secondary"> Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих персональных данных и&nbsp;соглашаетесь с&nbsp;<a class="tdu text-secondary" href="privacy-policy.pdf" target="_blank">Политикой конфиденциальности</a>
+            </div>
           </div>
-          <p>Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течении 15&nbsp;минут</p>
-        </div>
-        <div class="form-wrap__input-wrap"><input class="form-wrap__input" type="Ваше Имя" placeholder="text" name="Ваше Имя" required="required"/>
-        </div>
-        <!-- +e.input-wrap-->
-        <div class="form-wrap__input-wrap"><input class="form-wrap__input" type="Ваш телефон" placeholder="tel" name="Ваш телефон" required="required"/>
-        </div>
-        <!-- +e.input-wrap--><input class="form-wrap__btn btn btn-block btn-warning mb-4" type="submit" value="Рассчитать"/>
-        <div class="form-wrap__polite text-secondary"> Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих персональных данных и&nbsp;соглашаетесь с&nbsp;<a class="tdu text-secondary" href="privacy-policy.pdf" target="_blank">Политикой конфиденциальности</a>
         </div>
       </form>
     </div>
     <!-- #modal-call-->
+    <div class="form-wrap modal-win modal-form" id="modal-order">
+      <form>
+        <input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+        <input class="utm_source" type="hidden" name="utm_source"/>
+        <input class="utm_term" type="hidden" name="utm_term"/>
+        <div class="row no-gutters">
+          <div class="col-6 section-bg d-none d-lg-block" data-bg="img/@2x/modal-2.jpg"></div>
+          <div class="col">
+            <div class="form-wrap__top-title">Укажите контактные данные 
+              <div class="form-wrap__text form-wrap__text--lg">и&nbsp;удобное время для звонка
+              </div>
+            </div>
+            <div class="form-wrap__text form-wrap__text--sm">Специалист компании &laquo;АБлок&raquo; Зоя позвонит  вам прямо сейчас или в&nbsp;другое рабочее время: мы&nbsp;работаем ежедневно с&nbsp;09:00 до&nbsp;20:00
+            </div>
+            <input class="order" type="hidden" name="order" value=""/>
+            <div class="form-wrap__input-wrap">
+              <label><span class="form-wrap__title">Как к вам обращаться?</span><input class="form-wrap__input" type="text" placeholder="Иван" name="name" required="required"/>
+              </label>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="tabs">
+              <div class="form-wrap__group"> 
+                <div class="tabs__caption">
+                  <div class="tabs__btn active">
+                    <svg class="icon icon-tel2 ">
+                      <use xlink:href="img/svg/sprite.svg#tel2"></use>
+                    </svg>SMS
+                  </div>
+                  <div class="tabs__btn">
+                    <svg class="icon icon-whatsapp ">
+                      <use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+                    </svg>WhatsApp
+                  </div>
+                  <div class="tabs__btn">
+                    <svg class="icon icon-viber ">
+                      <use xlink:href="img/svg/sprite.svg#viber"></use>
+                    </svg>Viber
+                  </div>
+                </div>
+              </div>
+              <div class="tabs__wrap">
+                <div class="tabs__content active">
+                  <div class="form-wrap__input-wrap">
+                    <label><span class="form-wrap__title">Введите телефон:</span><input class="form-wrap__input" type="tel" placeholder="+7 (900) 444-44-44" name="tel" required="required"/>
+                    </label>
+                  </div>
+                  <!-- +e.input-wrap-->
+                </div>
+                <div class="tabs__content">
+                  <div class="form-wrap__input-wrap">
+                    <label><span class="form-wrap__title">Введите whatsapp:</span><input class="form-wrap__input" type="tel" placeholder="+7 (900) 444-44-44" name="whatsapp"/>
+                    </label>
+                  </div>
+                  <!-- +e.input-wrap-->
+                </div>
+                <div class="tabs__content">
+                  <div class="form-wrap__input-wrap">
+                    <label><span class="form-wrap__title">Введите viber:</span><input class="form-wrap__input" type="tel" placeholder="+7 (900) 444-44-44" name="viber"/>
+                    </label>
+                  </div>
+                  <!-- +e.input-wrap-->
+                </div>
+              </div>
+            </div>
+            <button class="form-wrap__btn" type="submit">Перезвоните мне 
+            </button>
+            <div class="form-wrap__polite text-secondary"> Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих персональных данных и&nbsp;соглашаетесь с&nbsp;<a class="tdu text-secondary" href="privacy-policy.pdf" target="_blank">Политикой конфиденциальности</a>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- #modal-order-->
+    <div class="modal-win modal-win--tech text-center" id="modal-tech">
+      <div class="h3">Соблюдаем технологию<br/>производства и хранения</div>
+      <div class="row no-gutters">
+          <div class="modal-win__col-tech col-md-4">
+            <div class="modal-win__item">
+              <!-- picture-->
+              <picture> 
+                <source srcset="img/@2x/webp/storage-1.webp" type="image/webp" media="(min-width:576px)"/>
+                <source srcset="img/@1x/webp/storage-1.webp" type="image/webp"/>
+                <source srcset="img/@2x/storage-1.png" type="image/png" media="(min-width:576px)"/>
+                <source srcset="img/@1x/storage-1.png" type="image/png"/><img src="img/@2x/storage-1.png" alt=""/>
+              </picture>
+              <!-- /picture-->
+              <div class="modal-win__title">Строго соблюдаем пропорции материалов
+              </div>
+              <p>чтобы получить шлакоблок с характеристиками, нужными при строительстве любых сооружений</p>
+            </div>
+          </div>
+          <div class="modal-win__col-tech col-md-4">
+            <div class="modal-win__item">
+              <!-- picture-->
+              <picture> 
+                <source srcset="img/@2x/webp/storage-2.webp" type="image/webp" media="(min-width:576px)"/>
+                <source srcset="img/@1x/webp/storage-2.webp" type="image/webp"/>
+                <source srcset="img/@2x/storage-2.png" type="image/png" media="(min-width:576px)"/>
+                <source srcset="img/@1x/storage-2.png" type="image/png"/><img src="img/@2x/storage-2.png" alt=""/>
+              </picture>
+              <!-- /picture-->
+              <div class="modal-win__title">Пропариваем горячим паром при температуре 70-95°C —
+              </div>
+              <p>шлакоблок достигает до 90% марочной прочности уже через сутки</p>
+            </div>
+          </div>
+          <div class="modal-win__col-tech col-md-4">
+            <div class="modal-win__item">
+              <!-- picture-->
+              <picture> 
+                <source srcset="img/@2x/webp/storage-3.webp" type="image/webp" media="(min-width:576px)"/>
+                <source srcset="img/@1x/webp/storage-3.webp" type="image/webp"/>
+                <source srcset="img/@2x/storage-3.png" type="image/png" media="(min-width:576px)"/>
+                <source srcset="img/@1x/storage-3.png" type="image/png"/><img src="img/@2x/storage-3.png" alt=""/>
+              </picture>
+              <!-- /picture-->
+              <div class="modal-win__title">Храним шлакоблок на транспортных поддонах,
+              </div>
+              <p>чтобы он не соприкасался с землей</p>
+            </div>
+          </div>
+      </div>
+      <div class="modal-win__foot">
+        <div class="row">
+          <div class="col-auto">
+            <svg class="icon icon-info ">
+              <use xlink:href="img/svg/sprite.svg#info"></use>
+            </svg>
+          </div>
+          <div class="h6 text-left col">Как правило, заказчику отгружаем шлакоблок со&nbsp;100% марочной прочностью, которому больше 28&nbsp;суток. При срочных заказах возможна отгрузка блока через неделю после изготовления&nbsp;&mdash; на&nbsp;качество стройки это не&nbsp;влияет</div>
+        </div>
+      </div>
+    </div>
+    <!-- #modal-tech-->
+    <div class="modal-win modal-win--sm modal-win--storage text-center" id="modal-storage">
+      <!-- picture-->
+      <picture> 
+        <source srcset="img/@2x/webp/modal-sm-img.webp" type="image/webp"/>
+        <!-- /webp images  --><img src="img/@2x/modal-sm-img.png" alt=""/>
+      </picture>
+      <!-- /picture-->
+      <div class="h5 text-center strong">Бесплатное хранение<br/>на нашей территории</div>
+      <div class="h6 fw-500">Вы&nbsp;можете купить шлакоблок даже зимой, а&nbsp;строить летом. Ваш шлакоблок будет храниться на&nbsp;транспортных поддонах, чтобы он&nbsp;не&nbsp;соприкасался с&nbsp;землей.</div>
+    </div>
+    <!-- #modal-storage-->
+    <div class="modal-win modal-win--know text-center" id="modal-know">
+      <div class="modal-win__head-text">
+        <div class="h3 fw-500">О&nbsp;чем нужно знать<br/>при строительстве из&nbsp;шлакоблока</div>
+        <div class="h6 fw-500"> 
+          <div class="text-secondary">Шлакоблок — такой материал, что если уже построили, то исправить,  заменить, как, например, коробку двери, не получится. </div>
+        </div>
+        <div class="h6 fw-500">
+             Учитывая, что стоимость шлакоблока это всего лишь ~ 10% от стоимости   <span class="text-secondary"> строительства всего дома, то экономить на качестве стен не имеет смысла</span></div>
+      </div>
+      <!-- picture-->
+      <picture> 
+        <source srcset="img/@2x/webp/modal-know-img.webp" type="image/webp" media="(min-width:576px)"/>
+        <source srcset="img/@1x/webp/modal-know-img.webp" type="image/webp"/>
+        <source srcset="img/@2x/modal-know-img.png" type="image/png" media="(min-width:576px)"/>
+        <source srcset="img/@1x/modal-know-img.png" type="image/png"/><img src="img/@2x/modal-know-img.png" alt=""/>
+      </picture>
+      <!-- /picture-->
+    </div>
+    <!-- #modal-know-->
+    <div class="modal-win modal-win--sm text-center" id="modal-pay">
+      <!-- picture-->
+      <picture> 
+        <source srcset="img/@2x/webp/modal-pay.webp" type="image/webp"/>
+        <!-- /webp images  --><img src="img/@2x/modal-pay.png" alt=""/>
+      </picture>
+      <!-- /picture-->
+      <div class="h5 text-center strong">Покупайте шлакоблок,<br/>не выходя из дома</div>
+      <div class="h6 fw-500">Мы&nbsp;уверены в&nbsp;качестве, поэтому спокойно отправляем заказ человеку, который не&nbsp;видел нашу продукцию. </div>
+      <div class="h6 fw-500">Ни&nbsp;разу водитель не&nbsp;привез шлакоблок обратно!</div>
+    </div>
+    <!-- #modal-pay-->
     <!-- modal-->
     <script src="js/lazy.js"></script>
     <script src="js/jquery.min.js"></script>

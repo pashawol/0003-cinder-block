@@ -1,4 +1,39 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
 		.container
-			h2 footer
+			.row
+				+e.col.col-sm-auto
+					+e.text
+						+e.icon-wrap
+							+icon('mark') 
+						div г.&nbsp;Магнитогорск,
+							br
+							|  Вайнера, 2А
+				+e.col.col-sm-auto.col-6.d-none.d-sm-block
+					ul
+						li
+							a(href="#") Каталог
+						
+						li
+							a(href="#") Доставка и оплата
+						
+						li
+							a(href="#") Калькулятор
+						
+				+e.col.col-sm-auto
+					+e.text--tel
+						+e.icon-wrap
+							+icon('tel')
+						div
+							+e.tel(href="tel:+7351945-52-03") +7 3519 45-52-03 
+							//- +e.sm-link.link-modal.d-xl-none(  data-src="#modal-call" href="javascript:;" data-order="Заказать звонок в шапке") Перезвоните мне 
+					+e.btn.link-modal(  data-src="#modal-call" href="javascript:;" data-order="Заказать звонок в шапке") Перезвоните мне
+				.col-lg-auto.col-md.order-md-first
+					.row 
+						+e.col.col-xl-auto.col
+							+e.logo(href="/")
+								+pic('logo','png','','lazy',0)
+								+e.DIV.logo-text Производство шлакоблока и&nbsp;тротуарной плитки
+									div.text-secondary Работаем с 2006 года
+			+e.policy.text-md-left.text-center
+				a(href="#").text-body.tdu Политика конфиденциальности

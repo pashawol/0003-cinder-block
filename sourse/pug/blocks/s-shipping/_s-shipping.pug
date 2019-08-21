@@ -20,7 +20,7 @@ mixin s-shipping()
 								+icon('check')
 							| При желании можете оплатить
 							| 
-							a(href="#").link-tdu заказ наличными водителю
+							a.link-modal( data-src="#modal-pay" href="javascript:;" ).link-tdu заказ наличными водителю
 					+e.block.lazy-background
 						+icon('ruble')
 						+e.block-text Если покупаете шлакоблоки 

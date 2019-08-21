@@ -1,9 +1,49 @@
 mixin s-rew()
 	// start s-rew
 	+b.SECTION.s-rew.section#s-rew&attributes(attributes)
-		.container
+		.container.lazy-background
 			+b.section-title.text-center
-				h2 s-rew
-				
+				h2
+					strong.text-primary Клиенты довольны
+					| 
+					| качеством&nbsp;и сотрудничеством
 			.row
+				.col-6
+				.col
+					.control-wrap
+
+			+e.slider--js
+				mixin slide(i,a, t, p)
+					+e.slide
+						+e.item
+							.row
+								.col-md-6
+									+e.video-wrap
+										+e.video(data-fancybox='rew-sl' href= a)
+											img.res-i.object-fit-js(src="#"  data-lazy= i, alt="")
+								.col-md-6
+									+e.title= t
+									p= p
+									block
+					// /+e.slide
+				+slide('img/@2x/rew-img.jpg','https://www.youtube.com/watch?v=_sI_Ps7JSEk','«Сотрудничаем почти 10 лет, менять поставщика не собираемся»','В какой бы месяц мы не заказывали материалы, поставки всегда в срок и в нужном объеме. Если срочно нужен материал еще, то поставляют обычно на следующий день. К качеству претензий ни у нас, ни у жильцов нет.')
+					+e.foot 
+						strong Иван Иванов,  
+						|  строительная 
+						br
+						| компания «ЖилСтрой»
+				
+				+slide('img/@2x/rew-img.jpg','https://www.youtube.com/watch?v=_sI_Ps7JSEk','«Сотрудничаем почти 10 лет, менять поставщика не собираемся»','В какой бы месяц мы не заказывали материалы, поставки всегда в срок и в нужном объеме. Если срочно нужен материал еще, то поставляют обычно на следующий день. К качеству претензий ни у нас, ни у жильцов нет.')
+					+e.foot 
+						strong Иван Иванов,  
+						|  строительная 
+						br
+						| компания «ЖилСтрой»
+				+slide('img/@2x/rew-img.jpg','https://www.youtube.com/watch?v=_sI_Ps7JSEk','«Сотрудничаем почти 10 лет, менять поставщика не собираемся»','В какой бы месяц мы не заказывали материалы, поставки всегда в срок и в нужном объеме. Если срочно нужен материал еще, то поставляют обычно на следующий день. К качеству претензий ни у нас, ни у жильцов нет.')
+					+e.foot 
+						strong Иван Иванов,  
+						|  строительная 
+						br
+						| компания «ЖилСтрой»
+
 	// end s-rew

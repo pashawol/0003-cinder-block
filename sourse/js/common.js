@@ -124,7 +124,64 @@ jQuery(document).ready(function ($) {
 				
 		 ]
 		});
+		$('.s-rew__slider--js').slick({
+			appendArrows: ".control-wrap",
+			slidesToShow: 1, 
+			speed: 600,
+			infinite: true, 
+			mobileFirst: true, 
+			arrows: true,
+			dots: true,
+			prevArrow: arrr2,
+			nextArrow: arrl2, 
+			});
 
+
+			$('.slider-for').slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				arrows: false, 
+				asNavFor: '.slider-nav',
+				mobileFirst: true, 
+				arrows: true,
+				dots: false,
+				prevArrow: arrr2,
+				nextArrow: arrl2, 
+				infinite: true, 
+				mobileFirst: true, 
+			});
+			$('.slider-nav').slick({
+				slidesToShow: 2,
+				slidesToScroll: 1,
+				asNavFor: '.slider-for',
+				dots: false, 
+				arrows: false, 
+				mobileFirst: true, 
+				focusOnSelect: true,
+				infinite: true, 
+				responsive: [
+					{ 
+					breakpoint: 1200,
+					settings: {
+						slidesToShow: 6,  
+					}  },
+					
+					{ 
+					breakpoint: 767.98,
+					settings: {
+						slidesToShow: 4, 
+						// infinite: false, 
+					}  },
+					
+					{ 
+					breakpoint: 575.98,
+					settings: {
+						slidesToShow: 3, 
+						// infinite: false, 
+					}  },
+					
+			 ]
+			});
 	// $('.s-gal__slider\
 	// ,.slider-for2 ')
 	// 	.on('lazyLoaded', function (event, slick, image, imageSource) {
@@ -160,33 +217,40 @@ jQuery(document).ready(function ($) {
 
 	// });
 	// });
+	$('.custom-input-time__input').change(function(){
+		$(this).parents('form').find('.toggle-wrap-input-js').toggle().toggleClass('active');
+	})
+	
 
-	// form
-	$("form").submit(function () { //Change
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: 'action.php', //Change
-			data: th.serialize()
-		}).success(function () {
-			// $.magnificPopup.close();
-			$.magnificPopup.open({
-				items: {
-					src: '#thanks', // can be a HTML string, jQuery object, or CSS selector
-					type: 'inline'
-				}
-			})
-			// window.location.replace("/thanks.html");
-			setTimeout(function () {
-				// Done Functions
-				th.trigger("reset");
-				// $.magnificPopup.close();
-				ym(53383120, 'reachGoal', 'zakaz');
-			}, 4000);
-		});
-		return false;
-	});
-	// /form
+	var gets = (function() {
+		var a = window.location.search;
+		var b = new Object();
+		a = a.substring(1).split("&");
+		for (var i = 0; i < a.length; i++) {
+		c = a[i].split("=");
+				b[c[0]] = c[1];
+		}
+		return b;
+	})();
+			// form
+			$("form").submit(function () { //Change
+				var th = $(this);
+				th.find('.utm_source').val(gets['utm_source']);
+				th.find('.utm_term').val(gets['utm_term']);
+				$.ajax({
+					type: "POST",
+					url: 'action.php', //Change
+					data: th.serialize()
+				}).success(function () { 
+					window.location.replace("/thanks.html");
+					setTimeout(function () { 
+						th.trigger("reset"); 
+						// ym(53383120, 'reachGoal', 'zakaz');
+					}, 4000);
+				});
+				return false;
+			});
+			// /form
 });
 JSCCommon = {
 	// часть вызов скриптов здесь, для использования при AJAX

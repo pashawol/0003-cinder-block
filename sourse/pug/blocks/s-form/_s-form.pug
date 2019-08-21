@@ -13,25 +13,7 @@ mixin s-form()
 					+e.text.lazy-background Мы&nbsp;также рассчитаем объем и&nbsp;стоимость материала, исходя из&nbsp;площади строения
 				.col
 					+form-wrap()
-						.tabs
-							+e.group
-								+e.group-title Куда отправить прайс и&nbsp;каталог?
-								
-								.tabs__caption
-									.tabs__btn.active
-										+icon('tel2')
-										| SMS
-									.tabs__btn
-										+icon('email')
-										| E-mail
-									
-									.tabs__btn
-										+icon('whatsapp')
-										| WhatsApp
-									.tabs__btn
-										+icon('viber')
-										| Viber
-							
+						+form-tabs()
 							+e.group-title Какую компанию вы&nbsp;представляете?
 							.row.justify-content-between
 								+b.LABEL.type-company.col-md-auto.col-6
@@ -60,20 +42,9 @@ mixin s-form()
 										br
 										|  лицо
 
-							.tabs__wrap
-								.tabs__content.active
-									+input("+7 (900) 444-44-44","tel",'Введите телефон:',"tel")(required)
+							
 								
-								.tabs__content
-									+input("email@email.info","email",'Введите email:')
-								
-								.tabs__content
-									+input("+7 (900) 444-44-44","tel",'Введите whatsapp:',"whatsapp")
-								
-								.tabs__content
-									+input("+7 (900) 444-44-44","tel",'Введите viber:',"viber")
-								
-							+input("Иван","text",'Как к вам обращаться?',"name")(required)
+							+inputName()
 							+e.btn(type="submit")  Получить каталог и прайс
 							+polite
 	// end s-form
