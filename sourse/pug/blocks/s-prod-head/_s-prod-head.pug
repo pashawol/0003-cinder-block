@@ -1,0 +1,15 @@
+mixin s-prod-head(i, t, label, labelclass)
+	// start s-prod-head
+	+b.SECTION.s-prod-head.section#s-prod-head&attributes(attributes)
+		.container
+			+e.title.d-md-none.text-center= t
+			.row
+				.col-md-auto
+					+e.img-wrap
+						if label
+							+e.label(class= labelclass)= label 
+						+pic(i)
+				block
+				
+
+	// end s-prod-head

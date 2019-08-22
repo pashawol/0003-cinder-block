@@ -67,6 +67,7 @@
 		}
 	}
 	&__foot-text{
+		padding-bottom: 2rem;
 		@include media-breakpoint-up(md) {
 			text-align: left;
 			padding-left: rem(20);
@@ -133,6 +134,135 @@
 
 	}
 
+	&--page{
+		padding-top: rem(45);
+		.section-title{
+			margin-left: auto;
+			margin-right: auto;
+			max-width: rem(700);
+			padding-bottom: rem(1);
+		}
+		.container{
+			// position: absolute;
+			position: relative;
+			&::after,
+			&::before{
+				position: absolute;
+				pointer-events: none;
+			}
+			&.lazy-background{ 
+				@include media-breakpoint-up(lg) { 
+				&::after{
+					content: url(../img/@2x/category-after.png);
+					left: 100%;
+					top: 0;
+				} 
+				&::before{
+					content: url(../img/@2x/category-before.png);
+					right: 95%;
+					bottom: rem(-100);
+				}
+			}
+		} 
+			}
+		}
+		&__item{
+		box-shadow: 0 2px $h4-font-size 7px rgba(48, 48, 48, 0.05);
+		border-radius: $border-radius;
+		background-color: #ffffff;
+		position: relative;
+		overflow: hidden;
+		display: block;
+		color: $body-color !important;
+		text-decoration: none !important;
+		height: 100%;
+		@include media-breakpoint-up(sm) {
+			margin-left: 0;
+			margin-right: 0;
+		}
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+	&__img-wrap{
+		display: block;
+	}
+	&__caption{
+		@include media-breakpoint-up(lg) {
+
+			padding: rem(35) rem(39) rem(25);
+		}
+		padding: rem(25) rem(10) rem(25);
+	}
+	&__title{
+		@extend .h5;
+		font-weight: bold;
+		padding-bottom: rem(10);
+	}
+	&__text{
+		@extend .h6;
+		font-weight: 500;
+		padding-bottom: rem(20);
+	}
+	&__small{
+		font-weight: 500;
+		display: flex;
+		span{
+			margin-right: rem(10);
+		}
+	}
+
+	&__shipping-block{
+		// background-image: url(../img/svg/shipping-block-bg.svg);
+		@include media-breakpoint-up(sm) {
+			
+			@include bg("shipping-block.png");
+			display: flex;
+			text-align: center;
+			// padding-top: rem(6);
+		div.order-sm-last{
+				padding: 0;
+				text-align: left;
+			}
+			padding: rem(6px);
+			padding-bottom: rem(32);
+		}
+		padding: rem(7px);
+		padding-bottom: rem(40);
+	div.order-sm-last{
+		text-align: center;
+			padding: rem(30) rem(10);
+		}
+		@include bg("shipping-block-sm.png");
+		margin-top: rem(40);
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+ 
+		max-width: rem(659);
+		margin-left: auto;
+		margin-right: auto;
+		
+
+		// align-items: flex-end;
+		align-items: center;
+		position: relative;
+		overflow: hidden;
+		border-radius: rem(6); 
+		picture{
+			border-radius: rem(6); 
+			position: relative;
+			overflow: hidden;
+			height: rem(209 - 34 - 12);
+			img{
+				height: 100%;
+				max-height: 100%;
+			}
+			width: auto;
+			text-align: left;
+		}
+		div{
+			flex-grow: 1;
+		}
+}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -170,6 +300,17 @@
 	max-width: rem(320);
 	display: flex;
 	flex-direction: column;
+	position: relative;
+	&__label{
+		position: absolute;
+		left: 0;
+		top: rem(27);
+		text-align: center;
+		padding: rem(9) rem(13);
+		border-radius: 0 3px 3px 0;
+		background-color: #e7eaee;
+		font-weight: 500;
+	}
 	&__img-wrap{
 		display: flex;
 		justify-content: center;
@@ -187,10 +328,14 @@
 			max-height: 100%;
 		}
 	}
+
 	&__title{
 		@extend .h5;
 			font-weight: bold;
-			padding-bottom: rem(20);
+			// padding-bottom: rem(20);
+			// margin-bottom: auto;
+		}
+		&__size{
 			margin-bottom: auto;
 		}
 				&__sub{
@@ -198,6 +343,7 @@
 					font-weight: 500;
 				}
 	table{
+		margin-top: rem(20);
 		width: 100%;
 		margin-bottom: rem(6);
 	}

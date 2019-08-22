@@ -1,24 +1,42 @@
 .s-about {
 	padding-bottom: 0;
-	background-color: #caaa95;
+	@include media-breakpoint-down(md) {
+		padding-top: 0;
+	}
+	// background-color: #caaa95;
 	position: relative;
 	// z-index: 2;
-	&.visible{
-		@include bg("bg.jpg");
-		&::after{
-			content: '';
-		pointer-events: none;
-		// z-index: -1;
-		@include bg("shadow.png");
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: rem(1725);
-		height: 100%;
-		background-size: 100% 100%;
-		background-repeat: no-repeat;
+	@include bgs;
+	&--main-page{
+
+		&.visible{
+			@include bg("bg.jpg");
+			&::after{
+				content: '';
+				pointer-events: none;
+				// z-index: -1;
+				@include bg("shadow.png");
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: rem(1725);
+				height: 100%;
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+			}
+		}
 	}
-}
+	
+	&--page{
+		@include media-breakpoint-up(lg) {
+
+			&.visible{
+				@include bg("woman-bg.jpg");
+				
+			}
+		}
+	}
+
 	&__col-text{
 		z-index: 2;
 		padding-left: 5px;
@@ -41,13 +59,53 @@
 	&__man{
 		text-align: center;
 		@include media-breakpoint-up(lg) {
-
+			
 			padding-top: rem(115);
 			margin-left: rem(-220);
 			padding-bottom: 0;
 		}
 		margin-left: -10%;
 		padding-bottom: rem(35);
+		&--girl{
+			@include media-breakpoint-up(lg) {
+				padding-top: 0 ;
+			
+				// padding-top: rem(115);
+				margin-left: rem(-50);
+				// padding-bottom: 0;
+			}
+			padding-bottom: 0;
+			@include media-breakpoint-down(md) {
+				padding-top: rem(30);
+				position: relative;
+				margin-bottom: rem(30);
+				&::before{
+					content: '';
+					background-image: url(../img/@1x/woman-bg.jpg);
+					// @include bg("woman-bg.jpg");
+					background-color: #caaa95;
+					@include bgs;
+					height: 100%;
+					width: 150vw;
+					top: 0;
+					@include a-cent(x);
+					z-index: -1;
+				}
+				// margin-left: -30px;
+				// margin-right: -30px;
+			}
+		}
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-primary;
+		// @extend .btn-lg;
+		width: rem(288);
+		margin-top: 1.5rem;
+		margin-bottom: 2rem;
+	}
+	&__right-block{
+		max-width: rem(360);
 	}
 	.form-wrap{
 		padding-bottom: rem(30);
@@ -63,20 +121,23 @@
 			margin-top: 0;
 			position: relative;
 			max-width: 100%;
+			&:after{
+
+				content: '';
+			position: absolute;
+			width: rem(125px);
+			height: rem(166px);
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			bottom: 0;
+			left: 88%;
+			opacity: 1;
+			top: auto;
+			}
 			@include media-breakpoint-up(lg) {
 
 				&.visible::after{
-					content: '';
-				position: absolute;
-				@include bg("clock.png");
-				width: rem(125px);
-				height: rem(166px);
-				background-repeat: no-repeat;
-				background-size: 100% 100%;
-				bottom: 0;
-				left: 88%;
-				opacity: 1;
-				top: auto;
+					@include bg("clock.png");
 				
 			}
 		}
@@ -104,6 +165,8 @@
 	&__block{
 		position: absolute;
 		left: rem(30);
+		// display: flex;
+		// flex-direction: column;
 		@include media-breakpoint-up(md) {
 
 			bottom: rem(70);
@@ -116,21 +179,26 @@
 		box-shadow: 0 0 $small 2px rgba(44, 44, 44, 0.33);
 		border-radius: $border-radius;
 		background-color: #ffffff;
-		padding: rem(18) 0;
+		padding: rem(18) rem(30);
 		margin-bottom: 0;
-		font-weight: 600;
 		text-align: center;
-		width: rem(230);
+		width: auto;
 		position: relative;
 		&--name{
+			width: rem(230);
+			// display: inline-block;
+			font-weight: 600;
 			background-image: linear-gradient(to top, #8eb930 0%, #a2d032 100%);
 			color: #ffffff;
 			z-index: 3;
 			margin-bottom: rem(-5);
 			@extend .h6;
 		}
+		&--girl{
+			max-width: rem(100);
+		}
 		&--prof{
-			width: rem(241);
+			min-width: rem(241);
 			margin-left: rem(30);
 		}
 	}
@@ -155,7 +223,15 @@
 	//
 	@include media-breakpoint-down(xl) {}
 	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(md) {
+		&--page{
+			text-align: center;
+		}
+		&__right-block{
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
 	@include media-breakpoint-down(sm) {}
 	@include media-breakpoint-down(xs) {} 
 

@@ -1,8 +1,15 @@
-mixin prod(img,title,subtitle,price,classs="col-lg-3 col-sm-6",size,at="подробнее",al="#")
+mixin prod-slide(img,title,subtitle,price,classs="col-lg-3 col-sm-6",size,at="подробнее",al="#", item, label, labelclass)
 	+e.col(class= classs)
 		+b.prod-item
+			if label
+				+e.label(class= labelclass)= label 
+
 			+e.img-wrap(href="#")
-				img(src="#" data-lazy=`img/@2x/${img}`, alt="")
+				if item
+					+pic(img,'jpg','','lazy',0)
+				else
+					img(src="#" data-lazy=`img/@2x/${img}`, alt="")
+					//- img.lazy(src="#" data-src=`img/@2x/${img}`, alt="")
 			+e.title= title
 				if subtitle
 					+e.sub= subtitle
@@ -15,6 +22,7 @@ mixin prod(img,title,subtitle,price,classs="col-lg-3 col-sm-6",size,at="подр
 				+e.price= price
 			+e.btn(href= al)&attributes(attributes)= at
 	// /+e.col
+
 	// если используется таблица с характеристиками
 mixin prod-tr(t1, t2)
 	tr
@@ -38,16 +46,16 @@ mixin s-catalog()
 						.col.h6 Делаем шлакоблок любых цветов
 				
 			+e.slider--js
-				+prod("s-catalog-1.jpg","Шлакоблок 50%","пустотности «А Блок»","От 1600 руб.*","")
+				+prod-slide("s-catalog-1.jpg","Шлакоблок 50%","пустотности «А Блок»","От 1600 руб.*","")
 					each t2, t1 in {'Размер:':'390х190х188 см','Цвет:':'серый, красный'}
 						+prod-tr(t1,t2)
-				+prod("s-catalog-2.jpg","Шлакоблок 50%","пустотности «А Блок»","От 1600 руб.*","")
+				+prod-slide("s-catalog-2.jpg","Шлакоблок 50%","пустотности «А Блок»","От 1600 руб.*","")
 					each t2, t1 in {'Размер:':'390х190х188 см','Цвет:':'серый, красный'}
 						+prod-tr(t1,t2)
-				+prod("s-catalog-3.jpg","Шлакоблок 50%","пустотности «А Блок»","От 1600 руб.*","")
+				+prod-slide("s-catalog-3.jpg","Шлакоблок 50%","пустотности «А Блок»","От 1600 руб.*","")
 					each t2, t1 in {'Размер:':'390х190х188 см','Цвет:':'серый, красный'}
 						+prod-tr(t1,t2)
-				+prod("s-catalog-4.jpg","Шлакоблок 50%","пустотности «А Блок»","От 1600 руб.*","")
+				+prod-slide("s-catalog-4.jpg","Шлакоблок 50%","пустотности «А Блок»","От 1600 руб.*","")
 					each t2, t1 in {'Размер:':'390х190х188 см','Цвет:':'серый, красный'}
 						+prod-tr(t1,t2)
 			+e.foot-text.text-secondary *Стоимость за&nbsp;1&nbsp;поддон, 60&nbsp;шт.
@@ -55,5 +63,18 @@ mixin s-catalog()
 				+e.btn--foot.btn-primary(href='#') Смотреть весь шлакоблок
 				+e.foot-block-text 
 					+icon("info")
-					div В&nbsp;каталоге вы&nbsp;также можете выбрать фасадный камень и&nbsp;сопутствующие стройматериалы
+					div 
+						a.tdu(href="#") В&nbsp;каталоге  
+						| 
+						| вы&nbsp;также можете выбрать фасадный камень и&nbsp;сопутствующие стройматериалы
 	// end s-catalog
+
+
+mixin s-catalog-body()
+	// start s-catalog
+	+b.s-catalog.section&attributes(attributes)
+		.container.lazy-background
+			block
+	// end s-catalog
+
+

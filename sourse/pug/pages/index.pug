@@ -23,6 +23,12 @@ block title
 block pagecontent
 	+mob-mnu()
 	+header()
+		<picture class="lazy picture-bg"> 
+			<source srcset="#" data-srcset="img/@2x/webp/3-layers.webp" type="image/webp" media="(min-width:576px)">
+			<source srcset="#" data-srcset="img/@1x/webp/header-bg-sm.webp" type="image/webp">
+			<source srcset="#" data-srcset="img/@2x/3-layers.jpg" type="image/jpg" media="(min-width:576px)">
+			<source srcset="#" data-srcset="img/@1x/header-bg-sm.jpg" type="image/jpg"><img class="object-fit-js" src="#" data-src="img/@2x/3-layers.jpg" alt="">
+		</picture>
 		+top-line()
 		+header-block()
 	+s-garanty

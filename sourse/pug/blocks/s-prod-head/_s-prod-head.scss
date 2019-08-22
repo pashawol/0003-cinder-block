@@ -1,0 +1,208 @@
+.s-prod-head {
+		 
+	&__title{
+		@extend .h3;
+		font-weight: 500;
+		padding-bottom: rem(20);
+	}
+	&__shipping{
+		box-shadow: 0 $h6-font-size 40px rgba(255, 255, 255, 0.38);
+		border: 1px solid #eeeeee;
+		background-color: #ffffff;
+		display: flex;
+		align-items: center;
+			@include media-breakpoint-up(xl) {
+
+				max-width: rem(340);
+				padding: rem(25) rem(30);
+			}
+			padding: rem(25) rem(10) rem(25) rem(30);
+			@include media-breakpoint-up(lg) {
+
+				max-width: rem(290);
+			}
+		margin-bottom: rem(20);
+		position: relative;
+		border-radius: rem(6);
+		&::before{
+			content: url(../img/@2x/right-angle.png);
+			@include a-cent(y);
+			left: -1px;
+			margin-top: 2px;
+		}
+		.icon{
+			font-size: rem(36 * 1.4);
+			fill: url(#primary-gradient);
+			filter: drop-shadow(inset 0 0 $h6-font-size 1px rgba(255, 255, 255, 0.32));
+			margin-right: rem(22);
+		}
+	}
+	ul{
+		display: block;
+		border-radius: 3px;
+		background-color: #f7f7f7;
+		
+		@include media-breakpoint-up(xl) {
+			padding: rem(35) rem(40) rem(15);
+			
+			max-width: rem(360);
+		}
+		padding: rem(35) rem(15) rem(15);
+		@include media-breakpoint-up(lg) {
+
+			max-width: rem(290);
+		}
+	}
+	li{
+		position: relative;
+		max-width: rem(410);
+		list-style-type: none;
+	 
+		font-weight: 500;
+		padding-left: rem(47);
+		margin-bottom: rem(25); 
+		position: relative;
+		line-height: 1.33;
+	 
+		.before{
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				background-size: 100% 100%;
+	 
+				background-image: url(../img/svg/polygon-border.svg);
+				width: rem(27px);
+				height: $h3-font-size;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+		}
+		
+			.icon{
+				font-size: rem(13);
+		fill: url(#success-gradient);
+		filter: drop-shadow(0 2px 0 #fff);
+			}
+		
+
+		// margin-right: rem(-30);
+		a{
+			border-width: em(1.6);
+		}
+	} 
+
+	&__img-wrap{
+		position: relative;
+		@include media-breakpoint-up(md) {
+
+			max-width: rem(414px);
+			width: rem(414);
+		}
+		margin-bottom: rem(20);
+		picture{
+			@include media-breakpoint-up(sm) {
+
+				height: rem(509px);
+			}
+			img{
+				max-height: 100%;
+			}
+			height: rem(309px);
+			box-shadow: 0 2px $h4-font-size 7px rgba(48, 48, 48, 0.05);
+			border-radius: $border-radius;
+			background-color: #ffffff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+		}
+	}
+	&__label{
+		position: absolute;
+		left: -1px;
+		top: rem(27);
+		text-align: center;
+		padding: rem(9) rem(13);
+		border-radius: 0 3px 3px 0;
+		background-color: #e7eaee;
+		font-weight: 500;
+	}
+
+	&__group{
+		margin-bottom: rem(35);
+	}
+	&__title-group{
+		color: #858585;
+		font-weight: 500;
+		width: rem(100);
+		margin-bottom: rem(10);
+	}
+	&__btn-wrap{
+		display: flex;
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-sm;
+		margin-left: 10px;
+		margin-right: 10px;
+		flex-grow: 1;
+		margin-bottom: rem(20);
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+
+	&__color{
+		.row{
+
+			margin-left: -8px;
+			margin-right: -8px;
+		}
+	}
+}
+.radio-input{
+	margin-left: 8px;
+	margin-right: 8px;
+	cursor: pointer;
+	flex-grow: 1;
+	&__input{
+		@extend .invisible;
+	}
+	&__title{
+		font-weight: 500;
+		text-align: center;
+		padding: rem(15) rem(10);
+		border-radius: 3px;
+		background-color: #e7eaee;
+		border: 1px solid #e7eaee;
+		display: block;
+	}
+	&__input:checked ~ &__title{
+		border: 1px solid #1e91d0;
+		background-color: #f7f9fc;
+	}
+}

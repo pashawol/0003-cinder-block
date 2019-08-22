@@ -19,7 +19,7 @@ jQuery(document).ready(function ($) {
 
 	JSCCommon.CustomInputFile(); 
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/1.png);"></div>')
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/2.png);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
@@ -251,6 +251,11 @@ jQuery(document).ready(function ($) {
 				return false;
 			});
 			// /form
+
+			$(".form-wrap__toggle").click(function(){
+				$(".form-wrap__toggle-block").toggle()
+			})
+		 
 });
 JSCCommon = {
 	// часть вызов скриптов здесь, для использования при AJAX
@@ -262,6 +267,10 @@ JSCCommon = {
 	magnificPopupCall: function () {
 		$(".link-modal").click(function(){
 			$($(this).data("src")).find(".order").val( $(this).data("order"))
+			 $(this).parents('.s-prod-head')
+			? $($(this).data("src")).find(".color").val( $(this).parents('.s-prod-head').find(".radio-input__input:checked").val())
+			: $($(this).data("src")).find(".color").val('')
+			
 		})
 		$(".link-modal").fancybox({
 			arrows: false,

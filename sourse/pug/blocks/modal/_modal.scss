@@ -156,6 +156,38 @@
 		}
 	}
 }
+
+#modal-one-click{
+	.col{
+		padding: 0 !important;
+	}
+	.h6{
+		max-width: none !important;
+		padding-bottom: 1rem;
+	}
+	form{
+
+		margin-left: auto;
+		margin-right: auto;
+		max-width: rem(380);
+	}
+	.form-wrap{
+		&__input{
+
+		}
+		&__btn{
+			margin-top: 0;
+			border-radius: 0 3px 3px 0;
+			&::before,
+			&::after{
+				border-radius: 0 3px 3px 0;
+
+			}
+			box-shadow: none;
+			text-shadow: none;
+		}
+	}
+}
 a {
 	outline: 0 !important;
 }
