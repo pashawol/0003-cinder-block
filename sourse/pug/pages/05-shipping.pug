@@ -35,7 +35,16 @@ block pagecontent
 			+breadcrumb("Главная",title) 
 	+s-shipping-page
 	+s-price
-	+s-about-page()
+	+s-about-page()(class="s-about-page--page") 
+		h3.fw-500
+			strong.text-primary Звоните, чтобы обсудить
+			| 
+			| материал, количество и&nbsp;стоимость со&nbsp;специалистом
+		
+		br
+		.h5
+			a(href="tel:").text-body.strong +7 3519 45-52-03
+		p Мы работаем ежедневно, с 9:00 до 20:00
 	//- +s-contact()
 	+footer()
 
