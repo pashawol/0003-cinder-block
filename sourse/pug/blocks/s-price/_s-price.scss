@@ -1,0 +1,87 @@
+.s-price {
+	position: relative;
+	z-index: 2;
+		 h3{
+			 font-weight: 500;
+			 padding-bottom: rem(30);
+			 @include media-breakpoint-up(sm) {
+				 text-align: left;
+			 }
+			 text-align: center;
+		 }
+	&__group{
+
+		padding-bottom: rem(30);
+	}
+	&__group-title{
+		@extend .h5;
+		font-weight: bold;
+		// margin-right: rem(-20);
+		padding-bottom: rem(20);
+	}
+	&__icon-wrap{
+		width: rem(42px);
+		height: rem(42px);
+		border-radius: rem(50);
+		background-color: $success;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-right: rem(20);
+		flex-shrink: 0;
+		.icon{
+			color: #ffffff;
+			font-size: rem(20);
+		}
+	}
+	font-weight: 500;
+	li{
+		list-style-type: none;
+		position: relative;
+		padding-left: rem(20);
+		padding-bottom: rem(5);
+		&::before{
+			content: ''; 
+			position: absolute;
+			left: 0;
+			top: rem(7);
+			background-size: 100% 100%;
+			background-image: url(../img/svg/Polygon_2.svg);
+			
+			width: rem(12);
+			height: rem(13);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+	&__group-item{
+		display: flex;
+		align-items: center;
+		padding-bottom: rem(30);
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+}

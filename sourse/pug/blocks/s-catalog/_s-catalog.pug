@@ -28,6 +28,13 @@ mixin prod-tr(t1, t2)
 	tr
 		td= t1
 		td= t2
+
+mixin s-catalog-body()
+	// start s-catalog
+	+b.s-catalog.section&attributes(attributes)
+		.container.lazy-background
+			block
+	// end s-catalog
 mixin s-catalog()
 	// start s-catalog
 	+b.SECTION.s-catalog--main-page.section#s-catalog&attributes(attributes)
@@ -70,11 +77,14 @@ mixin s-catalog()
 	// end s-catalog
 
 
-mixin s-catalog-body()
-	// start s-catalog
-	+b.s-catalog.section&attributes(attributes)
-		.container.lazy-background
-			block
-	// end s-catalog
 
 
+
+mixin s-catalog-with()
+	+s-catalog-body()
+		h3.fw-500 С этим товаром заказывают
+		+e.slider--js
+			+prod-slide("prod-1.jpg","Цемент","","240 руб.","text-center",'1 мешок','Заказать','')(class="link-modal" data-src="#modal-order" href="javascript:;" data-order="Заказать Цемент")
+			+prod-slide("prod-2.jpg","Песок","","860 руб.","text-center",'Бигбэг 1 тонна','Заказать','')( data-src="#modal-order" href="javascript:;" data-order="Заказать Песок")
+			+prod-slide("prod-3.jpg","Перемычки","","700 руб.","text-center",'1 шт','Заказать','')(class="link-modal" data-src="#modal-order" href="javascript:;" data-order="Заказать Перемычки")
+			+prod-slide("prod-4.jpg","Сетка кладочная Streck 20 m","","240 руб.","text-center",'90 мм','Заказать','')( class="link-modal" data-src="#modal-order" href="javascript:;" data-order="Заказать- Сетка кладочная Streck 20 m")

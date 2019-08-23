@@ -52,19 +52,21 @@ mixin s-about-page()
 							+e.text--name.--girl Зоя
 							+e.text--prof специалист «А Блок»
 				+e.col-text.col-lg-6
-
-					+e.right-block
-						h2
-							strong.text-primary Воспользуйтесь 
-							| 
-							| калькулятором
-						.h5.text-secondary Чтобы рассчитать необходимое количество материала и&nbsp;стоимость
-						+e.btn.btn.btn-primary(href="#") Перейти в калькулятор
-						.h6.fw-500 Или звоните, чтобы обсудить материал, количество и&nbsp;стоимость со&nbsp;специалистом
-						br
-						.h5
-							a(href="tel:").text-body.strong +7 3519 45-52-03
-						p Мы работаем ежедневно, с 9:00 до 20:00
+					if block
+						block
+					else
+						+e.right-block
+							h2
+								strong.text-primary Воспользуйтесь 
+								| 
+								| калькулятором
+							.h5.text-secondary Чтобы рассчитать необходимое количество материала и&nbsp;стоимость
+							+e.btn.btn.btn-primary(href="#") Перейти в калькулятор
+							.h6.fw-500 Или звоните, чтобы обсудить материал, количество и&nbsp;стоимость со&nbsp;специалистом
+							br
+							.h5
+								a(href="tel:").text-body.strong +7 3519 45-52-03
+							p Мы работаем ежедневно, с 9:00 до 20:00
 	// end s-about
 
 

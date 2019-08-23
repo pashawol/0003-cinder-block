@@ -1,0 +1,23 @@
+mixin s-shipping-page()
+	// start s-shipping-page
+	+b.SECTION.s-shipping-page.section#s-shipping-page&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h1
+					strong.text-primary Доставляем и&nbsp;разгружаем 
+					| 
+					| шлакоблок манипуляторами  в&nbsp;течение суток
+			.row.justify-content-between
+				mixin item(i,t,p)
+					+e.col.col-xl-auto.col-md-4
+						+e.item
+							+pic('shipping-page-'+ i,'png')
+							+e.title--item= t
+							+e.text--item= p
+				+item("1",'Вы звоните нам ','или оставляете заявку на сайте ')
+				+item("2",'Мы уточняем, сколько ',' и когда вам нужно материала')
+				+item("3",'Доставляем ','в удобное для вас место и время')
+			+e.foot.lazy-background
+				+e.title--foot Доставка оплачивается наличными при получении заказа
+				+e.text--foot Стоимость доставки рассчитывается индивидуально при оформлении заказа
+	// end s-shipping-page

@@ -150,7 +150,7 @@
 				position: absolute;
 				pointer-events: none;
 			}
-			&.lazy-background{ 
+			&.visible{ 
 				@include media-breakpoint-up(lg) { 
 				&::after{
 					content: url(../img/@2x/category-after.png);

@@ -1,5 +1,23 @@
 .s-prod-head {
+	.container{
+		// position: absolute;
+		position: relative;
+		&::after,
+		&::before{
+			position: absolute;
+			pointer-events: none;
+		}
+		&.visible{ 
+			@include media-breakpoint-up(lg) { 
+			&::after{
+				content: url(../img/@2x/category-after.png);
+				left: 100%;
+				top: 0;
+			} 
 		 
+		}
+	} 
+		}
 	&__title{
 		@extend .h3;
 		font-weight: 500;

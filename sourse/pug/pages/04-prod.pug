@@ -101,15 +101,7 @@ block pagecontent
 						.h6 Бесплатное хранение —
 						+e.small на&nbsp;территории компании  до&nbsp;12&nbsp;месяцев
 	+prod-body
-	+s-catalog-body()(class="")
-		h3.fw-500 С этим товаром заказывают
-		+e.slider--js
-			+prod-slide("prod-1.jpg","Цемент","","240 руб.","text-center",'1 мешок','Заказать','')(class="link-modal" data-src="#modal-order" href="javascript:;" data-order="Заказать Цемент")
-			+prod-slide("prod-2.jpg","Песок","","860 руб.","text-center",'Бигбэг 1 тонна','Заказать','')( data-src="#modal-order" href="javascript:;" data-order="Заказать Песок")
-			+prod-slide("prod-3.jpg","Перемычки","","700 руб.","text-center",'1 шт','Заказать','')(class="link-modal" data-src="#modal-order" href="javascript:;" data-order="Заказать Перемычки")
-			+prod-slide("prod-4.jpg","Сетка кладочная Streck 20 m","","240 руб.","text-center",'90 мм','Заказать','')( class="link-modal" data-src="#modal-order" href="javascript:;" data-order="Заказать- Сетка кладочная Streck 20 m")
-			
-
+	+s-catalog-with()(class="")
 	+s-about-page()
 	//- +s-contact()
 	+footer()

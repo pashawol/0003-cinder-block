@@ -227,7 +227,8 @@ a {
 		cursor: pointer;
 		text-decoration: underline;
 		:hover {
-			display: none;
+			text-decoration: none;
+			// display: none;
 		}
 	}
 }

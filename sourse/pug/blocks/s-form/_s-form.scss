@@ -63,13 +63,21 @@
 
 
 		.tabs{
-	 
+			&__caption{
+			 
+				@include media-breakpoint-up(md) {
+					max-width: 100%;
+				}
+				max-width: rem(240);
+			}
 			&__btn{
 			 
 				@include media-breakpoint-up(sm) {
 					flex: 0 0 25%;
 					min-width: 1%;
 				} 
+				min-width: 25%;
+				max-width: 49%;
 				@include media-breakpoint-down(sm) {
 					&:nth-child(1){
 						border-radius: 3px 0 0 0;
