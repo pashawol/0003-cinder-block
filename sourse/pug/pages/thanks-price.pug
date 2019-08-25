@@ -22,10 +22,10 @@ include ../blocks/s-price/_s-price.pug
 include ../blocks/s-calc/_s-calc.pug
 //- include ../blocks/s-categories/_s-categories.pug
 block variables
-	- let  mainPage= null
+	- let  mainPage= "thanks-page"
 	
 block title
-	- let title= 'Калькулятор'
+	- let title= 'Спасибо'
 	title= title
 
 block pagecontent
@@ -33,18 +33,19 @@ block pagecontent
 	+header()
 		+top-line()
 		.container
-			+breadcrumb("Главная",title) 
-	+s-calc
-	+s-about-page()(class="s-about-page--page") 
-		h3.fw-500
-			strong.text-primary Звоните, чтобы обсудить
-			| 
-			| материал, количество и&nbsp;стоимость со&nbsp;специалистом
-		
-		br
-		.h5
-			a(href="tel:").text-body.strong +7 3519 45-52-03
-		p Мы работаем ежедневно, с 9:00 до 20:00
+			nav( class="breadcrumb h6 justify-content-md-left justify-content-center")
+				a(href="/") Вернуться на сайт
+	+b.thanks.section
+		.container
+			+b.section-title.text-center
+				h1 Иван, спасибо, мы&nbsp;приняли вашу заявку!
+				+e.text Мы&nbsp;уже отправили вам каталог и&nbsp;прайс на&nbsp;шлакоблок.
+					br
+					| Специалист Зоя перезвонит вам, чтобы обсудить с&nbsp;вами объем материала, стоимость и&nbsp;условия поставки. 
+					br
+					| Удачного дня!
+			+e.img-wrap
+				+pic("thanks-price",'png','','',0)
 	//- +s-contact()
 	+footer()
 

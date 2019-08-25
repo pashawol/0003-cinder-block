@@ -29,8 +29,7 @@ mixin s-about()
 						strong Давайте обсудим вашу задачу. 
 						| 
 						|  Мы&nbsp;подскажем, какой шлакоблок&nbsp;вам подойдет, рассчитаем объемы и&nbsp;стоимость.
-					+form-wrap()
-						input(type="hidden" class='order' name='order' value="Обсудить задачу")
+					+form-wrap("Обсудить задачу")
 						+e.row.row
 							.col-md-6
 								+input("+7 (900) 444-44-44","tel")(required)

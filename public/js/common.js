@@ -19,25 +19,10 @@ jQuery(document).ready(function ($) {
 
 	JSCCommon.CustomInputFile(); 
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/5.png);"></div>')
+	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/5.png);"></div>')
 	// /добавляет подложку для pixel perfect
 
-
-	
-	// var url = document.location.href;
-	// $.each($(".top-nav__nav a "), function () {
-
-	// 	if (this.href == url) {
-	// 		if ($(this).hasClass("top-nav__link") == true) {
-
-	// 			$(this).addClass('top-nav__link-active');
-	// 		}
-	// 		if ($(this).hasClass("footer__link") == true) {
-
-	// 			$(this).addClass('footer__link-active');
-	// 		} 
-	// 	}; 
-	// }); 
+ 
  
 	// /закрыть/открыть мобильное меню
 
@@ -329,7 +314,7 @@ $(".s-calc  .link-modal").click(function(){
 		)
 	}
 	
-	parentVal(".choose-type",".choose-type")
+	parentVal(".choose-type",".choose-type",'')
 	parentText(".value-js",".result", 'м3')
 	parentText(".cost",".cost",'рублей')
 	parentVal(".length",".length" , 'м')
@@ -368,17 +353,35 @@ $(".s-calc  .link-modal").click(function(){
 				var th = $(this);
 				th.find('.utm_source').val(gets['utm_source']);
 				th.find('.utm_term').val(gets['utm_term']);
+				var  valOrder = th.find('.order').val();
+				var  valTime = th.find('[name="time"]').val(); 
 				$.ajax({
 					type: "POST",
 					url: 'action.php', //Change
 					data: th.serialize()
 				}).success(function () { 
-					if(!$('[name="time"]').val('')){ 
-						window.location.replace("/thanks-time.html");
-					} 
-					else if($('[name="time"]').val('')){ 
-						window.location.replace("/thanks.html");
-					}
+					
+					// if(valOrder == 'Получить каталог и прайс'){ 
+					// 	// console.log(valOrder + "1");
+					// 	window.location.replace("/thanks-price.html");
+					// }
+					// else if(valOrder == 'Заказать звонок в шапке' 
+					// 				|| valOrder == 'Заказать звонок в подвале' 
+					// 				|| valOrder == "Обсудить задачу") {
+
+					// 		window.location.replace("/thanks.html");
+					// 	}
+					// 	else{
+					// 	if(th.parent().is("#modal-one-click") 
+					// 			|| th.parent().is("#modal-order")
+					// 			|| th.parent().is("#modal-order-calc")
+					// 			){
+
+					// 				window.location.replace("/thanks-order.html");
+					// 			}
+						
+					// }
+				 
 
 					setTimeout(function () { 
 						th.trigger("reset"); 
