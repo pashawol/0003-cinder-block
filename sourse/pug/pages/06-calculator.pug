@@ -19,12 +19,13 @@ include ../blocks/s-about/_s-about.pug
 include ../blocks/s-prod-head/_s-prod-head.pug
 include ../blocks/s-shipping-page/_s-shipping-page.pug
 include ../blocks/s-price/_s-price.pug
+include ../blocks/s-calc/_s-calc.pug
 //- include ../blocks/s-categories/_s-categories.pug
 block variables
 	- let  mainPage= null
 	
 block title
-	- let title= 'Доставка и оплата'
+	- let title= 'Калькулятор'
 	title= title
 
 block pagecontent
@@ -33,8 +34,7 @@ block pagecontent
 		+top-line()
 		.container
 			+breadcrumb("Главная",title) 
-	+s-shipping-page
-	+s-price
+	+s-calc
 	+s-about-page()(class="s-about-page--page") 
 		h3.fw-500
 			strong.text-primary Звоните, чтобы обсудить

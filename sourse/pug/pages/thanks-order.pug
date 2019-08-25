@@ -19,12 +19,13 @@ include ../blocks/s-about/_s-about.pug
 include ../blocks/s-prod-head/_s-prod-head.pug
 include ../blocks/s-shipping-page/_s-shipping-page.pug
 include ../blocks/s-price/_s-price.pug
+include ../blocks/s-calc/_s-calc.pug
 //- include ../blocks/s-categories/_s-categories.pug
 block variables
-	- let  mainPage= null
+	- let  mainPage= "thanks-page"
 	
 block title
-	- let title= 'Доставка и оплата'
+	- let title= 'Спасибо'
 	title= title
 
 block pagecontent
@@ -32,19 +33,14 @@ block pagecontent
 	+header()
 		+top-line()
 		.container
-			+breadcrumb("Главная",title) 
-	+s-shipping-page
-	+s-price
-	+s-about-page()(class="s-about-page--page") 
-		h3.fw-500
-			strong.text-primary Звоните, чтобы обсудить
-			| 
-			| материал, количество и&nbsp;стоимость со&nbsp;специалистом
-		
-		br
-		.h5
-			a(href="tel:").text-body.strong +7 3519 45-52-03
-		p Мы работаем ежедневно, с 9:00 до 20:00
+			nav( class="breadcrumb h6 justify-content-md-left justify-content-center")
+				a(href="/") Вернуться на сайт
+	+b.thanks.section
+		.container
+			+b.section-title.text-center
+				h1 Иван, спасибо, мы&nbsp;приняли вашу заявку!
+				+e.text Специалист Зоя перезвонит в&nbsp;ближайшее время и&nbsp;обсудит с&nbsp;вами заказ. Удачного дня!
+				+pic("thanks-img",'png','','',0)
 	//- +s-contact()
 	+footer()
 
