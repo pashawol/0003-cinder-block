@@ -1,0 +1,118 @@
+.s-calc {
+	.section-title{
+		margin-left: auto;
+		margin-right: auto;
+		max-width: rem(560);
+		padding-bottom: rem(60);
+	}
+	.container{
+		position: relative;
+		z-index: 2;
+		&::after,
+		&::before{
+				content: '';
+				position: absolute;
+				z-index: -1; 
+		} 
+		@include media-breakpoint-up(lg) { 
+			&::before{
+				content: url(../img/@2x/shipping-page-before.png);
+			 
+				left: rem(-70);
+				top: rem(90);
+			} 
+			&::after{
+				content: url(../img/@2x/category-after.png);
+				
+				right: rem(-190);
+				top: rem(120);
+			}
+		} 
+	}
+
+	&__col{
+		margin-bottom: rem(60);
+		&:nth-child(2){
+			&::after,
+			&::before{
+					content: '';
+					position: absolute;
+					z-index: -1; 
+			}
+			
+			&::before{
+					content: url(../img/@2x/money.png); 
+					right: rem(-170);
+					bottom: 0;
+			} 
+		}
+	}
+	.form-wrap{
+		box-shadow: 0 2px $h4-font-size 7px rgba(48, 48, 48, 0.05);
+		border-radius: $border-radius;
+		background-color: #ffffff;
+		@include media-breakpoint-up(sm) {
+
+			padding: rem(60) rem(60);
+			margin-left: 0;
+			margin-right: 0;
+		}
+		padding: rem(40) rem(15);
+		margin-left: -15px;
+		margin-right: -15px;
+		form{
+
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+		}
+		height: 100%;
+		&__btn{
+			max-width: 100%;
+			margin-top: 0;
+		}
+		&__title-strong{
+			text-align: center;
+			@extend .h5;
+			font-weight: bold;
+			padding-bottom: 1rem;
+
+		}
+		select,
+		&__input{
+			text-align: center !important;
+		}
+		&__total{
+			margin-top: auto;
+		}
+	}
+	.container{
+		position: relative;
+
+	}
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+}

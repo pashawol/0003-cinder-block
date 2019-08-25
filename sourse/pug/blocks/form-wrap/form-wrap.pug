@@ -7,6 +7,7 @@ mixin input(placeholder,  t='text', label, name= t)
 	mixin t(t='text',placeholder, name= t)
 		if t== "textarea"
 			+e.TEXTAREA.input.form-control(placeholder= placeholder name= name)&attributes(attributes)
+
 		else
 			+e.INPUT.input(type= t placeholder= placeholder name= name)&attributes(attributes)
 	+e.input-wrap
@@ -17,10 +18,33 @@ mixin input(placeholder,  t='text', label, name= t)
 		else
 			+t(t,placeholder, name)&attributes(attributes)
 	// +e.input-wrap
+mixin select(label,name= t)
+	+e.input-wrap
+		if label
+			label
+				+e.SPAN.title= label
+				+e.SELECT.input.form-control(name= name)&attributes(attributes)
+					block
+		else
+			+e.SELECT.input.form-control(name= name)&attributes(attributes)
+				block
+	// +e.input-wrap
 
 mixin inputName()
 	+input("Иван","text",'Как к вам обращаться?',"name")(required)
-
+mixin order-block()
+	input(type="hidden" class='order' name='order' value="")
+	input(type="hidden" class='color' name='color' value="") 
+	block
+	+inputName()
+	+form-tabs-modal()
+	.h6 Специалист компании &laquo;АБлок&raquo; Зоя позвонит  вам прямо сейчас или в&nbsp;другое рабочее время: мы&nbsp;работаем ежедневно с&nbsp;09:00 до&nbsp;20:00
+	+e.toggle 
+		span Напишите, что вам нужно, если хотите
+	+e.toggle-block
+		+input("Текст сообщения","textarea",'',"comment")(required)
+	+e.btn(type='submit') Обсудить заказ
+	+polite
 
 mixin form-tabs()
 	.tabs

@@ -26,19 +26,28 @@ mixin modal()
 					+e.text--lg и&nbsp;удобное время для звонка
 				//- +e.text.h6 Администратор Ольга позвонит вам прямо сейчас или в&nbsp;другое рабочее время:
 				+e.text--sm Специалист компании &laquo;АБлок&raquo; Зоя позвонит  вам прямо сейчас или в&nbsp;другое рабочее время: мы&nbsp;работаем ежедневно с&nbsp;09:00 до&nbsp;20:00
-				 
-				input(type="hidden" class='order' name='order' value="")
-				input(type="hidden" class='color' name='color' value="") 
-				+inputName()
-				+form-tabs-modal()
-				.h6 Специалист компании &laquo;АБлок&raquo; Зоя позвонит  вам прямо сейчас или в&nbsp;другое рабочее время: мы&nbsp;работаем ежедневно с&nbsp;09:00 до&nbsp;20:00
-				+e.toggle 
-					span Напишите, что вам нужно, если хотите
-				+e.toggle-block
-					+input("Текст сообщения","textarea",'',"comment")(required)
-				+e.btn(type='submit') Обсудить заказ
-				+polite
+				+order-block()
+				
 	// #modal-order
+
+
+	+form-wrap()(id="modal-order-calc" class="  modal-win modal-form" )
+		.row.no-gutters
+			.col-6.section-bg.d-none.d-lg-block(data-bg="img/@2x/modal-2.jpg")
+			.col
+				+e.top-title Сообщите, что вам нужно заказать
+				+order-block()
+					input(type="hidden" class='choose-type' name='choose-type' value="") 
+					input(type="hidden" class='cost' name='cost' value="") 
+					input(type="hidden" class='result' name='result' value="") 
+					input(type="hidden" class='length' name='length' value="") 
+					input(type="hidden" class='width' name='width' value="") 
+					input(type="hidden" class='thickness' name='thickness' value="") 
+					input(type="hidden" class='windows' name='windows' value="") 
+					input(type="hidden" class='doors' name='doors' value="") 
+	// #modal-order-calc
+
+
 	+b.modal-win--tech(id="modal-tech" class="text-center" )
 		.h3 Соблюдаем технологию
 			br

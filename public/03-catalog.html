@@ -54,7 +54,7 @@
                     <div class="toggle-menu-mobile"><span></span>
                       <ul>
                         <li><a href="02-categories.html">Каталог</a></li>
-                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="05-shipping.html">Доставка и оплата</a></li>
                       </ul>
                     </div>
                   </div>
@@ -426,9 +426,9 @@
             </div>
             <div class="footer__col col-sm-auto col-6 d-none d-sm-block">
               <ul>
-                <li><a href="#">Каталог</a></li>
-                <li><a href="#">Доставка и оплата</a></li>
-                <li><a href="#">Калькулятор</a></li>
+                <li><a href="02-categories.html">Каталог</a></li>
+                <li><a href="05-shipping.html">Доставка и оплата</a></li>
+                <li><a href="06-calculator.html">Калькулятор</a></li>
               </ul>
             </div>
             <div class="footer__col col-sm-auto">
@@ -588,6 +588,92 @@
       </form>
     </div>
     <!-- #modal-order-->
+    <div class="form-wrap modal-win modal-form" id="modal-order-calc">
+      <form>
+        <input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+        <input class="utm_source" type="hidden" name="utm_source"/>
+        <input class="utm_term" type="hidden" name="utm_term"/>
+        <div class="row no-gutters">
+          <div class="col-6 section-bg d-none d-lg-block" data-bg="img/@2x/modal-2.jpg"></div>
+          <div class="col">
+            <div class="form-wrap__top-title">Сообщите, что вам нужно заказать
+            </div>
+            <input class="order" type="hidden" name="order" value=""/>
+            <input class="color" type="hidden" name="color" value=""/>
+            <input class="choose-type" type="hidden" name="choose-type" value=""/>
+            <input class="cost" type="hidden" name="cost" value=""/>
+            <input class="result" type="hidden" name="result" value=""/>
+            <input class="length" type="hidden" name="length" value=""/>
+            <input class="width" type="hidden" name="width" value=""/>
+            <input class="thickness" type="hidden" name="thickness" value=""/>
+            <input class="windows" type="hidden" name="windows" value=""/>
+            <input class="doors" type="hidden" name="doors" value=""/>
+            <div class="form-wrap__input-wrap">
+              <label><span class="form-wrap__title">Как к вам обращаться?</span><input class="form-wrap__input" type="text" placeholder="Иван" name="name" required="required"/>
+              </label>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="tabs">
+              <div class="form-wrap__group"> 
+                <div class="tabs__caption">
+                  <div class="tabs__btn active">
+                    <svg class="icon icon-tel2 ">
+                      <use xlink:href="img/svg/sprite.svg#tel2"></use>
+                    </svg>SMS
+                  </div>
+                  <div class="tabs__btn">
+                    <svg class="icon icon-whatsapp ">
+                      <use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+                    </svg>WhatsApp
+                  </div>
+                  <div class="tabs__btn">
+                    <svg class="icon icon-viber ">
+                      <use xlink:href="img/svg/sprite.svg#viber"></use>
+                    </svg>Viber
+                  </div>
+                </div>
+              </div>
+              <div class="tabs__wrap">
+                <div class="tabs__content active">
+                  <div class="form-wrap__input-wrap">
+                    <label><span class="form-wrap__title">Введите телефон:</span><input class="form-wrap__input" type="tel" placeholder="+7 (900) 444-44-44" name="tel" required="required"/>
+                    </label>
+                  </div>
+                  <!-- +e.input-wrap-->
+                </div>
+                <div class="tabs__content">
+                  <div class="form-wrap__input-wrap">
+                    <label><span class="form-wrap__title">Введите whatsapp:</span><input class="form-wrap__input" type="tel" placeholder="+7 (900) 444-44-44" name="whatsapp"/>
+                    </label>
+                  </div>
+                  <!-- +e.input-wrap-->
+                </div>
+                <div class="tabs__content">
+                  <div class="form-wrap__input-wrap">
+                    <label><span class="form-wrap__title">Введите viber:</span><input class="form-wrap__input" type="tel" placeholder="+7 (900) 444-44-44" name="viber"/>
+                    </label>
+                  </div>
+                  <!-- +e.input-wrap-->
+                </div>
+              </div>
+            </div>
+            <div class="h6">Специалист компании &laquo;АБлок&raquo; Зоя позвонит  вам прямо сейчас или в&nbsp;другое рабочее время: мы&nbsp;работаем ежедневно с&nbsp;09:00 до&nbsp;20:00</div>
+            <div class="form-wrap__toggle"> <span>Напишите, что вам нужно, если хотите</span>
+            </div>
+            <div class="form-wrap__toggle-block">
+              <div class="form-wrap__input-wrap"><textarea class="form-wrap__input form-control" placeholder="Текст сообщения" name="comment" required="required"></textarea>
+              </div>
+              <!-- +e.input-wrap-->
+            </div>
+            <button class="form-wrap__btn" type="submit">Обсудить заказ
+            </button>
+            <div class="form-wrap__polite text-secondary"> Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих персональных данных и&nbsp;соглашаетесь с&nbsp;<a class="tdu text-secondary" href="privacy-policy.pdf" target="_blank">Политикой конфиденциальности</a>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- #modal-order-calc-->
     <div class="modal-win modal-win--tech text-center" id="modal-tech">
       <div class="h3">Соблюдаем технологию<br/>производства и хранения</div>
       <div class="row no-gutters">
