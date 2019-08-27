@@ -19,7 +19,7 @@ jQuery(document).ready(function ($) {
 
 	JSCCommon.CustomInputFile(); 
 	// добавляет подложку для pixel perfect
-	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/5.png);"></div>')
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/3.png);"></div>')
 	// /добавляет подложку для pixel perfect
 
  
@@ -361,26 +361,26 @@ $(".s-calc  .link-modal").click(function(){
 					data: th.serialize()
 				}).success(function () { 
 					
-					// if(valOrder == 'Получить каталог и прайс'){ 
-					// 	// console.log(valOrder + "1");
-					// 	window.location.replace("/thanks-price.html");
-					// }
-					// else if(valOrder == 'Заказать звонок в шапке' 
-					// 				|| valOrder == 'Заказать звонок в подвале' 
-					// 				|| valOrder == "Обсудить задачу") {
+					if(valOrder == 'Получить каталог и прайс'){ 
+						// console.log(valOrder + "1");
+						window.location.replace("/thanks-price.html");
+					}
+					else if(valOrder == 'Заказать звонок в шапке' 
+									|| valOrder == 'Заказать звонок в подвале' 
+									|| valOrder == "Обсудить задачу") {
 
-					// 		window.location.replace("/thanks.html");
-					// 	}
-					// 	else{
-					// 	if(th.parent().is("#modal-one-click") 
-					// 			|| th.parent().is("#modal-order")
-					// 			|| th.parent().is("#modal-order-calc")
-					// 			){
+							window.location.replace("/thanks.html");
+						}
+						else{
+						if(th.parent().is("#modal-one-click") 
+								|| th.parent().is("#modal-order")
+								|| th.parent().is("#modal-order-calc")
+								){
 
-					// 				window.location.replace("/thanks-order.html");
-					// 			}
+									window.location.replace("/thanks-order.html");
+								}
 						
-					// }
+					}
 				 
 
 					setTimeout(function () { 

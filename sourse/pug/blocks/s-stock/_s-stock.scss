@@ -1,5 +1,9 @@
 .s-stock {
 		 background-color: #dbd6d5;
+		 &__left-col{
+			 z-index: 5;
+			 position: relative;
+		 }
 		 .container{
 			padding-bottom: 0;
 			@include media-breakpoint-up(md) {
@@ -135,7 +139,7 @@
 				}
 				padding: rem(48) rem(30) rem(20);
 			 @include media-breakpoint-only(md) {
-				 margin-left: rem(-340);
+				 margin-left: rem(-310);
 				 padding: rem(68) rem(30) rem(40);
 				 margin-top: rem(180);
 			 }
@@ -206,7 +210,8 @@
 	@include media-breakpoint-down(lg) {}
 	@include media-breakpoint-down(md) {}
 	@include media-breakpoint-down(sm) {
-		margin-bottom: rem(50);
+		// margin-bottom: rem(50);\
+		z-index: 4;
 	}
 	@include media-breakpoint-down(xs) {} 
 

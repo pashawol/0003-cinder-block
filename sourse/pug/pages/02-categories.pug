@@ -43,28 +43,28 @@ block pagecontent
 				| 
 				| все необходимое для постройки из&nbsp;шлакоблока
 		.row.justify-content-center
-			mixin item(i,t,p, a="#")
+			mixin item(i,t,p, a)
 				+e.col.col-md-4
-					+e.item(href= a)
+					-const src = (  a || null)
+					+e.item( href = src )
 						+e.DIV.img-wrap
-							//- img.lazy(src="#" data-src=`img/@2x/category-${i}.jpg`, alt="")
 							+pic('category-'+ i,'jpg','bg',"",0)
 						+e.DIV.caption
 							+e.DIV.title= t
 							+e.DIV.text= p
 							block
 				// /+e.col.col-md-4
-			+item('1','Шлакоблок','Для строительства домов, бань, хозпостроек и заборов','#')
+			+item('1','Шлакоблок','Для строительства домов, бань, хозпостроек и заборов','03-catalog.html')
 				+e.small
 					span.text-secondary Наполнитель: 
 					| 
 					div гранитный отсев
-			+item('2','Фасадный камень','Строительный материал для облицовки стен','#')
+			+item('2','Фасадный камень','Строительный материал для облицовки стен')
 				+e.small
 					span.text-secondary Цвета: 
 					| 
 					div красный, серый, желтый, фиолетовый
-			+item('3','Стройматериалы ','Цемент, сетка, сажа','#')
+			+item('3','Стройматериалы ','Цемент, сетка, сажа')
 		+e.shipping-block
 			//- +pic("manipulator_5_tonn_2x",'png',"","lazy",0)
 			div.order-sm-last

@@ -11,7 +11,10 @@
 				max-width: rem(380);
 				@include media-breakpoint-up(md) {
 					text-align: left;
+					margin-left: 0;
 				}
+				margin-left: auto;
+				margin-right: auto;
 				text-align: center;
 				 
 			}
@@ -152,6 +155,10 @@
 						padding-bottom: 3px;
 					}
 				}
+			}
+			&__block-item-text{
+				// font-size: $small;
+				padding-top: rem(16);
 			}
 		@include media-breakpoint-up(xl) {}
 		@include media-breakpoint-up(lg) {}

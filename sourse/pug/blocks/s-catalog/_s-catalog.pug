@@ -1,10 +1,10 @@
-mixin prod-slide(img,title,subtitle,price,classs="col-lg-3 col-sm-6",size,at="подробнее",al="#", item, label, labelclass)
+mixin prod-slide(img,title,subtitle,price,classs="col-lg-3 col-sm-6",size,at="подробнее",al, item, label, labelclass)
 	+e.col(class= classs)
 		+b.prod-item
 			if label
 				+e.label(class= labelclass)= label 
 
-			+e.img-wrap(href="#")
+			+e.img-wrap(href= (al || null))
 				if item
 					+pic(img,'jpg','','lazy',0)
 				else

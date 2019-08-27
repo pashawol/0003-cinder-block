@@ -4,12 +4,18 @@
 		padding-bottom: rem(40);
 		.section-title{
 			padding-bottom: rem(25);
+			 
+		 
 			.row{
 				align-items: center;
 			}
 			.icon{
 				font-size: rem(45);
 				fill: url(#primary-gradient);
+				// margin-top: rem(-5);
+				position: relative;
+				top: rem(-7);
+				left: rem(5);
 			}
 			h2{
 				max-width: em(145);
@@ -35,8 +41,11 @@
 			}
 			.h6{
 				max-width: 150px;
+				line-height: 1.4;
+				margin-bottom: 0;
 				@include media-breakpoint-up(xl) {
-
+					// margin-left: rem(-);
+					padding-left: rem(10);
 					margin-right: rem(30);
 				}
 			}
@@ -221,7 +230,7 @@
 			// padding-top: rem(6);
 		div.order-sm-last{
 				padding: 0;
-				text-align: left;
+				// text-align: left;
 			}
 			padding: rem(6px);
 			padding-bottom: rem(32);
