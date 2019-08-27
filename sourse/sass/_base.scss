@@ -573,6 +573,7 @@ a{
 		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
+		overflow: initial;
 	}
 	.thanks{
 		flex-grow: 1;
