@@ -25,9 +25,9 @@ html {
 	}
 	font-size: $em-base;
 
-	@include media-breakpoint-up(md) {
+	@include media-breakpoint-up(sm) {
+		font-size: 14px;
 	}
-	// font-size: 15px;
 	// font-size: 13px;
 	// @include font-size(1rem);
 }
@@ -563,6 +563,7 @@ a{
 			@include rfs(rem(20));
 			font-weight: 500;
 			margin-bottom: rem(33);
+			line-height: 1.4;
 		}
 	}
 }

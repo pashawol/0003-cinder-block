@@ -23,7 +23,7 @@ mixin prod-slide(img,title,subtitle,price,classs="col-lg-3 col-sm-6",size,at="п
 			+e.btn(href= al)&attributes(attributes)= at
 	// /+e.col
 
-	// если используется таблица с характеристиками
+	//- если используется таблица с характеристиками
 mixin prod-tr(t1, t2)
 	tr
 		td= t1
@@ -71,7 +71,7 @@ mixin s-catalog()
 				+e.foot-block-text 
 					+icon("info")
 					div 
-						a.tdu(href="03-catalog.html") В&nbsp;каталоге  
+						a.tdu(href="02-categories.html") В&nbsp;каталоге  
 						| 
 						| вы&nbsp;также можете выбрать фасадный камень и&nbsp;сопутствующие стройматериалы
 	// end s-catalog
@@ -85,6 +85,6 @@ mixin s-catalog-with()
 		h3.fw-500 С этим товаром заказывают
 		+e.slider--js
 			+prod-slide("prod-1.jpg","Цемент","","240 руб.","text-center",'1 мешок','Заказать','')(class="link-modal" data-src="#modal-order" href="javascript:;" data-order="Заказать Цемент")
-			+prod-slide("prod-2.jpg","Песок","","860 руб.","text-center",'Бигбэг 1 тонна','Заказать','')( data-src="#modal-order" href="javascript:;" data-order="Заказать Песок")
+			+prod-slide("prod-2.jpg","Песок","","860 руб.","text-center",'Бигбэг 1 тонна','Заказать','')(class="link-modal"  data-src="#modal-order" href="javascript:;" data-order="Заказать Песок")
 			+prod-slide("prod-3.jpg","Перемычки","","700 руб.","text-center",'1 шт','Заказать','')(class="link-modal" data-src="#modal-order" href="javascript:;" data-order="Заказать Перемычки")
 			+prod-slide("prod-4.jpg","Сетка кладочная Streck 20 m","","240 руб.","text-center",'90 мм','Заказать','')( class="link-modal" data-src="#modal-order" href="javascript:;" data-order="Заказать- Сетка кладочная Streck 20 m")

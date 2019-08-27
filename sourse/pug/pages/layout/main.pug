@@ -11,7 +11,8 @@ include ../../blocks/top-line/_top-line.pug
 include ../../blocks/top-nav/_top-nav.pug 
 include ../../blocks/header-block/_header-block.pug
 include ../../blocks/s-form/_s-form.pug
-
+block php
+	
 doctype html
 html(lang="ru")
 	head
@@ -40,7 +41,8 @@ html(lang="ru")
 		.main-wrapper
 			block pagecontent
 				h3 content
-		+modal()
+		block notmodal 
+			+modal()
 		//- link(rel="stylesheet", href="fonts/fontello/css/fontello.css")
 		script(src="js/jquery.min.js")
 		script(src="js/lazy.js")

@@ -32,7 +32,7 @@ mixin select(label,name= t)
 
 mixin inputName()
 	+input("Иван","text",'Как к вам обращаться?',"name")(required)
-mixin order-block()
+mixin order-block(btn="Обсудить заказ")
 	input(type="hidden" class='order' name='order' value="")
 	input(type="hidden" class='color' name='color' value="") 
 	block
@@ -43,7 +43,7 @@ mixin order-block()
 		span Напишите, что вам нужно, если хотите
 	+e.toggle-block
 		+input("Текст сообщения","textarea",'',"comment")
-	+e.btn(type='submit') Обсудить заказ
+	+e.btn(type='submit')= btn
 	+polite
 
 mixin form-tabs()
@@ -141,7 +141,7 @@ mixin form-tabs()
 //- wrapper for form
 mixin form-wrap(order)
 	+b.form-wrap&attributes(attributes)
-		form
+		form(action="thanks.php" method="post")
 			if !order 
 				input(type='hidden', class="order", name='order', value=`Заявка  с сайта` ) 
 			else
