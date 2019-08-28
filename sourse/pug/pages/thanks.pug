@@ -170,40 +170,50 @@ block pagecontent
 						if(isset($_POST['name'])) {
 							$name= $_POST['name']
 								?> 
-							<h1><?php echo $name; ?> , спасибо, мы&nbsp;приняли вашу заявку!</h1>
+							<h1><?php echo $name; ?>, спасибо, мы&nbsp;приняли вашу заявку!</h1>
 							<?php
 						}
 						else{	?> 
 							<h1>Cпасибо, мы&nbsp;приняли вашу заявку!</h1>
 								<?php
 						}
-						}
+				
 						if(isset($_POST['formwithtime'])){
 
 						if(!empty($_POST['time'])) {
 						 	?> 
-							<div class="section-title__text">Специалист Зоя перезвонит в&nbsp;указанное время и&nbsp;ответит на&nbsp;ваши вопросы. Удачного дня! </div>
+							<div class="section-title__text">Специалист Зоя перезвонит в&nbsp;указанное время и&nbsp;ответит на&nbsp;Ваши вопросы. Удачного дня! </div>
 							<?php
 						}
 						else{
 								?> 
-								<div class="section-title__text">Специалист Зоя перезвонит в&nbsp;ближайшее время и&nbsp;ответит на&nbsp;ваши вопросы. Удачного дня! </div>
+								<div class="section-title__text">Специалист Зоя перезвонит в&nbsp;ближайшее время и&nbsp;ответит на&nbsp;Ваши вопросы. Удачного дня! </div>
 								<?php
 						}
-					 
+					 		}
 						if(isset($_POST['formorder'])) {
 								?> 
-							<div class="section-title__text">Специалист Зоя перезвонит в&nbsp;ближайшее время и&nbsp;обсудит с&nbsp;вами заказ. Удачного дня!
+							<div class="section-title__text">Специалист Зоя перезвонит в&nbsp;ближайшее время и&nbsp;обсудит с&nbsp;Вами заказ. Удачного дня!
 						</div>
 					 
 							<?php 
 						}
+							if(isset($_POST['formtask'])) {
+								?> 
+							<div class="section-title__text">Специалист Зоя перезвонит в&nbsp;ближайшее время и&nbsp;обсудит с&nbsp;Вами задачу. Удачного дня!
+						</div>
+					 
+							<?php 
+						}
+ 
+						
 						if(isset($_POST['formprice'])) {
 								?> 
-							<div class="section-title__text">Мы&nbsp;уже отправили Вам каталог и&nbsp;прайс на&nbsp;шлакоблок.<br>Специалист Зоя перезвонит вам, чтобы обсудить с&nbsp;вами объем материала, стоимость и&nbsp;условия поставки. <br>Удачного дня!
+								
+							<div class="section-title__text">Мы&nbsp;уже отправили Вам каталог и&nbsp;прайс на&nbsp;шлакоблок.<br>Специалист Зоя перезвонит вам, чтобы обсудить с&nbsp;Вами объем материала, стоимость и&nbsp;условия поставки. <br>Удачного дня!
 						</div>
 						<div class="thanks__img-wrap">
-						<!-- picture-->
+						 
 						<picture> 
 							<source srcset="img/@2x/webp/thanks-price.webp" type="image/webp">
 							<!-- /webp images  --><img src="img/@2x/thanks-price.png" alt="">
