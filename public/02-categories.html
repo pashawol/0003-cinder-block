@@ -82,7 +82,7 @@
         </div>
         <!-- end .top-line-->
         <div class="container">
-          <nav class="breadcrumb"><a class="breadcrumb-item" href="#">Главная</a><span class="breadcrumb-item active">Каталоги</span>
+          <nav class="breadcrumb"><a class="breadcrumb-item" href="/">Главная</a><span class="breadcrumb-item active">Каталоги</span>
           </nav>
         </div>
       </header>
@@ -91,12 +91,12 @@
       <div class="s-catalog section s-catalog s-catalog--page">
         <div class="container lazy-background">
           <div class="section-title text-center">
-            <h2><strong class="text-primary">У&nbsp;нас вы&nbsp;можете купить сразу </strong> 
-              все необходимое для постройки из&nbsp;шлакоблока
+            <h2><strong class="text-primary">У&nbsp;нас вы&nbsp;можете купить&nbsp;сразу </strong> 
+              все необходимое для&nbsp;постройки из&nbsp;шлакоблока
             </h2>
           </div>
           <div class="row justify-content-center">
-              <div class="s-catalog__col col-md-4"><a class="s-catalog__item" href="#">
+              <div class="s-catalog__col col-md-4"><a class="s-catalog__item" href="03-catalog.html">
                 <div class="s-catalog__img-wrap">
                   <!-- picture-->
                   <picture> 
@@ -116,48 +116,52 @@
                 </div></a>
               </div>
               <!-- /+e.col.col-md-4-->
-              <div class="s-catalog__col col-md-4"><a class="s-catalog__item" href="#">
-                <div class="s-catalog__img-wrap">
-                  <!-- picture-->
-                  <picture> 
-                    <source srcset="img/@2x/webp/category-2.webp" type="image/webp"/>
-                    <!-- /webp images  --><img class="object-fit-js" src="img/@2x/category-2.jpg" alt=""/>
-                  </picture>
-                  <!-- /picture-->
+              <div class="s-catalog__col col-md-4">
+                <div class="s-catalog__item">
+                  <div class="s-catalog__img-wrap">
+                    <!-- picture-->
+                    <picture> 
+                      <source srcset="img/@2x/webp/category-2.webp" type="image/webp"/>
+                      <!-- /webp images  --><img class="object-fit-js" src="img/@2x/category-2.jpg" alt=""/>
+                    </picture>
+                    <!-- /picture-->
+                  </div>
+                  <div class="s-catalog__caption">
+                    <div class="s-catalog__title">Фасадный камень
+                    </div>
+                    <div class="s-catalog__text">Строительный материал для облицовки стен
+                    </div>
+                    <div class="s-catalog__small"><span class="text-secondary">Цвета: </span> 
+                      <div>красный, серый, желтый, фиолетовый</div>
+                    </div>
+                  </div>
                 </div>
-                <div class="s-catalog__caption">
-                  <div class="s-catalog__title">Фасадный камень
-                  </div>
-                  <div class="s-catalog__text">Строительный материал для облицовки стен
-                  </div>
-                  <div class="s-catalog__small"><span class="text-secondary">Цвета: </span> 
-                    <div>красный, серый, желтый, фиолетовый</div>
-                  </div>
-                </div></a>
               </div>
               <!-- /+e.col.col-md-4-->
-              <div class="s-catalog__col col-md-4"><a class="s-catalog__item" href="#">
-                <div class="s-catalog__img-wrap">
-                  <!-- picture-->
-                  <picture> 
-                    <source srcset="img/@2x/webp/category-3.webp" type="image/webp"/>
-                    <!-- /webp images  --><img class="object-fit-js" src="img/@2x/category-3.jpg" alt=""/>
-                  </picture>
-                  <!-- /picture-->
+              <div class="s-catalog__col col-md-4">
+                <div class="s-catalog__item">
+                  <div class="s-catalog__img-wrap">
+                    <!-- picture-->
+                    <picture> 
+                      <source srcset="img/@2x/webp/category-3.webp" type="image/webp"/>
+                      <!-- /webp images  --><img class="object-fit-js" src="img/@2x/category-3.jpg" alt=""/>
+                    </picture>
+                    <!-- /picture-->
+                  </div>
+                  <div class="s-catalog__caption">
+                    <div class="s-catalog__title">Стройматериалы 
+                    </div>
+                    <div class="s-catalog__text">Цемент, сетка, сажа
+                    </div>
+                  </div>
                 </div>
-                <div class="s-catalog__caption">
-                  <div class="s-catalog__title">Стройматериалы 
-                  </div>
-                  <div class="s-catalog__text">Цемент, сетка, сажа
-                  </div>
-                </div></a>
               </div>
               <!-- /+e.col.col-md-4-->
           </div>
           <div class="s-catalog__shipping-block">
             <div class="order-sm-last">
               <div class="h5 strong">Доставка с разгрузкой</div>
-              <div class="h6">Максимум на следующий день</div>
+              <div class="h6">Максимум на&nbsp;следующий день</div>
             </div><img class="lazy" src="#" data-src="img/@2x/manipulator_5_tonn_2x.png" alt="">
           </div>
         </div>
@@ -216,7 +220,7 @@
       </footer>
     </div>
     <div class="form-wrap modal-win modal-form" id="modal-call">
-      <form>
+      <form action="thanks.php" method="post">
         <input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
         <input class="utm_source" type="hidden" name="utm_source"/>
         <input class="utm_term" type="hidden" name="utm_term"/>
@@ -229,6 +233,7 @@
             </div>
             <div class="form-wrap__text form-wrap__text--sm">Специалист компании &laquo;АБлок&raquo; Зоя позвонит  вам прямо сейчас или в&nbsp;другое рабочее время: мы&nbsp;работаем ежедневно с&nbsp;09:00 до&nbsp;20:00
             </div>
+            <input type="hidden" name="formwithtime" value="formwithtime"/>
             <div class="form-wrap__input-wrap">
               <label><span class="form-wrap__title">Как к вам обращаться?</span><input class="form-wrap__input" type="text" placeholder="Иван" name="name" required="required"/>
               </label>
@@ -258,14 +263,15 @@
     </div>
     <!-- #modal-call-->
     <div class="form-wrap modal-win modal-form" id="modal-order">
-      <form>
+      <form action="thanks.php" method="post">
         <input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
         <input class="utm_source" type="hidden" name="utm_source"/>
         <input class="utm_term" type="hidden" name="utm_term"/>
+        <input type="hidden" name="formorder" value="formorder"/>
         <div class="row no-gutters">
           <div class="col-6 section-bg d-none d-lg-block" data-bg="img/@2x/modal-2.jpg"></div>
           <div class="col">
-            <div class="form-wrap__top-title">Сообщите, что вам нужно заказать
+            <div class="form-wrap__top-title">Для оформления заказа оставьте Ваши контакты
             </div>
             <input class="order" type="hidden" name="order" value=""/>
             <input class="color" type="hidden" name="color" value=""/>
@@ -326,7 +332,7 @@
               </div>
               <!-- +e.input-wrap-->
             </div>
-            <button class="form-wrap__btn" type="submit">Обсудить заказ
+            <button class="form-wrap__btn" type="submit">Оформить заказ
             </button>
             <div class="form-wrap__polite text-secondary"> Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих персональных данных и&nbsp;соглашаетесь с&nbsp;<a class="tdu text-secondary" href="privacy-policy.pdf" target="_blank">Политикой конфиденциальности</a>
             </div>
@@ -336,10 +342,11 @@
     </div>
     <!-- #modal-order-->
     <div class="form-wrap modal-win modal-form" id="modal-order-calc">
-      <form>
+      <form action="thanks.php" method="post">
         <input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
         <input class="utm_source" type="hidden" name="utm_source"/>
         <input class="utm_term" type="hidden" name="utm_term"/>
+        <input type="hidden" name="formorder" value="formorder"/>
         <div class="row no-gutters">
           <div class="col-6 section-bg d-none d-lg-block" data-bg="img/@2x/modal-2.jpg"></div>
           <div class="col">
@@ -502,14 +509,16 @@
         <div class="h6 fw-500">
              Учитывая, что стоимость шлакоблока это всего лишь ~ 10% от стоимости   <span class="text-secondary"> строительства всего дома, то экономить на качестве стен не имеет смысла</span></div>
       </div>
-      <!-- picture-->
-      <picture> 
-        <source srcset="img/@2x/webp/modal-know-img.webp" type="image/webp" media="(min-width:576px)"/>
-        <source srcset="img/@1x/webp/modal-know-img.webp" type="image/webp"/>
-        <source srcset="img/@2x/modal-know-img.png" type="image/png" media="(min-width:576px)"/>
-        <source srcset="img/@1x/modal-know-img.png" type="image/png"/><img src="img/@2x/modal-know-img.png" alt=""/>
-      </picture>
-      <!-- /picture-->
+      <div class="d-none d-sm-block">
+        <!-- picture-->
+        <picture> 
+          <source srcset="img/@2x/webp/modal-know-img.webp" type="image/webp" media="(min-width:576px)"/>
+          <source srcset="img/@1x/webp/modal-know-img.webp" type="image/webp"/>
+          <source srcset="img/@2x/modal-know-img.png" type="image/png" media="(min-width:576px)"/>
+          <source srcset="img/@1x/modal-know-img.png" type="image/png"/><img src="img/@2x/modal-know-img.png" alt=""/>
+        </picture>
+        <!-- /picture-->
+      </div>
     </div>
     <!-- #modal-know-->
     <div class="modal-win modal-win--sm text-center" id="modal-pay">
@@ -525,11 +534,12 @@
     </div>
     <!-- #modal-pay-->
     <div class="form-wrap modal-win modal-win--sm modal-win modal-form" id="modal-one-click">
-      <form>
+      <form action="thanks.php" method="post">
         <input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
         <input class="utm_source" type="hidden" name="utm_source"/>
         <input class="utm_term" type="hidden" name="utm_term"/>
         <input class="color" type="hidden" name="color" value=""/>
+        <input type="hidden" name="formorder" value="formorder"/>
         <div class="h5 strong">Введите номер телефона</div>
         <div class="h6 fw-500">Специалист перезвонит и оформит заказ</div>
         <div class="row no-gutters">

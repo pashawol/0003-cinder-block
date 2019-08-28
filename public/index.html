@@ -390,7 +390,7 @@
                       <div class="s-types__head">
                         <div class="s-types__title">Для заборов 
                         </div>
-                        <div class="s-types__text">изготавливаем блоки с различной поверхностью
+                        <div class="s-types__text">изготавливаем<br/> блоки с&nbsp;различной поверхностью
                         </div>
                       </div>
                     </div>
@@ -456,7 +456,7 @@
           </div>
           <div class="s-catalog__slider s-catalog__slider--js">
             <div class="s-catalog__col">
-              <div class="prod-item"><a class="prod-item__img-wrap" href="#"><img src="#" data-lazy="img/@2x/s-catalog-1.jpg" alt=""/></a>
+              <div class="prod-item"><a class="prod-item__img-wrap" href="04-prod.html"><img src="#" data-lazy="img/@2x/s-catalog-1.jpg" alt=""/></a>
                 <div class="prod-item__title">Шлакоблок 50%
                   <div class="prod-item__sub">пустотности «А Блок»
                   </div>
@@ -476,9 +476,8 @@
               </div>
             </div>
             <!-- /+e.col-->
-            <!-- если используется таблица с характеристиками-->
             <div class="s-catalog__col">
-              <div class="prod-item"><a class="prod-item__img-wrap" href="#"><img src="#" data-lazy="img/@2x/s-catalog-2.jpg" alt=""/></a>
+              <div class="prod-item"><a class="prod-item__img-wrap" href="04-prod.html"><img src="#" data-lazy="img/@2x/s-catalog-2.jpg" alt=""/></a>
                 <div class="prod-item__title">Шлакоблок 50%
                   <div class="prod-item__sub">пустотности «А Блок»
                   </div>
@@ -498,9 +497,8 @@
               </div>
             </div>
             <!-- /+e.col-->
-            <!-- если используется таблица с характеристиками-->
             <div class="s-catalog__col">
-              <div class="prod-item"><a class="prod-item__img-wrap" href="#"><img src="#" data-lazy="img/@2x/s-catalog-3.jpg" alt=""/></a>
+              <div class="prod-item"><a class="prod-item__img-wrap" href="04-prod.html"><img src="#" data-lazy="img/@2x/s-catalog-3.jpg" alt=""/></a>
                 <div class="prod-item__title">Шлакоблок 50%
                   <div class="prod-item__sub">пустотности «А Блок»
                   </div>
@@ -520,9 +518,8 @@
               </div>
             </div>
             <!-- /+e.col-->
-            <!-- если используется таблица с характеристиками-->
             <div class="s-catalog__col">
-              <div class="prod-item"><a class="prod-item__img-wrap" href="#"><img src="#" data-lazy="img/@2x/s-catalog-4.jpg" alt=""/></a>
+              <div class="prod-item"><a class="prod-item__img-wrap" href="04-prod.html"><img src="#" data-lazy="img/@2x/s-catalog-4.jpg" alt=""/></a>
                 <div class="prod-item__title">Шлакоблок 50%
                   <div class="prod-item__sub">пустотности «А Блок»
                   </div>
@@ -542,7 +539,6 @@
               </div>
             </div>
             <!-- /+e.col-->
-            <!-- если используется таблица с характеристиками-->
           </div>
           <div class="s-catalog__foot-text text-secondary">*Стоимость за&nbsp;1&nbsp;поддон, 60&nbsp;шт.
           </div>
@@ -551,7 +547,7 @@
               <svg class="icon icon-info ">
                 <use xlink:href="img/svg/sprite.svg#info"></use>
               </svg>
-              <div> <a class="tdu" href="03-catalog.html">В&nbsp;каталоге  </a> 
+              <div> <a class="tdu" href="02-categories.html">В&nbsp;каталоге  </a> 
                 вы&nbsp;также можете выбрать фасадный камень и&nbsp;сопутствующие стройматериалы
               </div>
             </div>
@@ -571,7 +567,7 @@
         <!-- /picture-->
         <div class="container lazy-background section">
           <div class="row">
-            <div class="col-md-auto">
+            <div class="s-stock__left-col col-md-auto">
               <div class="s-stock__title lazy-background"> &laquo;Скидку 100 рублей сделаете?&raquo;
               </div>
               <div class="d-none d-md-block">
@@ -587,7 +583,7 @@
                 <!-- /picture--></a>
               </div>
             </div>
-            <div class="col-md-auto">
+            <div class="col-md-auto align-self-lg-end">
               <div class="s-stock__man">
                 <!-- picture-->
                 <picture class="lazy"> 
@@ -645,7 +641,7 @@
             </div>
             <div class="col">
               <div class="form-wrap">
-                <form>
+                <form action="thanks.php" method="post">
                   <input class="order" type="hidden" name="order" value="Получить каталог и прайс"/>
                   <input class="utm_source" type="hidden" name="utm_source"/>
                   <input class="utm_term" type="hidden" name="utm_term"/>
@@ -676,22 +672,23 @@
                         </div>
                       </div>
                     </div>
+                    <input type="hidden" name="formprice" value="formprice"/>
                     <div class="form-wrap__group-title">Какую компанию вы&nbsp;представляете?
                     </div>
                     <div class="row justify-content-between">
-                      <label class="type-company col-md-auto col-6"><input class="type-company__input" type="radio" name="type-company[]" value="Строительная компания" required="required"/><span class="type-company__icon-wrap">
+                      <label class="type-company col-sm-auto col-6"><input class="type-company__input" type="radio" name="type-company[]" value="Строительная компания" required="required"/><span class="type-company__icon-wrap">
                         <svg class="icon icon-brickwall-form ">
                           <use xlink:href="img/svg/sprite.svg#brickwall-form"></use>
                         </svg></span><span class="type-company__text">
                         Строительная <br/> компания</span>
                       </label>
-                      <label class="type-company col-md-auto col-6"><input class="type-company__input" type="radio" name="type-company[]" value="Строительная компания"/><span class="type-company__icon-wrap">
+                      <label class="type-company col-sm-auto col-6"><input class="type-company__input" type="radio" name="type-company[]" value="Строительная компания"/><span class="type-company__icon-wrap">
                         <svg class="icon icon-shopping-bag ">
                           <use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
                         </svg></span><span class="type-company__text">
                         Торговая <br/> компания</span>
                       </label>
-                      <label class="type-company col-md-auto col-6"><input class="type-company__input" type="radio" name="type-company[]" value="Строительная компания"/><span class="type-company__icon-wrap">
+                      <label class="type-company col-sm-auto col-6"><input class="type-company__input" type="radio" name="type-company[]" value="Строительная компания"/><span class="type-company__icon-wrap">
                         <svg class="icon icon-users ">
                           <use xlink:href="img/svg/sprite.svg#users"></use>
                         </svg></span><span class="type-company__text">
@@ -768,8 +765,8 @@
                     <svg class="icon icon-check ">
                       <use xlink:href="img/svg/sprite.svg#check"></use>
                     </svg>
-                  </div>При желании можете оплатить
-                   <a class="link-modal link-tdu" data-src="#modal-pay" href="javascript:;">заказ наличными водителю</a>
+                  </div>При желании 
+                   <a class="link-modal link-tdu" data-src="#modal-pay" href="javascript:;">можете оплатить заказ наличными водителю</a>
                 </li>
               </ul>
               <div class="s-shipping__block lazy-background">
@@ -852,7 +849,8 @@
                   когда в&nbsp;приоритете качество, а&nbsp;не&nbsp;экономия
                 </h2>
                 <div class="s-about__text-block">
-                  <p>С&nbsp;2006 года мы&nbsp;занимаемся производством шлакоблока и&nbsp;тротуарной плитки и&nbsp;все время строго следим, чтобы клиенты получали заказ в&nbsp;срок и&nbsp;без брака.</p>
+                  <p>
+                    С&nbsp;2006 года мы&nbsp;занимаемся производством шлакоблока и&nbsp;тротуарной плитки и&nbsp;все время строго следим, чтобы клиенты получали заказ  <strong>в&nbsp;срок и&nbsp;без брака.</strong></p>
                   <p>На&nbsp;строительство коттеджа средней площади уходит 100 м2&nbsp;шлакоблока, примерно на&nbsp;180&nbsp;000&nbsp;рублей. Можно найти дешевле, сэкономить 10&nbsp;000 рублей и&nbsp;при этом получить груду отходов, неровную кладку и&nbsp;проблемы со&nbsp;стенами в&nbsp;будущем.</p>
                   <p>С&nbsp;нашим шлакоблоком этого не&nbsp;произойдет&nbsp;&mdash; гарантируем!</p>
                 </div>
@@ -861,10 +859,11 @@
                  Мы&nbsp;подскажем, какой шлакоблок&nbsp;вам подойдет, рассчитаем объемы и&nbsp;стоимость.
               </p>
               <div class="form-wrap">
-                <form>
+                <form action="thanks.php" method="post">
                   <input class="order" type="hidden" name="order" value="Обсудить задачу"/>
                   <input class="utm_source" type="hidden" name="utm_source"/>
                   <input class="utm_term" type="hidden" name="utm_term"/>
+                  <input type="hidden" name="formtask"/>
                   <div class="form-wrap__row row">
                     <div class="col-md-6">
                       <div class="form-wrap__input-wrap"><input class="form-wrap__input" type="tel" placeholder="+7 (900) 444-44-44" name="tel" required="required"/>
@@ -1330,7 +1329,7 @@
       </footer>
     </div>
     <div class="form-wrap modal-win modal-form" id="modal-call">
-      <form>
+      <form action="thanks.php" method="post">
         <input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
         <input class="utm_source" type="hidden" name="utm_source"/>
         <input class="utm_term" type="hidden" name="utm_term"/>
@@ -1343,6 +1342,7 @@
             </div>
             <div class="form-wrap__text form-wrap__text--sm">Специалист компании &laquo;АБлок&raquo; Зоя позвонит  вам прямо сейчас или в&nbsp;другое рабочее время: мы&nbsp;работаем ежедневно с&nbsp;09:00 до&nbsp;20:00
             </div>
+            <input type="hidden" name="formwithtime" value="formwithtime"/>
             <div class="form-wrap__input-wrap">
               <label><span class="form-wrap__title">Как к вам обращаться?</span><input class="form-wrap__input" type="text" placeholder="Иван" name="name" required="required"/>
               </label>
@@ -1372,14 +1372,15 @@
     </div>
     <!-- #modal-call-->
     <div class="form-wrap modal-win modal-form" id="modal-order">
-      <form>
+      <form action="thanks.php" method="post">
         <input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
         <input class="utm_source" type="hidden" name="utm_source"/>
         <input class="utm_term" type="hidden" name="utm_term"/>
+        <input type="hidden" name="formorder" value="formorder"/>
         <div class="row no-gutters">
           <div class="col-6 section-bg d-none d-lg-block" data-bg="img/@2x/modal-2.jpg"></div>
           <div class="col">
-            <div class="form-wrap__top-title">Сообщите, что вам нужно заказать
+            <div class="form-wrap__top-title">Для оформления заказа оставьте Ваши контакты
             </div>
             <input class="order" type="hidden" name="order" value=""/>
             <input class="color" type="hidden" name="color" value=""/>
@@ -1440,7 +1441,7 @@
               </div>
               <!-- +e.input-wrap-->
             </div>
-            <button class="form-wrap__btn" type="submit">Обсудить заказ
+            <button class="form-wrap__btn" type="submit">Оформить заказ
             </button>
             <div class="form-wrap__polite text-secondary"> Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих персональных данных и&nbsp;соглашаетесь с&nbsp;<a class="tdu text-secondary" href="privacy-policy.pdf" target="_blank">Политикой конфиденциальности</a>
             </div>
@@ -1450,10 +1451,11 @@
     </div>
     <!-- #modal-order-->
     <div class="form-wrap modal-win modal-form" id="modal-order-calc">
-      <form>
+      <form action="thanks.php" method="post">
         <input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
         <input class="utm_source" type="hidden" name="utm_source"/>
         <input class="utm_term" type="hidden" name="utm_term"/>
+        <input type="hidden" name="formorder" value="formorder"/>
         <div class="row no-gutters">
           <div class="col-6 section-bg d-none d-lg-block" data-bg="img/@2x/modal-2.jpg"></div>
           <div class="col">
@@ -1616,14 +1618,16 @@
         <div class="h6 fw-500">
              Учитывая, что стоимость шлакоблока это всего лишь ~ 10% от стоимости   <span class="text-secondary"> строительства всего дома, то экономить на качестве стен не имеет смысла</span></div>
       </div>
-      <!-- picture-->
-      <picture> 
-        <source srcset="img/@2x/webp/modal-know-img.webp" type="image/webp" media="(min-width:576px)"/>
-        <source srcset="img/@1x/webp/modal-know-img.webp" type="image/webp"/>
-        <source srcset="img/@2x/modal-know-img.png" type="image/png" media="(min-width:576px)"/>
-        <source srcset="img/@1x/modal-know-img.png" type="image/png"/><img src="img/@2x/modal-know-img.png" alt=""/>
-      </picture>
-      <!-- /picture-->
+      <div class="d-none d-sm-block">
+        <!-- picture-->
+        <picture> 
+          <source srcset="img/@2x/webp/modal-know-img.webp" type="image/webp" media="(min-width:576px)"/>
+          <source srcset="img/@1x/webp/modal-know-img.webp" type="image/webp"/>
+          <source srcset="img/@2x/modal-know-img.png" type="image/png" media="(min-width:576px)"/>
+          <source srcset="img/@1x/modal-know-img.png" type="image/png"/><img src="img/@2x/modal-know-img.png" alt=""/>
+        </picture>
+        <!-- /picture-->
+      </div>
     </div>
     <!-- #modal-know-->
     <div class="modal-win modal-win--sm text-center" id="modal-pay">
@@ -1639,11 +1643,12 @@
     </div>
     <!-- #modal-pay-->
     <div class="form-wrap modal-win modal-win--sm modal-win modal-form" id="modal-one-click">
-      <form>
+      <form action="thanks.php" method="post">
         <input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
         <input class="utm_source" type="hidden" name="utm_source"/>
         <input class="utm_term" type="hidden" name="utm_term"/>
         <input class="color" type="hidden" name="color" value=""/>
+        <input type="hidden" name="formorder" value="formorder"/>
         <div class="h5 strong">Введите номер телефона</div>
         <div class="h6 fw-500">Специалист перезвонит и оформит заказ</div>
         <div class="row no-gutters">

@@ -82,8 +82,7 @@
         </div>
         <!-- end .top-line-->
         <div class="container">
-          <nav class="breadcrumb"><a class="breadcrumb-item" href="#">Главная</a><a class="breadcrumb-item" href="#">Каталог</a><a class="breadcrumb-item" href="#">Шлакоблоки</a><span class="breadcrumb-item active">Шлакоблок 50% пустотности</span>
-          </nav>
+          <nav class="breadcrumb"><a class="breadcrumb-item" href="/">Главная</a><a class="breadcrumb-item" href="02-categories.html">Каталог</a><a class="breadcrumb-item" href="03-catalog.html">Шлакоблок</a><span class="breadcrumb-item active">Шлакоблок 50% пустотности</span></nav>
         </div>
       </header>
       <!-- end HEADER.header-->
@@ -226,7 +225,9 @@
           <h3 class="fw-500">С этим товаром заказывают</h3>
           <div class="s-catalog__slider s-catalog__slider--js">
             <div class="s-catalog__col text-center">
-              <div class="prod-item"><a class="prod-item__img-wrap" href="#"><img src="#" data-lazy="img/@2x/prod-1.jpg" alt=""/></a>
+              <div class="prod-item">
+                <div class="prod-item__img-wrap"><img src="#" data-lazy="img/@2x/prod-1.jpg" alt=""/>
+                </div>
                 <div class="prod-item__title">Цемент
                 </div>
                 <div class="prod-item__size">1 мешок
@@ -236,21 +237,23 @@
               </div>
             </div>
             <!-- /+e.col-->
-            <!-- если используется таблица с характеристиками-->
             <div class="s-catalog__col text-center">
-              <div class="prod-item"><a class="prod-item__img-wrap" href="#"><img src="#" data-lazy="img/@2x/prod-2.jpg" alt=""/></a>
+              <div class="prod-item">
+                <div class="prod-item__img-wrap"><img src="#" data-lazy="img/@2x/prod-2.jpg" alt=""/>
+                </div>
                 <div class="prod-item__title">Песок
                 </div>
                 <div class="prod-item__size">Бигбэг 1 тонна
                 </div>
                 <div class="prod-item__price">860 руб.
-                </div><a class="prod-item__btn" href="javascript:;" data-src="#modal-order" data-order="Заказать Песок">Заказать</a>
+                </div><a class="prod-item__btn link-modal" href="javascript:;" data-src="#modal-order" data-order="Заказать Песок">Заказать</a>
               </div>
             </div>
             <!-- /+e.col-->
-            <!-- если используется таблица с характеристиками-->
             <div class="s-catalog__col text-center">
-              <div class="prod-item"><a class="prod-item__img-wrap" href="#"><img src="#" data-lazy="img/@2x/prod-3.jpg" alt=""/></a>
+              <div class="prod-item">
+                <div class="prod-item__img-wrap"><img src="#" data-lazy="img/@2x/prod-3.jpg" alt=""/>
+                </div>
                 <div class="prod-item__title">Перемычки
                 </div>
                 <div class="prod-item__size">1 шт
@@ -260,9 +263,10 @@
               </div>
             </div>
             <!-- /+e.col-->
-            <!-- если используется таблица с характеристиками-->
             <div class="s-catalog__col text-center">
-              <div class="prod-item"><a class="prod-item__img-wrap" href="#"><img src="#" data-lazy="img/@2x/prod-4.jpg" alt=""/></a>
+              <div class="prod-item">
+                <div class="prod-item__img-wrap"><img src="#" data-lazy="img/@2x/prod-4.jpg" alt=""/>
+                </div>
                 <div class="prod-item__title">Сетка кладочная Streck 20 m
                 </div>
                 <div class="prod-item__size">90 мм
@@ -272,7 +276,6 @@
               </div>
             </div>
             <!-- /+e.col-->
-            <!-- если используется таблица с характеристиками-->
           </div>
         </div>
       </div>
@@ -301,13 +304,13 @@
             </div>
             <div class="s-about__col-text col-lg-6">
               <div class="s-about__right-block">
-                <h2><strong class="text-primary">Воспользуйтесь </strong> 
+                <h3><strong class="text-primary">Воспользуйтесь </strong> 
                   калькулятором
-                </h2>
+                </h3>
                 <div class="h5 text-secondary">Чтобы рассчитать необходимое количество материала и&nbsp;стоимость</div><a class="s-about__btn btn btn-primary" href="06-calculator.html">Перейти в калькулятор</a>
                 <div class="h6 fw-500">Или звоните, чтобы обсудить материал, количество и&nbsp;стоимость со&nbsp;специалистом</div><br/>
                 <div class="h5"><a class="text-body strong" href="tel:+7351945-52-03">+7 3519 45-52-03</a></div>
-                <p>Мы работаем ежедневно, с 9:00 до 20:00</p>
+                <div class="fw-500">Мы&nbsp;работаем ежедневно, с&nbsp;9:00&nbsp;до&nbsp;20:00</div>
               </div>
             </div>
           </div>
@@ -367,7 +370,7 @@
       </footer>
     </div>
     <div class="form-wrap modal-win modal-form" id="modal-call">
-      <form>
+      <form action="thanks.php" method="post">
         <input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
         <input class="utm_source" type="hidden" name="utm_source"/>
         <input class="utm_term" type="hidden" name="utm_term"/>
@@ -380,6 +383,7 @@
             </div>
             <div class="form-wrap__text form-wrap__text--sm">Специалист компании &laquo;АБлок&raquo; Зоя позвонит  вам прямо сейчас или в&nbsp;другое рабочее время: мы&nbsp;работаем ежедневно с&nbsp;09:00 до&nbsp;20:00
             </div>
+            <input type="hidden" name="formwithtime" value="formwithtime"/>
             <div class="form-wrap__input-wrap">
               <label><span class="form-wrap__title">Как к вам обращаться?</span><input class="form-wrap__input" type="text" placeholder="Иван" name="name" required="required"/>
               </label>
@@ -409,14 +413,15 @@
     </div>
     <!-- #modal-call-->
     <div class="form-wrap modal-win modal-form" id="modal-order">
-      <form>
+      <form action="thanks.php" method="post">
         <input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
         <input class="utm_source" type="hidden" name="utm_source"/>
         <input class="utm_term" type="hidden" name="utm_term"/>
+        <input type="hidden" name="formorder" value="formorder"/>
         <div class="row no-gutters">
           <div class="col-6 section-bg d-none d-lg-block" data-bg="img/@2x/modal-2.jpg"></div>
           <div class="col">
-            <div class="form-wrap__top-title">Сообщите, что вам нужно заказать
+            <div class="form-wrap__top-title">Для оформления заказа оставьте Ваши контакты
             </div>
             <input class="order" type="hidden" name="order" value=""/>
             <input class="color" type="hidden" name="color" value=""/>
@@ -477,7 +482,7 @@
               </div>
               <!-- +e.input-wrap-->
             </div>
-            <button class="form-wrap__btn" type="submit">Обсудить заказ
+            <button class="form-wrap__btn" type="submit">Оформить заказ
             </button>
             <div class="form-wrap__polite text-secondary"> Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих персональных данных и&nbsp;соглашаетесь с&nbsp;<a class="tdu text-secondary" href="privacy-policy.pdf" target="_blank">Политикой конфиденциальности</a>
             </div>
@@ -487,10 +492,11 @@
     </div>
     <!-- #modal-order-->
     <div class="form-wrap modal-win modal-form" id="modal-order-calc">
-      <form>
+      <form action="thanks.php" method="post">
         <input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
         <input class="utm_source" type="hidden" name="utm_source"/>
         <input class="utm_term" type="hidden" name="utm_term"/>
+        <input type="hidden" name="formorder" value="formorder"/>
         <div class="row no-gutters">
           <div class="col-6 section-bg d-none d-lg-block" data-bg="img/@2x/modal-2.jpg"></div>
           <div class="col">
@@ -653,14 +659,16 @@
         <div class="h6 fw-500">
              Учитывая, что стоимость шлакоблока это всего лишь ~ 10% от стоимости   <span class="text-secondary"> строительства всего дома, то экономить на качестве стен не имеет смысла</span></div>
       </div>
-      <!-- picture-->
-      <picture> 
-        <source srcset="img/@2x/webp/modal-know-img.webp" type="image/webp" media="(min-width:576px)"/>
-        <source srcset="img/@1x/webp/modal-know-img.webp" type="image/webp"/>
-        <source srcset="img/@2x/modal-know-img.png" type="image/png" media="(min-width:576px)"/>
-        <source srcset="img/@1x/modal-know-img.png" type="image/png"/><img src="img/@2x/modal-know-img.png" alt=""/>
-      </picture>
-      <!-- /picture-->
+      <div class="d-none d-sm-block">
+        <!-- picture-->
+        <picture> 
+          <source srcset="img/@2x/webp/modal-know-img.webp" type="image/webp" media="(min-width:576px)"/>
+          <source srcset="img/@1x/webp/modal-know-img.webp" type="image/webp"/>
+          <source srcset="img/@2x/modal-know-img.png" type="image/png" media="(min-width:576px)"/>
+          <source srcset="img/@1x/modal-know-img.png" type="image/png"/><img src="img/@2x/modal-know-img.png" alt=""/>
+        </picture>
+        <!-- /picture-->
+      </div>
     </div>
     <!-- #modal-know-->
     <div class="modal-win modal-win--sm text-center" id="modal-pay">
@@ -676,11 +684,12 @@
     </div>
     <!-- #modal-pay-->
     <div class="form-wrap modal-win modal-win--sm modal-win modal-form" id="modal-one-click">
-      <form>
+      <form action="thanks.php" method="post">
         <input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
         <input class="utm_source" type="hidden" name="utm_source"/>
         <input class="utm_term" type="hidden" name="utm_term"/>
         <input class="color" type="hidden" name="color" value=""/>
+        <input type="hidden" name="formorder" value="formorder"/>
         <div class="h5 strong">Введите номер телефона</div>
         <div class="h6 fw-500">Специалист перезвонит и оформит заказ</div>
         <div class="row no-gutters">

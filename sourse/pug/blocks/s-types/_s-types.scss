@@ -6,6 +6,9 @@
 		padding-bottom: rem(40);
 	}
 	&__block{
+		@include media-breakpoint-up(md) {
+			margin-right: rem(80);
+		}
 		@include media-breakpoint-up(sm) {
 
 			&.visible{
@@ -16,7 +19,8 @@
 			background-size: cover;
 			background-repeat: no-repeat;
 			border-radius: rem(6);
-			margin-right: rem(80);
+			margin-right: rem(40);
+		
 			position: relative;
 			padding-top: rem(44);
 		}

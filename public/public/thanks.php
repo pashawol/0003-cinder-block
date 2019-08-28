@@ -263,7 +263,7 @@
             		<div class="section-title__text">Мы&nbsp;уже отправили Вам каталог и&nbsp;прайс на&nbsp;шлакоблок.<br>Специалист Зоя перезвонит вам, чтобы обсудить с&nbsp;Вами объем материала, стоимость и&nbsp;условия поставки. <br>Удачного дня!
             	</div>
             	<div class="thanks__img-wrap">
-            	 
+            	<!-- picture-->
             	<picture> 
             		<source srcset="img/@2x/webp/thanks-price.webp" type="image/webp">
             		<!-- /webp images  --><img src="img/@2x/thanks-price.png" alt="">

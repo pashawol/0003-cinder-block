@@ -22,13 +22,13 @@ body,
 html {
 
 	@include media-breakpoint-up(xl) {	
-		font-size: $em-base;
 	}
+	font-size: $em-base;
 
-	@include media-breakpoint-up(md) {
+	@include media-breakpoint-up(sm) {
 		font-size: 14px;
 	}
-	font-size: 13px;
+	// font-size: 13px;
 	// @include font-size(1rem);
 }
 
@@ -563,6 +563,7 @@ a{
 			@include rfs(rem(20));
 			font-weight: 500;
 			margin-bottom: rem(33);
+			line-height: 1.4;
 		}
 	}
 }
@@ -572,6 +573,7 @@ a{
 		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
+		overflow: initial;
 	}
 	.thanks{
 		flex-grow: 1;

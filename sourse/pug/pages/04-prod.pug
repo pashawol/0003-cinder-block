@@ -31,7 +31,11 @@ block pagecontent
 	+header()
 		+top-line()
 		.container
-			+breadcrumb("Главная","Каталог",'Шлакоблоки',title)
+			nav.breadcrumb
+				a.breadcrumb-item(href='/') Главная
+				a.breadcrumb-item(href='02-categories.html') Каталог
+				a.breadcrumb-item(href='03-catalog.html') Шлакоблок
+				span.breadcrumb-item.active= title 
 		//- +header-block()
 		//- +s-composition
 	//- +s-strength

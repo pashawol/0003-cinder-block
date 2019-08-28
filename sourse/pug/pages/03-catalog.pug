@@ -19,7 +19,7 @@ include ../blocks/s-gal/_s-gal.pug
 block variables
 	- let  mainPage= null
 block title
-	- let title= 'Шлакоблоки'
+	- let title= 'Шлакоблок'
 		title= title  
 
 block pagecontent
@@ -27,7 +27,12 @@ block pagecontent
 	+header()
 		+top-line()
 		.container
-			+breadcrumb("Главная","Каталог",title )
+			nav.breadcrumb
+				a.breadcrumb-item(href='/') Главная
+				a.breadcrumb-item(href='02-categories.html') Каталог
+				span.breadcrumb-item.active= title  
+		 
+			//- +breadcrumb("Главная","Каталог", )
 		//- +header-block()
 		//- +s-composition
 	//- +s-strength
@@ -68,13 +73,26 @@ block pagecontent
 			+prod-slide("s-catalog-4","Шлакоблок 50%","пустотности «А Блок»","От 1600 руб.*","col-lg-3 col-sm-6",'','подробнее','04-prod.html',"item")
 				each t2, t1 in {'Размер:':'390х190х188 см','Цвет:':'серый, красный'}
 					+prod-tr(t1,t2)
-		
+			
+			+prod-slide("s-catalog-1","Шлакоблок 50%","пустотности «А Блок»","От 1600 руб.*","col-lg-3 col-sm-6",'','подробнее','04-prod.html',"item")
+				each t2, t1 in {'Размер:':'390х190х188 см','Цвет:':'серый, красный'}
+					+prod-tr(t1,t2)
+			+prod-slide("s-catalog-2","Шлакоблок 50%","пустотности «А Блок»","От 1600 руб.*","col-lg-3 col-sm-6",'','подробнее','04-prod.html',"item","В наличии")
+				each t2, t1 in {'Размер:':'390х190х188 см','Цвет:':'серый, красный'}
+					+prod-tr(t1,t2)
+			+prod-slide("s-catalog-3","Шлакоблок 50%","пустотности «А Блок»","От 1600 руб.*","col-lg-3 col-sm-6",'','подробнее','04-prod.html',"item")
+				each t2, t1 in {'Размер:':'390х190х188 см','Цвет:':'серый, красный'}
+					+prod-tr(t1,t2)
+			+prod-slide("s-catalog-4","Шлакоблок 50%","пустотности «А Блок»","От 1600 руб.*","col-lg-3 col-sm-6",'','подробнее','04-prod.html',"item")
+				each t2, t1 in {'Размер:':'390х190х188 см','Цвет:':'серый, красный'}
+					+prod-tr(t1,t2)
+
 		+e.foot-block
 			+e.btn--foot.--foot-js.btn-primary(href='#') Смотреть весь шлакоблок
 			+e.foot-block-text 
 				+icon("info")
 				div 
-					a.tdu(href="#") В&nbsp;каталоге  
+					a.tdu(href="02-categories.html") В&nbsp;каталоге  
 					| 
 					| вы&nbsp;также можете выбрать фасадный камень и&nbsp;сопутствующие стройматериалы
 		+e.shipping-block

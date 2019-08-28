@@ -85,7 +85,10 @@
 			margin-right: 0;
 			margin-bottom: 0;
 			width: rem(229px);
+			padding: rem(13) rem(17) rem(20);
+			min-height: rem(130);
 		}
+		padding: rem(13) rem(30) rem(20);
 		width: rem(269px);
 		margin-bottom: rem(30);
 		margin-left: auto;
@@ -96,9 +99,7 @@
 		border-top: none;
 		border-radius: 0 0 rem(10) rem(10);
 		background-color: #ffffff;
-		padding: rem(13) rem(17) rem(20);
 		position: relative;
-		min-height: rem(130);
 		
 		&::after{
 			content: '';
@@ -115,7 +116,7 @@
 	&__title{
 		@extend .h6;
 		line-height: 1.39;
-		font-weight: bold;
+		font-weight: 500;
 		margin-bottom: rem(0);
 	}
 	&__text{

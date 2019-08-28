@@ -4,13 +4,13 @@ mixin s-stock()
 		+pic("stock-bg",'jpg','bg')(class="picture-bg")
 		.container.lazy-background.section
 			.row
-				.col-md-auto
+				+e.left-col.col-md-auto
 					+e.title.lazy-background  &laquo;Скидку 100 рублей сделаете?&raquo;
 					.d-none.d-md-block
 						+e.sm-text Посмотрите видео, где мы&nbsp;все объясняем
 						+e.video.bg-wrap(data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk")
 							+pic("stock-video",'jpg','bg')(class="picture-bg")
-				.col-md-auto
+				.col-md-auto.align-self-lg-end
 					+e.man
 						+pic("stock-img",'png')
 				.col
