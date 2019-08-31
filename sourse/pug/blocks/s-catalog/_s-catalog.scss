@@ -181,8 +181,11 @@
 		} 
 			}
 			.s-catalog__col{
-				&:nth-last-child(-n + 4) {
-					display: none;
+				// &:nth-last-child(-n + 4) {
+				// 	display: none;
+				// }
+				&:nth-child(n + 9){
+					 display: none;
 				}
 			}
 			
