@@ -112,6 +112,8 @@
 				background-image: linear-gradient(to top, #8eb930 0%, #a2d032 100%);
 				opacity: 0;
 				@include mt;
+				left: 0;
+				top: 0;
 			}
 			&:hover,
 			&.active{
