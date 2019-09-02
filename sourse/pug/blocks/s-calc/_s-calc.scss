@@ -57,7 +57,7 @@
 		background-color: #ffffff;
 		@include media-breakpoint-up(sm) {
 
-			padding: rem(55) rem(50);
+			padding: rem(55) rem(42);
 			margin-left: 0;
 			margin-right: 0;
 		}
@@ -81,6 +81,9 @@
 			font-weight: bold;
 			padding-bottom: .8rem;
 
+		}
+		&__title{
+			margin-right: -10px;
 		}
 		.row{
 			@include roww(8);
