@@ -133,7 +133,6 @@
     <meta name="viewport" content="width=device-width, shrink-to-fit=no">
     <meta property="og:image" content="path/to/image.jpg">
     <link rel="shortcut icon" type="image/ico" href="img/favicon/favicon.ico">
-    <link rel="image_src" href="http://genrif.ru/assets/i/soc-logo.png">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="content">
     <meta property="og:title" content="content">
