@@ -3,10 +3,11 @@ mixin s-contact()
 	+b.s-contact.section.block-with-lazy#s-contact&attributes(attributes)
 		.container
 			+b.section-title.d-md-none.text-center
-						h2
-							strong.text-primary  Приезжайте к&nbsp;нам
+						h2 	Приезжайте к&nbsp;нам
 							| 
-							| на&nbsp;производство,
+							strong.text-primary  на&nbsp;производство, 
+							| 
+							| 
 						+e.text чтобы лично проверить качество шлакоблока и&nbsp;обсудить поставку
 			.row
 				.col-md-6.align-self-end
@@ -152,14 +153,14 @@ mixin s-contact()
 					script(async='', defer='' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCnoRp8wBQeCZLL8k4R-vckP_wDGVR2k10&callback=initMap')
 					+e.map-wrap.lazy-background
 						+e.img-wrap--lg(data-fancybox="gal-cont" href="img/@2x/gal.jpg")
-							+pic("gal")(class='pciture-bg')
+							+pic("gal")(class='picture-bg')
 						#map
 				+e.col.col-md-6.order-md-first
 					+b.section-title.d-none.d-md-block
-						h2
-							strong.text-primary  Приезжайте к&nbsp;нам
+						h2 Приезжайте к&nbsp;нам
 							| 
-							| на&nbsp;производство,
+							strong.text-primary   на&nbsp;производство, 
+							| 
 						+e.text чтобы лично проверить качество шлакоблока и&nbsp;обсудить поставку
 					table
 						tr

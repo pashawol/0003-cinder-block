@@ -2,14 +2,14 @@ mixin footer()
 	+b.FOOTER.footer.block-with-lazy
 		.container
 			.row
-				+e.col.col-sm-auto
+				+e.col.col-sm-auto.col-xl
 					+e.text
 						+e.icon-wrap
 							+icon('mark') 
 						div г.&nbsp;Магнитогорск,
 							br
 							|  Вайнера, 2А
-				+e.col.col-sm-auto.col-6.d-none.d-sm-block
+				+e.col.col-sm-auto.col-6.d-none.d-sm-block.col-xl
 					ul
 						li
 							a(href="02-categories.html") Каталог
@@ -28,7 +28,7 @@ mixin footer()
 							+e.tel(href="tel:+7351945-52-03") +7 3519 45-52-03 
 							//- +e.sm-link.link-modal.d-xl-none(  data-src="#modal-call" href="javascript:;" data-order="Заказать звонок в шапке") Перезвоните мне 
 					+e.btn.link-modal(  data-src="#modal-call" href="javascript:;" data-order="Заказать звонок в подвале") Перезвоните мне
-				.col-lg-auto.col-md.order-md-first
+				.col-xl-4.col-lg-auto.col-md.order-md-first
 					.row 
 						+e.col.col-xl-auto.col
 							+e.logo(href="/")

@@ -57,6 +57,9 @@
 		@include media-breakpoint-up(lg) {
 
 			max-width: rem(511);
+			margin-left: auto;
+			// margin-right: 0;
+			margin-right: auto;
 		}
 		padding: rem(28) rem(13) rem(20);
 

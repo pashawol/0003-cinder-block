@@ -1,9 +1,13 @@
 .s-calc {
+	padding-top: rem(40);
 	.section-title{
 		margin-left: auto;
 		margin-right: auto;
 		max-width: rem(560);
 		padding-bottom: rem(60);
+		h1{
+			padding-bottom: rem(10);
+		}
 	}
 	.container{
 		position: relative;
@@ -53,7 +57,7 @@
 		background-color: #ffffff;
 		@include media-breakpoint-up(sm) {
 
-			padding: rem(60) rem(60);
+			padding: rem(55) rem(42);
 			margin-left: 0;
 			margin-right: 0;
 		}
@@ -75,23 +79,42 @@
 			text-align: center;
 			@extend .h5;
 			font-weight: bold;
-			padding-bottom: 1rem;
+			padding-bottom: .8rem;
 
+		}
+		&__title{
+			margin-right: -10px;
+		}
+		.row{
+			@include roww(8);
+		}
+		&__input-wrap{
+			margin-bottom: 1.4rem;
 		}
 		select,
 		&__input{
 			text-align: center !important;
+			height: rem(55);
+			padding-top: 1rem ;
+			padding-bottom: 1rem ;
 		}
 		&__total{
 			margin-top: auto;
+			padding-top: rem(20);
 		}
+	 
 	}
 	.container{
 		position: relative;
 
 	}
 		 
-	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(xl) {
+		padding-bottom: 0;
+		.container{
+			max-width: 1147px;
+		}
+	}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
 	@include media-breakpoint-up(sm) {}

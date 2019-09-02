@@ -1,6 +1,8 @@
 .s-price {
 	position: relative;
 	z-index: 2;
+	padding-bottom: rem(20);
+	// padding-bottom: rem(20);
 		 h3{
 			 font-weight: 500;
 			 @include media-breakpoint-up(sm) {
@@ -10,15 +12,21 @@
 				text-align: center;
 				padding-bottom: rem(10);
 		 }
+		 @include media-breakpoint-up(lg) {
+
+			 .col{
+				 padding-left: 0;
+				}
+			}
 	&__group{
 
-		padding-bottom: rem(30);
+		padding-bottom: rem(25);
 	}
 	&__group-title{
 		@extend .h5;
 		font-weight: bold;
 		// margin-right: rem(-20);
-		padding-bottom: rem(20);
+		padding-bottom: rem(15);
 	}
 	&__icon-wrap{
 		width: rem(42px);
@@ -44,8 +52,8 @@
 	li{
 		list-style-type: none;
 		position: relative;
-		padding-left: rem(20);
-		padding-bottom: rem(5);
+		padding-left: rem(25);
+		padding-bottom: rem(12);
 		&::before{
 			content: ''; 
 			position: absolute;

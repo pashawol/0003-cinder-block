@@ -42,14 +42,21 @@ mixin s-about()
 	// end s-about
 
 
-mixin s-about-page()
+mixin s-about-page(woman2)
 	// start s-about
 	+b.SECTION.s-about--page.section.lazy-background#s-about&attributes(attributes)
 		.container 
 			.row
 				.col.align-self-end
-					+e.man--girl
-						+pic("womn","png",'','')
+					if woman2
+						+e.man--girl.--girl-2
+							+pic("womn2","png",'','')
+						+e.block
+							+e.text--name.--girl Зоя
+							+e.text--prof специалист «А Блок»
+					else
+						+e.man--girl
+							+pic("womn","png",'','')
 						+e.block
 							+e.text--name.--girl Зоя
 							+e.text--prof специалист «А Блок»
