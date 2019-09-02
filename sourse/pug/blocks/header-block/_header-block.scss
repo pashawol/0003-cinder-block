@@ -38,7 +38,7 @@
 		}
 		@extend .h5;
 		font-weight: 500;
-		margin-bottom: rem(65);
+		margin-bottom: rem(60);
 		.icon{
 			font-size: rem(51);
 			fill: url(#primary-gradient);
@@ -116,7 +116,7 @@
 		color: #5b5b5b !important;
 		padding-left: rem(28);
 		padding-right: rem(28);
-		padding-top: rem(145);
+		padding-top: rem(155);
 		display: block;
 		text-decoration: none !important;
 		z-index: 2;
@@ -139,7 +139,7 @@
 		&--2{
 			@include bg("header-rect-2.png");
 			margin-top: rem(90);
-			padding-top: rem(155);
+			padding-top: rem(165);
 		}
 
 	}

@@ -133,6 +133,16 @@
     <meta name="viewport" content="width=device-width, shrink-to-fit=no">
     <meta property="og:image" content="path/to/image.jpg">
     <link rel="shortcut icon" type="image/ico" href="img/favicon/favicon.ico">
+    <link link rel="image_src" href="http://genrif.ru/assets/i/soc-logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="content">
+    <meta property="og:title" content="content">
+    <meta property="og:description" content="content">
+    <meta property="og:url" content="content">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:image" content="path/to/image.jpg">
+    <meta property="og:image:width" content="968">
+    <meta property="og:image:height" content="504">
     <!-- Custom Browsers Color-->
     <meta name="theme-color" content="#1c8dcc">
     <link rel="stylesheet" href="css/main.min.css">
@@ -290,7 +300,7 @@
       <footer class="footer block-with-lazy">
         <div class="container">
           <div class="row">
-            <div class="footer__col col-sm-auto">
+            <div class="footer__col col-sm-auto col-xl">
               <div class="footer__text">
                 <div class="footer__icon-wrap">
                   <svg class="icon icon-mark ">
@@ -300,7 +310,7 @@
                 <div>г.&nbsp;Магнитогорск,<br/> Вайнера, 2А</div>
               </div>
             </div>
-            <div class="footer__col col-sm-auto col-6 d-none d-sm-block">
+            <div class="footer__col col-sm-auto col-6 d-none d-sm-block col-xl">
               <ul>
                 <li><a href="02-categories.html">Каталог</a></li>
                 <li><a href="05-shipping.html">Доставка и оплата</a></li>
@@ -318,7 +328,7 @@
                 </div>
               </div><a class="footer__btn link-modal" data-src="#modal-call" href="javascript:;" data-order="Заказать звонок в подвале">Перезвоните мне</a>
             </div>
-            <div class="col-lg-auto col-md order-md-first">
+            <div class="col-xl-4 col-lg-auto col-md order-md-first">
               <div class="row"> 
                 <div class="footer__col col-xl-auto col"><a class="footer__logo" href="/">
                   <!-- picture-->
@@ -406,7 +416,7 @@
                   <div class="tabs__btn active">
                     <svg class="icon icon-tel2 ">
                       <use xlink:href="img/svg/sprite.svg#tel2"></use>
-                    </svg>SMS
+                    </svg>Телефон
                   </div>
                   <div class="tabs__btn">
                     <svg class="icon icon-whatsapp ">
@@ -493,7 +503,7 @@
                   <div class="tabs__btn active">
                     <svg class="icon icon-tel2 ">
                       <use xlink:href="img/svg/sprite.svg#tel2"></use>
-                    </svg>SMS
+                    </svg>Телефон
                   </div>
                   <div class="tabs__btn">
                     <svg class="icon icon-whatsapp ">

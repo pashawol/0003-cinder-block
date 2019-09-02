@@ -47,7 +47,7 @@
 		// justify-content: space-between;
 
 		padding:  rem(10);
-		padding-top: rem(68);
+		padding-top: rem(78);
 		color: #5b5b5b;
 		margin-bottom: rem(33);
 		background-repeat: no-repeat;
@@ -80,17 +80,22 @@
 	&__title{
 		@extend .h6;
 		font-weight: 700;
-		letter-spacing: 1.44px;
+		line-height: 1.2;
+		// letter-spacing: 1.44px;
 		text-transform: uppercase;
-		padding-left: rem(18);
-		padding-right: rem(18);
+		padding-left: rem(8);
+		padding-right: rem(8);
+		margin-bottom: 0;
+	}
+	&__text{
+
 	}
 	&__head{
 		// margin-top: auto;
 		// margin-bottom: rem(-20);
 	}
 	&__price{
-		font-weight: 500;
+		font-weight: 600;
 	}
 	&__text-block{
 		width: rem(223px);

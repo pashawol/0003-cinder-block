@@ -71,6 +71,18 @@
 							top: 65%;
 							left: -45px;
 						}
+						
+						&::after{
+							content: '';
+							background-image: url(../img/@2x/triangle-left.jpg);
+							@include a-cent(y);
+							left: -1px;
+							width: rem(25);
+							height: rem(47);
+							background-size: 100% 100%;
+							background-repeat: no-repeat;
+						}
+
 					}
 				}
 				@include media-breakpoint-up(xl) {
