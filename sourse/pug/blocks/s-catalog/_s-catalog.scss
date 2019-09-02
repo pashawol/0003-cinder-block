@@ -130,8 +130,14 @@
 	&__btn{
 		@extend .btn;
 		&--foot{
-			flex: 0 0 rem(313);
-			width: rem(313);
+			@include media-breakpoint-up(sm) {
+
+				flex: 0 0 rem(313);
+				
+				width: rem(313);
+			}
+			width: 100%; 
+				// width: rem(313);
 			margin-right: rem(45);
 			margin-bottom: rem(30);
 		}
@@ -249,13 +255,14 @@
 			margin-right: auto;
 		}
 	}
+	padding-top: rem(10);
 		// background-image: url(../img/svg/shipping-block-bg.svg);
 		@include media-breakpoint-up(sm) {
 			
 			@include bg("shipping-block.png");
 			display: flex;
 			text-align: center;
-			// padding-top: rem(6);
+			padding-top: 0;
 		div.order-sm-last{
 				padding: 0;
 				// text-align: left;
@@ -264,7 +271,7 @@
 			padding-bottom: rem(32);
 		}
 		padding-bottom: rem(40);
-		padding: rem(0px);
+		// padding: rem(0px); 
 	div.order-sm-last{
 		text-align: center;
 			padding: rem(30) rem(10);
