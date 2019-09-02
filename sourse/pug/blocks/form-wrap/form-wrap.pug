@@ -177,8 +177,8 @@ mixin polite()
 
 mixin form-body()
 	
-	+input("Ваш номер телефона","tel",'Введите Ваш номер телефона для связи')(required)
-	+e.title  Выберите время для звонка
+	+input("+7 (900) 444-44-44","tel",'Введите телефон:')(required)
+	//- +e.title  Выберите время для звонка
 	+b.LABEL.custom-input-time
 		+e.INPUT.input(type='checkbox', name='scr8-time', )
 		+e.SPAN.lab

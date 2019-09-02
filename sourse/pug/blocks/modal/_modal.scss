@@ -78,7 +78,10 @@
 	.col{
 		background-color: #fafafa;
 		@include media-breakpoint-up(sm) {
-			padding: rem(40px) rem(64px);
+			padding: rem(40px) rem(60px);
+			.form-wrap__btn{
+				max-width: 100%;
+			}
 		}
 		padding: rem(30px) rem(15px) rem(20px);
 		

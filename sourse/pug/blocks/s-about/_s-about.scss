@@ -33,6 +33,7 @@
 	}
 
 	&--page{
+		font-weight: 500;
 		@include media-breakpoint-down(sm) {
 			padding-top: 0;
 		}	
@@ -233,6 +234,7 @@
 		&--prof{
 			min-width: rem(241);
 			margin-left: rem(30);
+			font-weight: normal;
 		}
 	}
 		 
@@ -251,14 +253,20 @@
 		}
 
 	}
+	.h5{
+
+		font-weight: 500;
+	
+	}
 	h3{
 		max-width: rem(400);
-		font-weight: normal;
+		font-weight: 500;
+		line-height: 1.19;
 		@include media-breakpoint-down(md) {
 			margin-left: auto;
 			margin-right: auto;
 		}
-		padding-bottom: rem(10);
+		// padding-bottom: rem(10);
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

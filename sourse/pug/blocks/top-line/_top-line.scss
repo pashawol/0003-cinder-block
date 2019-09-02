@@ -64,7 +64,8 @@ padding-top: rem(30);
     // padding-top: rem(6);
   }
   &__time{
-		color: $secondary;  
+		// color: $secondary;  
+		color: #5b5b5b;
 		@include media-breakpoint-up(xl) {
 
 			margin-bottom: rem(5);
