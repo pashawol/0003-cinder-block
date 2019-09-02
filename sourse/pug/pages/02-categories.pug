@@ -19,7 +19,7 @@ include ../blocks/s-gal/_s-gal.pug
 block variables
 	- let  mainPage= null
 block title
-	- let title= 'Каталоги'
+	- let title= 'Каталог'
 	title= title 
 
 block pagecontent
@@ -55,12 +55,12 @@ block pagecontent
 							block
 				// /+e.col.col-md-4
 			+item('1','Шлакоблок','Для строительства домов, бань, хозпостроек и заборов','03-catalog.html')
-				+e.small
+				+e.small.fw-500
 					span.text-secondary Наполнитель: 
 					| 
 					div гранитный отсев
 			+item('2','Фасадный камень','Строительный материал для облицовки стен')
-				+e.small
+				+e.small.fw-500
 					span.text-secondary Цвета: 
 					| 
 					div красный, серый, желтый, фиолетовый
@@ -69,7 +69,7 @@ block pagecontent
 			//- +pic("manipulator_5_tonn_2x",'png',"","lazy",0)
 			div.order-sm-last
 				.h5.strong Доставка с разгрузкой
-				.h6 Максимум на&nbsp;следующий день
+				.h6.fw-500 Максимум на&nbsp;следующий день
 			img.lazy(src="#" data-src="img/@2x/manipulator_5_tonn_2x.png", alt="")
 			
 

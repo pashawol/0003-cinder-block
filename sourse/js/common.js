@@ -19,7 +19,7 @@ jQuery(document).ready(function ($) {
 
     JSCCommon.CustomInputFile();
     // добавляет подложку для pixel perfect
-    $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/6.png);"></div>')
+    $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/5.png);"></div>')
     // /добавляет подложку для pixel perfect
 
 
@@ -354,7 +354,7 @@ jQuery(document).ready(function ($) {
 
         $(".s-calc  .link-modal").click(function () {
             function parentVal(value, value2, value3) {
-                $('#modal-order-calc').find(value2).val(
+                $('#modal-order').find(value2).val(
                     !value
                         ? ('')
                         : ($(value).val() + ' ' + value3)
@@ -362,7 +362,7 @@ jQuery(document).ready(function ($) {
             }
 
             function parentText(value, value2, value3) {
-                $('#modal-order-calc').find(value2).val(
+                $('#modal-order').find(value2).val(
                     !value
                         ? ('')
                         : ($(value).text() + ' ' + value3)

@@ -56,17 +56,26 @@ block pagecontent
 			+e.group.row
 				+e.title-group.col-auto Состав:
 				.col.fw-500
-					.row
-						.col-auto Гранитный отсев
-						.col-auto Вода
-						.col-auto Цемент ПЦ400
-						.col-auto Добавки
+					table
+						tr
+							td Гранитный отсев
+							td Вода
+						
+						tr
+							td Цемент ПЦ400
+							td Добавки
+						
+					//- .row
+					//- 	.col-auto
+					//- 	.col-auto
+					//- 	.col-auto
+					//- 	.col-auto
 			
-			+e.group.row
+			+e.group--size.row
 				+e.title-group.col-auto Размер:
 				.col.fw-500 390*190*188 мм
 			
-			+e.group.row.align-items-center
+			+e.group--color.row.align-items-center
 				+e.title-group.col-auto Цвет:
 				+e.color.col
 					.row
@@ -80,7 +89,7 @@ block pagecontent
 			+e.btn-wrap
 				+e.btn--one-click-js.btn-success.link-modal(  data-src="#modal-one-click" href="javascript:;" data-order=`Быстрый заказ- ${title}`) Купить в 1 клик
 				+e.btn.btn-primary.link-modal(  data-src="#modal-order" href="javascript:;" data-order=`Заказать ${title}`) заказать
-		.col-lg-auto
+		+e.last-col.col-lg-auto
 			+e.shipping
 				+icon('tow-truck')
 				+e.shipping-text  В&nbsp;этом месяце отгружено 229 поддонов

@@ -25,17 +25,6 @@ mixin modal()
 			.col
 				+e.top-title Для оформления заказа оставьте Ваши контакты
 				+order-block("Оформить заказ")
-				
-	// #modal-order
-
-
-	+form-wrap()(id="modal-order-calc" class="  modal-win modal-form" )
-		input(type="hidden" name="formorder" value="formorder") 
-		.row.no-gutters
-			.col-6.section-bg.d-none.d-lg-block(data-bg="img/@2x/modal-2.jpg")
-			.col
-				+e.top-title Сообщите, что вам нужно заказать
-				+order-block()
 					input(type="hidden" class='choose-type' name='choose-type' value="") 
 					input(type="hidden" class='cost' name='cost' value="") 
 					input(type="hidden" class='result' name='result' value="") 
@@ -44,7 +33,18 @@ mixin modal()
 					input(type="hidden" class='thickness' name='thickness' value="") 
 					input(type="hidden" class='windows' name='windows' value="") 
 					input(type="hidden" class='doors' name='doors' value="") 
-	// #modal-order-calc
+				
+	// #modal-order
+
+
+	//- +form-wrap()(id="modal-order-calc" class="  modal-win modal-form" )
+	//- 	input(type="hidden" name="formorder" value="formorder") 
+	//- 	.row.no-gutters
+	//- 		.col-6.section-bg.d-none.d-lg-block(data-bg="img/@2x/modal-2.jpg")
+	//- 		.col
+	//- 			+e.top-title Для оформления заказа оставьте ваши контакты
+	//- 			+order-block("Оформить заказ")
+	//- // #modal-order-calc
 
 
 	+b.modal-win--tech(id="modal-tech" class="text-center" )
@@ -57,7 +57,7 @@ mixin modal()
 					+e.item
 						+pic('storage-'+ i,'png','','')
 						+e.title= t
-						p= p
+						p.fw-500= p
 			+item("1",'Строго соблюдаем пропорции материалов','чтобы получить шлакоблок с характеристиками, нужными при строительстве любых сооружений')
 			+item("2",'Пропариваем горячим паром при температуре 70-95°C —','шлакоблок достигает до 90% марочной прочности уже через сутки')
 			+item("3",'Храним шлакоблок на транспортных поддонах,','чтобы он не соприкасался с землей')
@@ -65,7 +65,7 @@ mixin modal()
 			.row
 				.col-auto
 					+icon('info')
-				.h6.text-left.col Как правило, заказчику отгружаем шлакоблок со&nbsp;100% марочной прочностью, которому больше 28&nbsp;суток. При срочных заказах возможна отгрузка блока через неделю после изготовления&nbsp;&mdash; на&nbsp;качество стройки это не&nbsp;влияет
+				.h6.text-left.col.fw-500 Как правило, заказчику отгружаем шлакоблок со&nbsp;100% марочной прочностью, которому больше 28&nbsp;суток. При срочных заказах возможна отгрузка блока через неделю после изготовления&nbsp;&mdash; на&nbsp;качество стройки это не&nbsp;влияет
 
 	// #modal-tech
 
@@ -95,6 +95,7 @@ mixin modal()
 	// #modal-know
 	+b.modal-win--sm(id="modal-pay" class="text-center" )
 		+pic('modal-pay','png','','',0)
+		br
 		.h5.text-center.strong Покупайте шлакоблок,
 
 			br
