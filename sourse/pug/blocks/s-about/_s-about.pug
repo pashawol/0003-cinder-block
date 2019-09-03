@@ -9,7 +9,7 @@ mixin s-about()
 			.row
 				.col.align-self-end
 					+e.man
-						+pic("man","png",'','')
+						+pic("man","png",'','',0)
 						+e.block
 							+e.text--name Константин Торшин
 							+e.text--prof руководитель «А Блок»
@@ -50,13 +50,13 @@ mixin s-about-page(woman2)
 				.col.align-self-end
 					if woman2
 						+e.man--girl.--girl-2
-							+pic("womn2","png",'','')
+							+pic("womn2","png",'','',0)
 						+e.block
 							+e.text--name.--girl Зоя
 							+e.text--prof специалист «А Блок»
 					else
 						+e.man--girl
-							+pic("womn","png",'','')
+							+pic("womn","png",'','',0)
 						+e.block
 							+e.text--name.--girl Зоя
 							+e.text--prof специалист «А Блок»

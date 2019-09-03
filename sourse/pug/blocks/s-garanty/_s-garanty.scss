@@ -92,7 +92,8 @@
 		&__img-wrap{
 			position: relative;
 			z-index: 2;
-			width: 100%;
+			// width: 100%;
+			margin-right: rem(-10);
 			@include media-breakpoint-up(md){
 
 				&::before{
