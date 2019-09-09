@@ -108,7 +108,7 @@
 
 	}
 	&__item{
-		// background-size: contain;
+		background-size: 100% 100%;
 		background-repeat: no-repeat;
 		width: rem(162px);
 		height: rem(274px); 
@@ -133,8 +133,7 @@
 			box-shadow: 0 $h6-font-size rem(40px) rgba(255, 255, 255, 0.38);
 		}
 		&--1{
-			background-image: url(../img/header-rect-1.png);
-			// @include bg("")
+			@include bg("header-rect-1.png")
 		}
 		
 		&--2{

@@ -119,7 +119,10 @@
               <h1 class="s-prod-head__title d-none d-md-block">Шлакоблок 50% пустотности
               </h1>
               <div class="s-prod-head__group row">
-                <div class="col-auto h5 fw-600">1600 руб.*</div>
+                <div class="col-auto h5 fw-600"> 
+                  <div class="first-price-js" id="price-1">1600 руб.*</div>
+                  <div class="second-price-js" id="price-2">2600 руб.*</div>
+                </div>
                 <div class="col text-secondary">*Стоимость <br>за 1 поддон, 60 шт. </div>
               </div>
               <div class="s-prod-head__group row">
@@ -148,9 +151,9 @@
                 </div>
                 <div class="s-prod-head__color col">
                   <div class="row">
-                    <label class="radio-input"><input class="radio-input__input" type="radio" name="color[]" value="Серый" checked="checked"/><span class="radio-input__title">Серый</span>
+                    <label class="radio-input"><input class="radio-input__input" type="radio" name="color[]" value="Серый" checked="checked" data-price="#price-1"/><span class="radio-input__title">Серый</span>
                     </label>
-                    <label class="radio-input"><input class="radio-input__input" type="radio" name="color[]" value="Красный"/><span class="radio-input__title">Красный</span>
+                    <label class="radio-input"><input class="radio-input__input" type="radio" name="color[]" value="Красный" data-price="#price-2"/><span class="radio-input__title">Красный</span>
                     </label>
                   </div>
                 </div>
@@ -301,8 +304,10 @@
               <div class="s-about__man s-about__man--girl">
                 <!-- picture-->
                 <picture> 
-                  <source srcset="img/@2x/webp/womn.webp" type="image/webp"/>
-                  <!-- /webp images  --><img src="img/@2x/womn.png" alt=""/>
+                  <source srcset="img/@2x/webp/womn.webp" type="image/webp" media="(min-width:576px)"/>
+                  <source srcset="img/@1x/webp/womn.webp" type="image/webp"/>
+                  <source srcset="img/@2x/womn.png" type="image/png" media="(min-width:576px)"/>
+                  <source srcset="img/@1x/womn.png" type="image/png"/><img src="img/@2x/womn.png" alt=""/>
                 </picture>
                 <!-- /picture-->
               </div>
