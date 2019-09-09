@@ -19,7 +19,7 @@ jQuery(document).ready(function ($) {
 
     JSCCommon.CustomInputFile();
     // добавляет подложку для pixel perfect
-    $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/5.png);"></div>')
+    // $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/5.png);"></div>')
     // /добавляет подложку для pixel perfect
 
 
@@ -410,63 +410,7 @@ jQuery(document).ready(function ($) {
         th.find('.utm_term').val(gets['utm_term']);
          
     });
-    // $("form").submit(function () { //Change
-    //     var th = $(this);
-    //     th.find('.utm_source').val(gets['utm_source']);
-    //     th.find('.utm_term').val(gets['utm_term']);
-    //     var valOrder = th.find('.order').val();
-    //     var valTime = th.find('[name="time"]').val();
-    //     //**********************
-    //     var name = $('[name="name"]', th).val();
-        
-    //     $.ajax({
-    //         type: "POST",
-    //         url: 'action.php', //Change
-    //         data: th.serialize()
-    //     }).success(function () {
-    //         //****************************************
-    //         window.location.replace('/thanks.html?name="' + name  + '"&time="' + valTime +'"'  );
-    //         // if(valOrder == 'Получить каталог и прайс'){
-    //         // 	// console.log(valOrder + "1");
-    //         // 	window.location.replace("/thanks-price.html");
-    //         // }
-    //         // else if(valOrder == 'Заказать звонок в шапке'
-    //         // 				|| valOrder == 'Заказать звонок в подвале'
-    //         // 				|| valOrder == "Обсудить задачу") {
-
-    //         // 		window.location.replace("/thanks.html");
-    //         // 	}
-    //         // 	else{
-    //         // 	if(th.parent().is("#modal-one-click")
-    //         // 			|| th.parent().is("#modal-order")
-    //         // 			|| th.parent().is("#modal-order-calc")
-    //         // 			){
-
-    //         // 				window.location.replace("/thanks-order.html");
-    //         // 			}
-
-    //         // }
-
-
-    //         setTimeout(function () {
-    //             th.trigger("reset");
-    //             // ym(53383120, 'reachGoal', 'zakaz');
-    //         }, 4000);
-    //     });
-    //     return false;
-    // });
-    // /form
-
-    // //***********************************
-    // if(typeof  gets['name']!=='undefined'){
-    //     $("container").html("<div></div>")
-    //      $('h1').text(gets['name']+', спасибо, мы приняли вашу заявку!')
-    // }
     
-    // if(typeof  gets['time']!=='undefined'){
-    //     $("container").html("<div></div>")
-    //      $('.section-title__text').text(gets['time']+', спасибо, мы приняли вашу заявку!')
-    // }
     $(".form-wrap__toggle").click(function () {
         $(".form-wrap__toggle-block").toggle()
     })
@@ -474,6 +418,10 @@ jQuery(document).ready(function ($) {
     $(".s-catalog__btn--foot-js").click(function(e){
         e.preventDefault();
         $(this).addClass("disabled").parents(".s-catalog--page").find(".s-catalog__col:hidden").fadeIn()
+    })
+
+    $(".s-prod-head .radio-input__input").change(function(){
+        $($(this).data("price")).show().siblings().hide();
     })
 });
 JSCCommon = {

@@ -53,17 +53,17 @@ mixin s-catalog()
 						.col.h6 Делаем шлакоблок любых цветов
 				
 			+e.slider--js
-				+prod-slide("s-catalog-1.jpg","Шлакоблок 50%","пустотности «А Блок»","От 1600 руб.*","","",'подробнее','04-prod.html')
-					each t2, t1 in {'Размер:':'390х190х188 см','Цвет:':'серый, красный'}
+				+prod-slide("s-catalog-1.jpg","Шлакоблок 30%","пустотности ","от 1800 руб.*","","",'подробнее','30-prod.html')
+					each t2, t1 in {'Размер:':'390х190х188 мм','Цвет:':'серый, красный'}
 						+prod-tr(t1,t2)
-				+prod-slide("s-catalog-2.jpg","Шлакоблок 50%","пустотности «А Блок»","От 1600 руб.*","","",'подробнее','04-prod.html')
-					each t2, t1 in {'Размер:':'390х190х188 см','Цвет:':'серый, красный'}
+				+prod-slide("s-catalog-2.jpg","Шлакоблок 50%","пустотности ","от 1600 руб.*","","",'подробнее','50-prod.html')
+					each t2, t1 in {'Размер:':'390х190х188 мм','Цвет:':'серый, красный'}
 						+prod-tr(t1,t2)
-				+prod-slide("s-catalog-3.jpg","Шлакоблок 50%","пустотности «А Блок»","От 1600 руб.*","","",'подробнее','04-prod.html')
-					each t2, t1 in {'Размер:':'390х190х188 см','Цвет:':'серый, красный'}
+				+prod-slide("s-catalog-3.jpg","Перегородочный","камень 90мм","от 2100 руб.*","","",'подробнее','90-prod.html')
+					each t2, t1 in {'Размер:':'390х190х90 мм','Цвет:':'серый, красный'}
 						+prod-tr(t1,t2)
-				+prod-slide("s-catalog-4.jpg","Шлакоблок 50%","пустотности «А Блок»","От 1600 руб.*","","",'подробнее','04-prod.html')
-					each t2, t1 in {'Размер:':'390х190х188 см','Цвет:':'серый, красный'}
+				+prod-slide("s-catalog-4.jpg","Перегородочный","камень 120мм","от 2100 руб.*","","",'подробнее','120-prod.html')
+					each t2, t1 in {'Размер:':'390х190х120 мм','Цвет:':'серый, красный'}
 						+prod-tr(t1,t2)
 			+e.foot-text.text-secondary *Стоимость за&nbsp;1&nbsp;поддон, 60&nbsp;шт.
 			+e.foot-block
@@ -88,3 +88,13 @@ mixin s-catalog-with()
 			+prod-slide("prod-2.jpg","Песок","","860 руб.","text-center",'Бигбэг 1 тонна','Заказать','')(class="link-modal"  data-src="#modal-order" href="javascript:;" data-order="Заказать Песок")
 			+prod-slide("prod-3.jpg","Перемычки","","700 руб.","text-center",'1 шт','Заказать','')(class="link-modal" data-src="#modal-order" href="javascript:;" data-order="Заказать Перемычки")
 			+prod-slide("prod-4.jpg","Сетка кладочная Streck 20 m","","240 руб.","text-center",'90 мм','Заказать','')( class="link-modal" data-src="#modal-order" href="javascript:;" data-order="Заказать- Сетка кладочная Streck 20 m")
+
+mixin s-catalog-stroimat()
+	+s-catalog-body()
+		h3.fw-500 Стройматериалы
+		+e.slider--js
+			+prod-slide("prod-1.jpg","Цемент","","240 руб.","text-center",'1 мешок','Заказать','')(class="link-modal" data-src="#modal-order" href="javascript:;" data-order="Заказать Цемент")
+			+prod-slide("prod-2.jpg","Песок","","860 руб.","text-center",'Бигбэг 1 тонна','Заказать','')(class="link-modal"  data-src="#modal-order" href="javascript:;" data-order="Заказать Песок")
+			+prod-slide("prod-3.jpg","Перемычки","","700 руб.","text-center",'1 шт','Заказать','')(class="link-modal" data-src="#modal-order" href="javascript:;" data-order="Заказать Перемычки")
+			+prod-slide("prod-4.jpg","Сетка кладочная Streck 20 m","","240 руб.","text-center",'90 мм','Заказать','')( class="link-modal" data-src="#modal-order" href="javascript:;" data-order="Заказать- Сетка кладочная Streck 20 m")
+			+prod-slide("prod-5.jpg","Сажа строительная","","1300 руб.","text-center",'10 кг мешок','Заказать','')( class="link-modal" data-src="#modal-order" href="javascript:;" data-order="Заказать- Сажа строительная")
