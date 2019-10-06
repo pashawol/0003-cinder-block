@@ -1,7 +1,7 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
 		.container
-			.row
+			+e.row.row
 				+e.col.col-sm-auto.col-xl
 					+e.text
 						+e.icon-wrap
@@ -36,4 +36,16 @@ mixin footer()
 								+e.DIV.logo-text Производство шлакоблока и&nbsp;тротуарной плитки
 									div.text-secondary Работаем с 2006 года
 			+e.policy.text-md-left.text-center
-				a(href="privacy-policy.pdf" target="_blank").text-body.tdu Политика конфиденциальности
+				+e.policy-row.row
+					.col-auto
+						a(href="privacy-policy.pdf" target="_blank").text-body.tdu Политика конфиденциальности
+	
+					.col-auto
+						a(href="privacy-policy.pdf" target="_blank").text-body.tdu Пользовательское соглашение 
+				+e.develop-row.row
+					.col-lg-6
+						+e.develop Создание и продвижение сайта: 
+							| 
+							a(href="#").text-success.tdu Студия &laquo;Барс&raquo;
+					.col
+						a(href="map.html" target="_blank").text-body.tdu Карта сайта

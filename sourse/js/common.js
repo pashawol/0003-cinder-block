@@ -76,6 +76,7 @@ jQuery(document).ready(function ($) {
         arrr2 = (' <div class="l">' + icon);
     // // карусель
     // // карусель
+    
     $('.s-catalog__slider--js').slick({
         slidesToShow: 1,
         dots: false,
@@ -398,7 +399,7 @@ jQuery(document).ready(function ($) {
         var b = new Object();
         a = a.substring(1).split("&");
         for (var i = 0; i < a.length; i++) {
-            c = a[i].split("=");
+           let c = a[i].split("=");
             b[c[0]] = c[1];
         }
         return b;
@@ -406,8 +407,10 @@ jQuery(document).ready(function ($) {
     // form
     $("form").each(function () { //Change
         var th = $(this);
-        th.find('.utm_source').val(gets['utm_source']);
-        th.find('.utm_term').val(gets['utm_term']);
+        th.find('.utm_source').val(decodeURIComponent(gets['utm_source']));
+        th.find('.utm_term').val(decodeURIComponent(gets['utm_term']));
+        th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium']));
+        th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign']));
          
     });
     
@@ -424,7 +427,7 @@ jQuery(document).ready(function ($) {
         $($(this).data("price")).show().siblings().hide();
     })
 });
-JSCCommon = {
+const JSCCommon = {
     // часть вызов скриптов здесь, для использования при AJAX
     // функции для запуска lazy
 

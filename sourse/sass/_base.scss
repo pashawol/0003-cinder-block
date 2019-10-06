@@ -592,3 +592,14 @@ a{
 		}
 	}
 }
+.s-map{
+	ol{
+		padding-left: rem(20);
+	}
+	li{
+		a{
+			@extend h6;
+			display: inline-block;
+		}
+	}
+}
