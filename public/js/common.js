@@ -398,14 +398,14 @@ jQuery(document).ready(function ($) {
 	$("form").each(function () {
 		//Change
 		var th = $(this);
-		th.find('.utm_source').val(decodeURIComponent(gets['utm_source'] || ''));
-		th.find('.utm_term').val(decodeURIComponent(gets['utm_term'] || ''));
-		th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium'] || ''));
-		th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign'] || ''));
-	});
-	$(".form-wrap__toggle").click(function () {
-		$(".form-wrap__toggle-block").toggle();
-	});
+		th.find('.utm_source').val(decodeURIComponent(gets['utm_source']));
+		th.find('.utm_term').val(decodeURIComponent(gets['utm_term']));
+		th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium']));
+		th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign']));
+	}); // $(".form-wrap__toggle").click(function () {
+	//     // $(".form-wrap__toggle-block").toggle()
+	// })
+
 	$(".s-catalog__btn--foot-js").click(function (e) {
 		e.preventDefault();
 		$(this).addClass("disabled").parents(".s-catalog--page").find(".s-catalog__col:hidden").fadeIn();

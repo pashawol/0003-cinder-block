@@ -161,7 +161,7 @@
 	} 
 
 	&__toggle{
-		cursor: pointer;
+		// cursor: pointer;
 		text-align: center;
 		@extend .h6;
 		span{
@@ -170,13 +170,13 @@
 			border-bottom: 1px dashed;
 			@include mt;
 			&:hover{
-				border-color: transparent;
+				// border-color: transparent;
 			}
 		}
 		// margin-bottom: 0.5rem;
 		&-block{
 			padding-top: 0.5rem;
-			display: none;
+			// display: none;
 		}
 	}
 }

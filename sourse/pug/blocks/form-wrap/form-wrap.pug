@@ -40,7 +40,7 @@ mixin order-block(btn="Обсудить заказ")
 	+form-tabs-modal()
 	.h6 Специалист компании &laquo;АБлок&raquo; Зоя позвонит  вам прямо сейчас или в&nbsp;другое рабочее время: мы&nbsp;работаем ежедневно с&nbsp;09:00 до&nbsp;20:00
 	+e.toggle 
-		span Напишите, что вам нужно, если хотите
+		span Укажите необходимое количество, если знаете
 	+e.toggle-block
 		+input("Текст сообщения","textarea",'',"comment")
 	+e.btn(type='submit')= btn

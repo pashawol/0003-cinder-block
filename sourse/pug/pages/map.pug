@@ -23,7 +23,6 @@ include ../blocks/s-calc/_s-calc.pug
 //- include ../blocks/s-categories/_s-categories.pug
 block variables
 	- let  mainPage= null
-	- let  siteLink= ''
 	
 block title
 	- let title= 'Карта сайта'
@@ -39,48 +38,48 @@ block pagecontent
 		.container
 			ol.level-0
 				li.lpage
-					a(href=(siteLink|| "/"), title=`Главная`) Главная
+					a(href='/', title='Главная') Главная
 				li.lpage
-					a(href=`${siteLink}02-categories.html`, title=`Каталог`) Каталог
+					a(href='02-categories.html', title='Каталог') Каталог
 					ol
 						li.lpage
-							a(href=`${siteLink}03-catalog.html`, title=`Шлакоблок`) Шлакоблок
+							a(href='03-catalog.html', title='Шлакоблок') Шлакоблок
 							ol
 								li.lpage
-									a(href=`${siteLink}30-prod.html`, title=`Шлакоблок 30% пустотности`) Шлакоблок 30% пустотности
+									a(href='30-prod.html', title='Шлакоблок 30% пустотности') Шлакоблок 30% пустотности
 								li.lpage
-									a(href=`${siteLink}50-prod.html`, title=`Шлакоблок 50% пустотности`) Шлакоблок 50% пустотности
+									a(href='50-prod.html', title='Шлакоблок 50% пустотности') Шлакоблок 50% пустотности
 								li.lpage
-									a(href=`${siteLink}90-prod.html`, title=`Перегородочный камень 90 мм`) Перегородочный камень 90 мм
+									a(href='90-prod.html', title='Перегородочный камень 90 мм') Перегородочный камень 90 мм
 								li.lpage
-									a(href=`${siteLink}120-prod.html`, title=`Перегородочный камень 120 мм`) Перегородочный камень 120 мм
+									a(href='120-prod.html', title='Перегородочный камень 120 мм') Перегородочный камень 120 мм
 								li.lpage
-									a(href=`${siteLink}shlakoblok-rubleni-s-mramorom.html`, title=`Шлакоблок рубленый с мрамором`) Шлакоблок рубленый с мрамором
+									a(href='shlakoblok-rubleni-s-mramorom.html', title='Шлакоблок рубленый с мрамором') Шлакоблок рубленый с мрамором
 								li.lpage
-									a(href=`${siteLink}stolb-prod.html`, title=`Камень столбовой`) Камень столбовой
+									a(href='stolb-prod.html', title='Камень столбовой') Камень столбовой
 						li.lpage
-							a(href=`${siteLink}fasadnii-kamen.html`, title=`Фасадный камень`) Фасадный камень
+							a(href='fasadnii-kamen.html', title='Фасадный камень') Фасадный камень
 							ol
 								li.lpage
-									a(href=`${siteLink}fasadnaya-plitka.html`, title=`Фасадная плитка 90мм без мрамора`) Фасадная плитка 90мм без мрамора
+									a(href='fasadnaya-plitka.html', title='Фасадная плитка 90мм без мрамора') Фасадная плитка 90мм без мрамора
 								li.lpage
-									a(href=`${siteLink}fasadnaya-plitka-s-mramorom.html`, title=`Фасадная плитка 90мм с мрамором`) Фасадная плитка 90мм с мрамором
+									a(href='fasadnaya-plitka-s-mramorom.html', title='Фасадная плитка 90мм с мрамором') Фасадная плитка 90мм с мрамором
 								li.lpage
-									a(href=`${siteLink}shlakoblok-rubleni.html`, title=`Шлакоблок рубленый без мрамора`) Шлакоблок рубленый без мрамора
+									a(href='shlakoblok-rubleni.html', title='Шлакоблок рубленый без мрамора') Шлакоблок рубленый без мрамора
 								li.lpage
-									a(href=`${siteLink}shlakoblok-rubleni-zheltii.html`, title=`Шлакоблок рубленый без мрамора`) Шлакоблок рубленый без мрамора
+									a(href='shlakoblok-rubleni-zheltii.html', title='Шлакоблок рубленый без мрамора') Шлакоблок рубленый без мрамора
 								li.lpage
-									a(href=`${siteLink}shlakoblok-rubleni-s-mramorom-zheltii.html`, title=`Шлакоблок рубленый с мрамором`) Шлакоблок рубленый с мрамором
+									a(href='shlakoblok-rubleni-s-mramorom-zheltii.html', title='Шлакоблок рубленый с мрамором') Шлакоблок рубленый с мрамором
 								li.lpage
-									a(href=`${siteLink}shlakoblok-rubleni-uglovoi.html`, title=`Шлакоблок рубленый угловой без мрамора`) Шлакоблок рубленый угловой без мрамора
+									a(href='shlakoblok-rubleni-uglovoi.html', title='Шлакоблок рубленый угловой без мрамора') Шлакоблок рубленый угловой без мрамора
 								li.lpage.last-page
-									a(href=`${siteLink}shlakoblok-rubleni-uglovoi-s-mramorom.html`, title=`Шлакоблок рубленый угловой с мрамором`) Шлакоблок рубленый угловой с мрамором
+									a(href='shlakoblok-rubleni-uglovoi-s-mramorom.html', title='Шлакоблок рубленый угловой с мрамором') Шлакоблок рубленый угловой с мрамором
 						li.lpage
-							a(href=`${siteLink}dop-catalog.html`, title=`Стройматериалы`) Стройматериалы 
+							a(href='dop-catalog.html', title='Стройматериалы') Стройматериалы 
 				li.lpage
-					a(href=`${siteLink}05-shipping.html`, title=`Доставка и оплата`) Доставка и оплата
+					a(href='05-shipping.html', title='Доставка и оплата') Доставка и оплата
 				li.lpage
-					a(href=`${siteLink}06-calculator.html`, title=`Калькулятор`) Калькулятор
+					a(href='06-calculator.html', title='Калькулятор') Калькулятор
 
 				
 				
