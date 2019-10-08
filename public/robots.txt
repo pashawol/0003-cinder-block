@@ -1,5 +1,7 @@
 User-agent: *
 
+
 Disallow: /admin/
+
 
 Host: 62bloka.ru
