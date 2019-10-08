@@ -1,0 +1,22 @@
+mixin s-strength()
+	// start s-strength
+	+b.SECTION.s-strength.section.lazy-background#s-strength&attributes(attributes)
+		.container
+			.row
+				.col-lg-6.col-md-7
+					+b.section-title.text-center.text-md-left
+						h2
+							strong.text-primary Проверяем прочность
+							| 
+							| в&nbsp;независимой лаборатории
+						+e.text Марка прочности неоднократно подтверждалась протоколом испытаний
+					+e.foot.row
+						a.col-lg-auto.col-md.col-auto(data-fancybox="sert" href="img/@2x/gost.jpg")
+							+pic("5-layers2",'png')
+						.col-auto
+							.before
+								+icon('check')
+							+e.text Шлакоблок по&nbsp;ГОСТу 6133-99
+				+e.img-wrap.col.d-none.d-md-block
+					+pic("s-strength-img","jpg","","lazy",0)
+	// end s-strength

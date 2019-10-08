@@ -1,0 +1,42 @@
+mixin header-block()
+	// start header-block
+	+b.header-block#header-block
+		.container
+			+e.text-block
+				h1 
+					strong.text-primary Ровный и&nbsp;крепкий
+					| 
+					| шлакоблок от производителя
+				.row
+					+e.col.col
+						+icon('brickwall')
+						+e.text 
+							.strong Для возведения
+							| стен помещений
+					
+					+e.col.col
+						+icon('brick')
+						+e.text 
+							.strong Большие объемы
+							| в короткий срок
+				.row
+					.col-sm-auto
+						+e.btn(href="03-catalog.html") Выбрать блоки
+					.col
+						+e.text-check.d-flex
+							+e.check-wrap
+								+icon('check')
+							+e.h6 Стройте качественно, сдавайте объекты вовремя
+				+e.item-wrap.d-none.d-md-block
+					.row
+						.col-auto
+							+e.item--1
+								+e.title Отправим
+								+e.item-text ваш заказ в&nbsp;течение дня
+
+						.col-auto
+							+e.item--2
+								+e.title Работаем
+								+e.link.link-modal( data-src="#modal-storage" href="javascript:;" ).link-tdu круглый год
+					
+	// end header-block

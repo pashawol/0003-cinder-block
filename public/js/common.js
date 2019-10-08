@@ -1,7 +1,13 @@
+"use strict";
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 var $ = jQuery;
 var btnToggle = $(".toggle-menu-mobile--js"),
 		menu = $(".menu-mobile--js");
 jQuery(document).ready(function ($) {
+	var _$$slick;
+
 	// полифил для object-fit
 	objectFitImages(); // Picture element HTML5 shiv
 
@@ -97,19 +103,13 @@ jQuery(document).ready(function ($) {
 		prevArrow: arrr2,
 		nextArrow: arrl2
 	});
-	$('.slider-for').slick({
+	$('.slider-for').slick((_$$slick = {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		arrows: false,
 		asNavFor: '.slider-nav',
-		mobileFirst: true,
-		arrows: true,
-		dots: false,
-		prevArrow: arrr2,
-		nextArrow: arrl2,
-		infinite: true,
 		mobileFirst: true
-	});
+	}, _defineProperty(_$$slick, "arrows", true), _defineProperty(_$$slick, "dots", false), _defineProperty(_$$slick, "prevArrow", arrr2), _defineProperty(_$$slick, "nextArrow", arrl2), _defineProperty(_$$slick, "infinite", true), _defineProperty(_$$slick, "mobileFirst", true), _$$slick));
 	$('.slider-nav').slick({
 		slidesToShow: 2,
 		slidesToScroll: 1,
@@ -289,7 +289,7 @@ jQuery(document).ready(function ($) {
 	}
 
 	if ($("section").is(".s-calc")) {
-		function change() {
+		var change = function change() {
 			var length, width, thickness, height, windows, result, cost;
 			length = parseFloat(document.getElementById("length").value);
 			width = parseFloat(document.getElementById("width").value);
@@ -315,9 +315,9 @@ jQuery(document).ready(function ($) {
 			link = link + type + "=" + cost + ":::image=" + getImage(document.getElementById("choose-type").value);
 			var a = document.getElementById("add-cart-1");
 			a.href = link;
-		}
+		};
 
-		function change2() {
+		var change2 = function change2() {
 			var length_2, thickness_2, height_2, doors, result_2, cost;
 			length_2 = parseFloat(document.getElementById("length-2").value);
 			thickness_2 = getThickness() / 100;
@@ -342,7 +342,7 @@ jQuery(document).ready(function ($) {
 			link = link + type + "=" + cost + ":::image=" + getImage(document.getElementById("choose-type-2").value);
 			var a = document.getElementById("add-cart-2");
 			a.href = link;
-		}
+		};
 
 		change();
 		change2();
@@ -387,7 +387,7 @@ jQuery(document).ready(function ($) {
 		a = a.substring(1).split("&");
 
 		for (var i = 0; i < a.length; i++) {
-			let c = a[i].split("=");
+			var c = a[i].split("=");
 			b[c[0]] = c[1];
 		}
 
@@ -414,11 +414,11 @@ jQuery(document).ready(function ($) {
 		$($(this).data("price")).show().siblings().hide();
 	});
 });
-const JSCCommon = {
+var JSCCommon = {
 	// часть вызов скриптов здесь, для использования при AJAX
 	// функции для запуска lazy
 	// /LazyFunction
-	magnificPopupCall: function () {
+	magnificPopupCall: function magnificPopupCall() {
 		$(".link-modal").click(function () {
 			$($(this).data("src")).find(".order").val($(this).data("order"));
 			$(this).parents('.s-prod-head') ? $($(this).data("src")).find(".color").val($(this).parents('.s-prod-head').find(".radio-input__input:checked").val()) : $($(this).data("src")).find(".color").val('');
@@ -434,7 +434,7 @@ const JSCCommon = {
 		}); // /modal галерея
 	},
 	// /magnificPopupCall
-	mobileMenu: function () {
+	mobileMenu: function mobileMenu() {
 		// закрыть/открыть мобильное меню
 		btnToggle.click(function () {
 			btnToggle.toggleClass("on"); // $("body").toggleClass("fixed");
@@ -459,7 +459,7 @@ const JSCCommon = {
 	},
 	// /mobileMenu
 	// табы  .
-	tabscostume: function (tab) {
+	tabscostume: function tabscostume(tab) {
 		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
 			$(this).addClass('active').siblings().removeClass('active').closest('.' + tab).find('.' + tab + '__content').removeClass('active').hide(function () {
 				$(this).find('input').attr('required', false);
@@ -479,7 +479,7 @@ const JSCCommon = {
 		});
 	},
 	// /CustomYoutubeBlock
-	inputMask: function () {
+	inputMask: function inputMask() {
 		// mask for input
 		$('input[type="tel"]').attr("pattern", "[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+7(999)999-99-99");
 	} // /inputMask

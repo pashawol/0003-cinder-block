@@ -1,0 +1,15 @@
+mixin s-prices()
+	// start s-prices
+	+b.s-prices.section#s-prices&attributes(attributes)
+		.container.lazy-background
+			.row.justify-content-center.justify-content-lg-start
+				.col-lg-auto.text-lg-left.text-center
+					+e.title Получите полный
+						| 
+						a.scroll-link(href="#s-form") каталог и&nbsp;прайс на&nbsp;шлакоблок
+					+e.text или выберите нужный из&nbsp;каталога
+				.col-xl-auto.col-lg.col-auto
+					+pic("s-price-img","jpg","","lazy",0)
+				.col-auto
+					+e.btn(href="03-catalog.html") Выбрать шлакоблок
+	// end s-prices

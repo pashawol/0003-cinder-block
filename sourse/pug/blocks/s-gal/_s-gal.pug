@@ -1,0 +1,45 @@
+mixin s-gal()
+	// start s-gal
+	+b.SECTION.s-gal.section#s-gal&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 
+					strong.text-primary Постройки из&nbsp;нашего
+					| 
+					| шлакоблока
+			
+			+e.slider--lg.slider-for
+				mixin slide(i,t)
+
+					+e.slide
+						+e.img-wrap-wrap
+							+e.img-wrap--lg(data-fancybox="gal-sl" href= i)
+								img.res-i.object-fit-js(src="#"  data-lazy= i, alt="")
+						+e.title= t
+				+slide('img/@2x/gal-8.jpg','Дом в поселке «Раздолье»')
+				+slide('img/@2x/gal-2.jpg','Поселок «Нежный»')
+				+slide('img/@2x/gal-3.jpg','Дом в поселке «Раздолье»')
+				+slide('img/@2x/gal-4.jpg','Улица в поселке «Раздолье»')
+				+slide('img/@2x/gal-5.jpg','Улица в поселке «Раздолье»')
+				+slide('img/@2x/gal-6.jpg','Поселок «Светлый»')
+				+slide('img/@2x/gal-7.jpg','Улица в поселке «Раздолье»')
+				+slide('img/@2x/gal-9.jpg','«Богатый остров»')
+				+slide('img/@2x/gal-10.jpg','Многоквартирный дом в г. Карталы')
+				+slide('img/@2x/gal-11.jpg','ТЦ «Фрегат» г. Карталы')
+			.d-none.d-md-block
+				+e.slider--sm.slider-nav
+					mixin slide(i)
+						+e.slide--sm: +e.img-wrap--sm()
+							img.res-i.object-fit-js(src="#"  data-lazy= i, alt="")
+					+slide('img/@2x/m-gal-8.jpg')
+					+slide('img/@2x/m-gal-2.jpg')
+					+slide('img/@2x/m-gal-3.jpg')
+					+slide('img/@2x/m-gal-4.jpg')
+					+slide('img/@2x/m-gal-5.jpg')
+					+slide('img/@2x/m-gal-6.jpg')
+					+slide('img/@2x/m-gal-7.jpg')
+					+slide('img/@2x/m-gal-9.jpg')
+					+slide('img/@2x/m-gal-10.jpg')
+					+slide('img/@2x/m-gal-11.jpg')
+			
+	// end s-gal
