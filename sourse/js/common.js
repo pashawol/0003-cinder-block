@@ -415,7 +415,7 @@ jQuery(document).ready(function ($) {
     });
     
     // $(".form-wrap__toggle").click(function () {
-    //     // $(".form-wrap__toggle-block").toggle()
+    //     $(".form-wrap__toggle-block").toggle()
     // })
 
     $(".s-catalog__btn--foot-js").click(function(e){

@@ -403,7 +403,7 @@ jQuery(document).ready(function ($) {
 		th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium']));
 		th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign']));
 	}); // $(".form-wrap__toggle").click(function () {
-	//     // $(".form-wrap__toggle-block").toggle()
+	//     $(".form-wrap__toggle-block").toggle()
 	// })
 
 	$(".s-catalog__btn--foot-js").click(function (e) {
