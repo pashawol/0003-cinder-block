@@ -64,7 +64,8 @@ padding-top: rem(30);
     // padding-top: rem(6);
   }
   &__time{
-		color: $secondary;  
+		// color: $secondary;  
+		color: #5b5b5b;
 		@include media-breakpoint-up(xl) {
 
 			margin-bottom: rem(5);
@@ -77,8 +78,11 @@ padding-top: rem(30);
   &__text{
     // padding-right: 20px;
     display: flex;
-    font-weight: 500;
-    min-width: rem(150);
+		font-weight: 500;
+		@include media-breakpoint-up(sm) {
+
+			min-width: rem(150);
+		}
   }
  
   &__icon-wrap{
@@ -89,7 +93,7 @@ padding-top: rem(30);
     }
   }
   &__btn{
-    margin-top: rem(-4);
+    // margin-top: rem(-4);
 
     @include media-breakpoint-up(xl) {
 

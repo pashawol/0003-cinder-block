@@ -49,11 +49,18 @@
 				border-width: em(1.6);
 			}
 		} 
+		&__block-text{
+			line-height: 1.4;
+		}
 		&__block{
 			box-shadow: 0 0 23px 12px rgba(192, 192, 192, 0.07);
 			border-radius: $border-radius;
 			background-color: #ffffff;
+			@include media-breakpoint-up(sm) {
 			display: flex;
+			text-align: left;
+			}
+			text-align: center;
 			@include media-breakpoint-up(xl) {
 
 				padding: rem(40) rem(20) rem(40) rem(35);
@@ -75,7 +82,7 @@
 				max-width: rem(523);
 				margin-left: auto;
 				margin-top: 0;
-				margin-bottom: rem(50);
+				margin-bottom: rem(40);
 			}
 			margin-top: rem(-50);
 		}

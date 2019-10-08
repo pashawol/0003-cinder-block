@@ -20,17 +20,19 @@ mixin s-about()
 							| 
 							| когда в&nbsp;приоритете качество, а&nbsp;не&nbsp;экономия
 						+e.text-block
-							p С&nbsp;2006 года мы&nbsp;занимаемся производством шлакоблока и&nbsp;тротуарной плитки и&nbsp;все время строго следим, чтобы клиенты получали заказ в&nbsp;срок и&nbsp;без брака.
+							p С&nbsp;2006 года мы&nbsp;занимаемся производством шлакоблока и&nbsp;тротуарной плитки и&nbsp;все время строго следим, чтобы клиенты получали заказ 
+								| 
+								strong в&nbsp;срок и&nbsp;без брака.
 
-							p На&nbsp;строительство коттеджа средней площади уходит 100 м2&nbsp;шлакоблока, примерно на&nbsp;180&nbsp;000&nbsp;рублей. Можно найти дешевле, сэкономить 10&nbsp;000 рублей и&nbsp;при этом получить груду отходов, неровную кладку и&nbsp;проблемы со&nbsp;стенами в&nbsp;будущем.
+							p На&nbsp;строительство коттеджа средней площади уходит 100 м³&nbsp;шлакоблока, примерно на&nbsp;180&nbsp;000&nbsp;рублей. Можно найти дешевле, сэкономить 10&nbsp;000 рублей и&nbsp;при этом получить груду отходов, неровную кладку и&nbsp;проблемы со&nbsp;стенами в&nbsp;будущем.
 
 							p С&nbsp;нашим шлакоблоком этого не&nbsp;произойдет&nbsp;&mdash; гарантируем!
 					p 
 						strong Давайте обсудим вашу задачу. 
 						| 
 						|  Мы&nbsp;подскажем, какой шлакоблок&nbsp;вам подойдет, рассчитаем объемы и&nbsp;стоимость.
-					+form-wrap()
-						input(type="hidden" class='order' name='order' value="Обсудить задачу")
+					+form-wrap("Обсудить задачу")
+						input(type="hidden" name='formtask')
 						+e.row.row
 							.col-md-6
 								+input("+7 (900) 444-44-44","tel")(required)
@@ -40,14 +42,21 @@ mixin s-about()
 	// end s-about
 
 
-mixin s-about-page()
+mixin s-about-page(woman2)
 	// start s-about
 	+b.SECTION.s-about--page.section.lazy-background#s-about&attributes(attributes)
 		.container 
 			.row
 				.col.align-self-end
-					+e.man--girl
-						+pic("womn","png",'','')
+					if woman2
+						+e.man--girl.--girl-2
+							+pic("womn2","png",'','')
+						+e.block
+							+e.text--name.--girl Зоя
+							+e.text--prof специалист «А Блок»
+					else
+						+e.man--girl
+							+pic("womn","png",'','')
 						+e.block
 							+e.text--name.--girl Зоя
 							+e.text--prof специалист «А Блок»
@@ -56,17 +65,17 @@ mixin s-about-page()
 						block
 					else
 						+e.right-block
-							h2
+							h3
 								strong.text-primary Воспользуйтесь 
 								| 
 								| калькулятором
 							.h5.text-secondary Чтобы рассчитать необходимое количество материала и&nbsp;стоимость
-							+e.btn.btn.btn-primary(href="#") Перейти в калькулятор
+							+e.btn.btn.btn-primary(href="06-calculator.html") Перейти в калькулятор
 							.h6.fw-500 Или звоните, чтобы обсудить материал, количество и&nbsp;стоимость со&nbsp;специалистом
 							br
 							.h5
-								a(href="tel:").text-body.strong +7 3519 45-52-03
-							p Мы работаем ежедневно, с 9:00 до 20:00
+								a(href="tel:83519460203").text-body.strong +7 3519 46-02-03
+							.fw-500 Мы&nbsp;работаем ежедневно, с&nbsp;9:00&nbsp;до&nbsp;20:00
 	// end s-about
 
 

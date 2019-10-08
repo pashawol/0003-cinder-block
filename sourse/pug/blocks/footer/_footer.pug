@@ -1,34 +1,34 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
 		.container
-			.row
-				+e.col.col-sm-auto
+			+e.row.row
+				+e.col.col-sm-auto.col-xl
 					+e.text
 						+e.icon-wrap
 							+icon('mark') 
 						div г.&nbsp;Магнитогорск,
 							br
 							|  Вайнера, 2А
-				+e.col.col-sm-auto.col-6.d-none.d-sm-block
+				+e.col.col-sm-auto.col-6.d-none.d-sm-block.col-xl
 					ul
 						li
-							a(href="#") Каталог
+							a(href="02-categories.html") Каталог
 						
 						li
-							a(href="#") Доставка и оплата
+							a(href="05-shipping.html") Доставка и оплата
 						
 						li
-							a(href="#") Калькулятор
+							a(href="06-calculator.html") Калькулятор
 						
 				+e.col.col-sm-auto
 					+e.text--tel
 						+e.icon-wrap
 							+icon('tel')
 						div
-							+e.tel(href="tel:+7351945-52-03") +7 3519 45-52-03 
+							+e.tel(href="tel:+73519460203") +7 3519 46-02-03 
 							//- +e.sm-link.link-modal.d-xl-none(  data-src="#modal-call" href="javascript:;" data-order="Заказать звонок в шапке") Перезвоните мне 
-					+e.btn.link-modal(  data-src="#modal-call" href="javascript:;" data-order="Заказать звонок в шапке") Перезвоните мне
-				.col-lg-auto.col-md.order-md-first
+					+e.btn.link-modal(  data-src="#modal-call" href="javascript:;" data-order="Заказать звонок в подвале") Перезвоните мне
+				.col-xl-4.col-lg-auto.col-md.order-md-first
 					.row 
 						+e.col.col-xl-auto.col
 							+e.logo(href="/")
@@ -36,4 +36,16 @@ mixin footer()
 								+e.DIV.logo-text Производство шлакоблока и&nbsp;тротуарной плитки
 									div.text-secondary Работаем с 2006 года
 			+e.policy.text-md-left.text-center
-				a(href="#").text-body.tdu Политика конфиденциальности
+				+e.policy-row.row
+					.col-auto
+						a(href="privacy-policy.pdf" target="_blank").text-body.tdu Политика конфиденциальности
+	
+					.col-auto
+						a(href="processing-conditions.pdf" target="_blank").text-body.tdu Пользовательское соглашение 
+				+e.develop-row.row
+					.col-lg-6
+						+e.develop Создание и продвижение сайта: 
+							| 
+							a(href="https://studiobars.ru/" target="_blank").text-success.tdu Студия &laquo;Барс&raquo;
+					.col
+						a(href="map.html" target="_blank").text-body.tdu Карта сайта

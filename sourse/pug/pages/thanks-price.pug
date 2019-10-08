@@ -1,0 +1,51 @@
+extends layout/main.pug
+
+
+//- include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+//- include ../blocks/s-garanty/_s-garanty.pug
+//- include ../blocks/s-composition/_s-composition.pug
+//- include ../blocks/s-strength/_s-strength.pug
+//- include ../blocks/s-types/_s-types.pug
+//- include ../blocks/s-prices/_s-prices.pug
+//- include ../blocks/s-stock/_s-stock.pug
+//- include ../blocks/s-form/_s-form.pug
+//- include ../blocks/s-shipping/_s-shipping.pug
+//- include ../blocks/s-rew/_s-rew.pug
+//- include ../blocks/s-gal/_s-gal.pug
+include ../blocks/s-catalog/_s-catalog.pug
+include ../blocks/s-prod-head/_s-prod-head.pug
+include ../blocks/s-about/_s-about.pug
+include ../blocks/s-prod-head/_s-prod-head.pug
+include ../blocks/s-shipping-page/_s-shipping-page.pug
+include ../blocks/s-price/_s-price.pug
+include ../blocks/s-calc/_s-calc.pug
+//- include ../blocks/s-categories/_s-categories.pug
+block variables
+	- let  mainPage= "thanks-page"
+	
+block title
+	- let title= 'Спасибо'
+	title= title
+
+block pagecontent
+	//- +mob-mnu()
+	+header()
+		+top-line()
+		.container
+			nav( class="breadcrumb h6 justify-content-md-start justify-content-center")
+				a(href="/") Вернуться на сайт
+	+b.thanks.section
+		.container
+			+b.section-title.text-center
+				h1 Иван, спасибо, мы&nbsp;приняли вашу заявку!
+				+e.text Мы&nbsp;уже отправили вам каталог и&nbsp;прайс на&nbsp;шлакоблок.
+					br
+					| Специалист Зоя перезвонит вам, чтобы обсудить с&nbsp;вами объем материала, стоимость и&nbsp;условия поставки. 
+					br
+					| Удачного дня!
+			+e.img-wrap
+				+pic("thanks-price",'png','','',0)
+	//- +s-contact()
+	+footer()
+

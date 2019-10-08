@@ -12,13 +12,13 @@ mixin s-form()
 							| и&nbsp;прайс на шлакоблок &laquo;А&nbsp;Блок&raquo;
 					+e.text.lazy-background Мы&nbsp;также рассчитаем объем и&nbsp;стоимость материала, исходя из&nbsp;площади строения
 				.col
-					+form-wrap()
+					+form-wrap("Получить каталог и прайс")
 						+form-tabs()
-							input(type="hidden" class='order' name='order' value="Получить каталог и прайс")
+							input(type="hidden" name="formprice" value="formprice") 
 							+e.group-title Какую компанию вы&nbsp;представляете?
 
 							.row.justify-content-between
-								+b.LABEL.type-company.col-md-auto.col-6
+								+b.LABEL.type-company.col-sm-auto.col-6
 									+e.INPUT.input(type="radio" name="type-company[]" value="Строительная компания" required)
 									+e.icon-wrap
 										+icon("brickwall-form")
@@ -27,7 +27,7 @@ mixin s-form()
 										br
 										|  компания
 								
-								+b.LABEL.type-company.col-md-auto.col-6
+								+b.LABEL.type-company.col-sm-auto.col-6
 									+e.INPUT.input(type="radio" name="type-company[]" value="Строительная компания" )
 									+e.icon-wrap
 										+icon("shopping-bag")
@@ -35,7 +35,7 @@ mixin s-form()
 										| 
 										br
 										|  компания
-								+b.LABEL.type-company.col-md-auto.col-6
+								+b.LABEL.type-company.col-sm-auto.col-6
 									+e.INPUT.input(type="radio" name="type-company[]" value="Строительная компания" )
 									+e.icon-wrap
 										+icon("users")

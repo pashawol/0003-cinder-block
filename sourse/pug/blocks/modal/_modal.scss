@@ -28,6 +28,9 @@
 		// background-size: ;
 	
 	}
+	.h5{
+		// line-height: 1.33;
+	}
 	@include media-breakpoint-up(lg) {
 
 		max-width: 1061px;
@@ -75,7 +78,10 @@
 	.col{
 		background-color: #fafafa;
 		@include media-breakpoint-up(sm) {
-			padding: rem(40px) rem(50px);
+			padding: rem(40px) rem(60px);
+			.form-wrap__btn{
+				max-width: 100%;
+			}
 		}
 		padding: rem(30px) rem(15px) rem(20px);
 		

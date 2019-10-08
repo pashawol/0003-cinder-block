@@ -40,18 +40,58 @@ $html = '
         $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Телефон:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['tel'] . '</b></td></tr>';
     }
     
+    if (!empty($_POST['email'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Email:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['email'] . '</b></td></tr>';
+    }
+    
+    if (!empty($_POST['whatsapp'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Whatsapp:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['whatsapp'] . '</b></td></tr>';
+    }
+    
+    if (!empty($_POST['viber'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Viber:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['viber'] . '</b></td></tr>';
+    }
+    
     if (!empty($_POST['time'])) {
         $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Время для звонка:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['time'] . '</b></td></tr>';
     }
 
     
-    if (!empty($_POST['color'])) {
-        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Цвет материала:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['color'] . '</b></td></tr>';
+    if (!empty($_POST['choose-type'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Тип шлакоблок:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['choose-type'] . '</b></td></tr>';
     }
-
     
-    if (!empty($_POST['comment'])) {
-        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Текст сообщения:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['comment'] . '</b></td>';
+    if (!empty($_POST['result'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Объем:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['result'] . '</b></td></tr>';
+    }
+    
+    if (!empty($_POST['cost'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Стоимость:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['cost'] . '</b></td></tr>';
+    }
+    
+    if (!empty($_POST['length'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Длина стен:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['length'] . '</b></td></tr>';
+    }
+    
+    if (!empty($_POST['height'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Высота стен:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['height'] . '</b></td></tr>';
+    }
+    
+    if (!empty($_POST['width'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Ширина стен:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['width'] . '</b></td></tr>';
+    }
+    
+    if (!empty($_POST['thickness'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Толщина стен:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['thickness'] . '</b></td></tr>';
+    }
+    
+    if (!empty($_POST['windows'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Количество окон:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['windows'] . '</b></td></tr>';
+    }
+    
+    
+    if (!empty($_POST['doors'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Количество дверей:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['doors'] . '</b></td>';
     }
 
     if (!empty($_POST['utm_source'])) {
@@ -60,6 +100,13 @@ $html = '
     
     if (!empty($_POST['utm_term'])) {
         $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> utm_term:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['utm_term'] . '</b></td>';
+    }
+    if (!empty($_POST['utm_medium'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> utm_medium:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['utm_medium'] . '</b></td>';
+    }  
+      
+    if (!empty($_POST['utm_campaign'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> utm_campaign:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['utm_campaign'] . '</b></td>';
     }
     // if (!empty($_POST['tech'])) {
     //     $html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;"> Техника:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . implode(", ",$_POST['tech']) . '</b></td></tr>';

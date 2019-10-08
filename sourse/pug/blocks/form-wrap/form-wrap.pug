@@ -7,6 +7,7 @@ mixin input(placeholder,  t='text', label, name= t)
 	mixin t(t='text',placeholder, name= t)
 		if t== "textarea"
 			+e.TEXTAREA.input.form-control(placeholder= placeholder name= name)&attributes(attributes)
+
 		else
 			+e.INPUT.input(type= t placeholder= placeholder name= name)&attributes(attributes)
 	+e.input-wrap
@@ -17,10 +18,33 @@ mixin input(placeholder,  t='text', label, name= t)
 		else
 			+t(t,placeholder, name)&attributes(attributes)
 	// +e.input-wrap
+mixin select(label,name= t)
+	+e.input-wrap
+		if label
+			label
+				+e.SPAN.title= label
+				+e.SELECT.input.form-control(name= name)&attributes(attributes)
+					block
+		else
+			+e.SELECT.input.form-control(name= name)&attributes(attributes)
+				block
+	// +e.input-wrap
 
 mixin inputName()
 	+input("Иван","text",'Как к вам обращаться?',"name")(required)
-
+mixin order-block(btn="Обсудить заказ")
+	input(type="hidden" class='order' name='order' value="")
+	input(type="hidden" class='color' name='color' value="") 
+	block
+	+inputName()
+	+form-tabs-modal()
+	.h6 Специалист компании &laquo;АБлок&raquo; Зоя позвонит  вам прямо сейчас или в&nbsp;другое рабочее время: мы&nbsp;работаем ежедневно с&nbsp;09:00 до&nbsp;20:00
+	+e.toggle 
+		span Укажите необходимое количество, если знаете
+	+e.toggle-block
+		+input("Текст сообщения","textarea",'',"comment")
+	+e.btn(type='submit')= btn
+	+polite
 
 mixin form-tabs()
 	.tabs
@@ -61,7 +85,7 @@ mixin form-tabs-modal()
 			.tabs__caption
 				.tabs__btn.active
 					+icon('tel2')
-					| SMS
+					| Телефон
 			 
 				.tabs__btn
 					+icon('whatsapp')
@@ -117,13 +141,15 @@ mixin form-tabs()
 //- wrapper for form
 mixin form-wrap(order)
 	+b.form-wrap&attributes(attributes)
-		form
+		form(action="thanks.php" method="post")
 			if !order 
 				input(type='hidden', class="order", name='order', value=`Заявка  с сайта` ) 
 			else
 				input(type='hidden', class="order", name='order', value= order ) 
 			input(type="hidden" class='utm_source' name='utm_source')
 			input(type="hidden" class='utm_term' name='utm_term')
+			input(type="hidden" class='utm_medium' name='utm_medium')
+			input(type="hidden" class='utm_campaign' name='utm_campaign')
 			block
 //- /wrapper for form
 
@@ -153,8 +179,8 @@ mixin polite()
 
 mixin form-body()
 	
-	+input("Ваш номер телефона","tel",'Введите Ваш номер телефона для связи')(required)
-	+e.title  Выберите время для звонка
+	+input("+7 (900) 444-44-44","tel",'Введите телефон:')(required)
+	//- +e.title  Выберите время для звонка
 	+b.LABEL.custom-input-time
 		+e.INPUT.input(type='checkbox', name='scr8-time', )
 		+e.SPAN.lab

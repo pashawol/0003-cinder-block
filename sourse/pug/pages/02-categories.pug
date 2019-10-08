@@ -19,11 +19,11 @@ include ../blocks/s-gal/_s-gal.pug
 block variables
 	- let  mainPage= null
 block title
-	- let title= 'Каталоги'
+	- let title= 'Каталог'
 	title= title 
 
 block pagecontent
-	+mob-mnu()
+	//- +mob-mnu()
 	+header()
 		+top-line()
 		.container
@@ -39,37 +39,37 @@ block pagecontent
 	+s-catalog-body()(class="s-catalog--page")
 		+b.section-title.text-center
 			h2
-				strong.text-primary У&nbsp;нас вы&nbsp;можете купить сразу 
+				strong.text-primary У&nbsp;нас вы&nbsp;можете купить&nbsp;сразу 
 				| 
-				| все необходимое для постройки из&nbsp;шлакоблока
+				| все необходимое для&nbsp;постройки из&nbsp;шлакоблока
 		.row.justify-content-center
-			mixin item(i,t,p, a="#")
+			mixin item(i,t,p, a)
 				+e.col.col-md-4
-					+e.item(href= a)
+					-const src = (  a || null)
+					+e.item( href = src )
 						+e.DIV.img-wrap
-							//- img.lazy(src="#" data-src=`img/@2x/category-${i}.jpg`, alt="")
 							+pic('category-'+ i,'jpg','bg',"",0)
 						+e.DIV.caption
 							+e.DIV.title= t
 							+e.DIV.text= p
 							block
 				// /+e.col.col-md-4
-			+item('1','Шлакоблок','Для строительства домов, бань, хозпостроек и заборов','#')
-				+e.small
+			+item('1','Шлакоблок','Для строительства домов, бань, хозпостроек и заборов','03-catalog.html')
+				+e.small.fw-500
 					span.text-secondary Наполнитель: 
 					| 
 					div гранитный отсев
-			+item('2','Фасадный камень','Строительный материал для облицовки стен','#')
-				+e.small
+			+item('2','Фасадный камень','Строительный материал для облицовки стен','fasadnii-kamen.html')
+				+e.small.fw-500
 					span.text-secondary Цвета: 
 					| 
 					div красный, серый, желтый, фиолетовый
-			+item('3','Стройматериалы ','Цемент, сетка, сажа','#')
+			+item('3','Стройматериалы ','Цемент, сетка, сажа','dop-catalog.html')
 		+e.shipping-block
 			//- +pic("manipulator_5_tonn_2x",'png',"","lazy",0)
 			div.order-sm-last
 				.h5.strong Доставка с разгрузкой
-				.h6 Максимум на следующий день
+				.h6.fw-500 Максимум на&nbsp;следующий день
 			img.lazy(src="#" data-src="img/@2x/manipulator_5_tonn_2x.png", alt="")
 			
 

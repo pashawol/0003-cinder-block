@@ -13,25 +13,14 @@ jQuery(document).ready(function ($) {
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
 	JSCCommon.CustomInputFile(); // добавляет подложку для pixel perfect
-
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/5.png);"></div>'); // /добавляет подложку для pixel perfect
-	// var url = document.location.href;
-	// $.each($(".top-nav__nav a "), function () {
-	// 	if (this.href == url) {
-	// 		if ($(this).hasClass("top-nav__link") == true) {
-	// 			$(this).addClass('top-nav__link-active');
-	// 		}
-	// 		if ($(this).hasClass("footer__link") == true) {
-	// 			$(this).addClass('footer__link-active');
-	// 		} 
-	// 	}; 
-	// }); 
+	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/5.png);"></div>')
+	// /добавляет подложку для pixel perfect
 	// /закрыть/открыть мобильное меню
 
 	function heightses() {
 		var w = $(window).width(); // $(".main-wrapper").css("margin-bottom", $('footer').height())
 		// $(".otz__item .text-wrap ").height('auto').equalHeights();
-		// 
+		//
 		// скрывает моб меню
 
 		var topH = $("header ").innerHeight();
@@ -86,13 +75,13 @@ jQuery(document).ready(function ($) {
 		}, {
 			breakpoint: 767.98,
 			settings: {
-				slidesToShow: 3 // infinite: false, 
+				slidesToShow: 3 // infinite: false,
 
 			}
 		}, {
 			breakpoint: 575.98,
 			settings: {
-				slidesToShow: 2 // infinite: false, 
+				slidesToShow: 2 // infinite: false,
 
 			}
 		}]
@@ -138,43 +127,259 @@ jQuery(document).ready(function ($) {
 		}, {
 			breakpoint: 767.98,
 			settings: {
-				slidesToShow: 4 // infinite: false, 
+				slidesToShow: 4 // infinite: false,
 
 			}
 		}, {
 			breakpoint: 575.98,
 			settings: {
-				slidesToShow: 3 // infinite: false, 
+				slidesToShow: 3 // infinite: false,
 
 			}
 		}]
-	}); // $('.s-gal__slider\
-	// ,.slider-for2 ')
-	// 	.on('lazyLoaded', function (event, slick, image, imageSource) {
-	// 		image.parent().css('background-image', 'url(' + image.attr('src') + ')');
-	// 	});
-	// modal window
-	// или
-	// $(".dropzone").dropzone({
-	//  url: "/file/post",
-	//  addRemoveLinks: true,
-	//      acceptedFiles: 'image/*',
-	//      uploadMultiple: true,
-	//   });
-	// $(".wow-wrap").each(function () {
-	// var wowAnim = $(this).find(".s-dop__col," +
-	//                 ".s-pick__col," +
-	//                 ".s-condition__col");
-	// wowAnim.each(function(i){
-	// wowAnim.eq(i).attr("data-wow-delay", i*.1*2 + "s");
-	//    var wow = new WOW({ mobile: false });
-	//         wow.init();
-	// });
-	// });
-
+	});
 	$('.custom-input-time__input').change(function () {
 		$(this).parents('form').find('.toggle-wrap-input-js').toggle().toggleClass('active');
-	});
+	}); // калькулятор
+
+	function getCost(x) {
+		switch (x) {
+			case 'Стеновой камень 30% пустотности серый':
+				return 1800;
+
+			case 'Стеновой камень 30% пустотности красный':
+				return 2100;
+
+			case 'Стеновой камень 50% пустотности серый':
+				return 1600;
+
+			case 'Стеновой камень 50% пустотности красный':
+				return 1900;
+
+			case 'Перегородочный камень 90 мм серый':
+				return 2100;
+
+			case 'Перегородочный камень 120 мм серый':
+				return 2100;
+
+			case 'Стеновой камень рубленый серый':
+				return 2500;
+
+			case 'Стеновой камень рубленый красный':
+				return 2900;
+
+			case 'Стеновой камень рубленый фиолетовый':
+				return 3100;
+
+			case 'Стеновой камень рубленый желтый':
+				return 3500;
+
+			case 'Стеновой камень рубленый с мрамором серый':
+				return 3100;
+
+			case 'Стеновой камень рубленый с мрамором красный':
+				return 3500;
+
+			case 'Стеновой камень рубленый с мрамором желтый':
+				return 4100;
+
+			case 'Стеновой камень рубленый угол серый':
+				return 2800;
+
+			case 'Стеновой камень рубленый угол красный':
+				return 3200;
+
+			case 'Стеновой камень рубленый угол фиолетовый':
+				return 3800;
+
+			case 'Стеновой камень рубленый угол желтый':
+				return 3400;
+
+			case 'Стеновой камень рубленый угол с мрамором серый':
+				return 3400;
+
+			case 'Стеновой камень рубленый угол с мрамором красный':
+				return 3800;
+
+			case 'Стеновой камень рубленый угол с мрамором желтый':
+				return 4000;
+		}
+	}
+
+	function getImage(x) {
+		switch (x) {
+			case 'Стеновой камень 30% пустотности серый':
+				return "https://static.tildacdn.com/tild6130-6463-4264-b961-636637336234/shlak-30-square.jpg";
+
+			case 'Стеновой камень 30% пустотности красный':
+				return "https://static.tildacdn.com/tild6130-6463-4264-b961-636637336234/shlak-30-square.jpg";
+
+			case 'Стеновой камень 50% пустотности серый':
+				return "https://static.tildacdn.com/tild3637-6564-4866-b661-363465303731/shlak-50-square.jpg";
+
+			case 'Стеновой камень 50% пустотности красный':
+				return "https://static.tildacdn.com/tild3637-6564-4866-b661-363465303731/shlak-50-square.jpg";
+
+			case 'Перегородочный камень 90 мм серый':
+				return "https://static.tildacdn.com/tild6136-6535-4362-b231-643933356562/shlak-90mm-square.jpg";
+
+			case 'Перегородочный камень 120 мм серый':
+				return "https://static.tildacdn.com/tild3039-6261-4661-b639-363762323537/shlak-120mm-square.jpg";
+
+			case 'Стеновой камень рубленый серый':
+				return "https://static.tildacdn.com/tild3766-3837-4637-b365-633938353833/shlak-uglovoy-aquare.jpg";
+
+			case 'Стеновой камень рубленый красный':
+				return "https://static.tildacdn.com/tild3766-3837-4637-b365-633938353833/shlak-uglovoy-aquare.jpg";
+
+			case 'Стеновой камень рубленый фиолетовый':
+				return "https://static.tildacdn.com/tild3766-3837-4637-b365-633938353833/shlak-uglovoy-aquare.jpg";
+
+			case 'Стеновой камень рубленый желтый':
+				return "https://static.tildacdn.com/tild3766-3837-4637-b365-633938353833/shlak-uglovoy-aquare.jpg";
+
+			case 'Стеновой камень рубленый с мрамором серый':
+				return "https://static.tildacdn.com/tild3537-3430-4533-b332-613162343039/shlak-rubl-ugl-mramo.jpg";
+
+			case 'Стеновой камень рубленый с мрамором красный':
+				return "https://static.tildacdn.com/tild3537-3430-4533-b332-613162343039/shlak-rubl-ugl-mramo.jpg";
+
+			case 'Стеновой камень рубленый с мрамором желтый':
+				return "https://static.tildacdn.com/tild3537-3430-4533-b332-613162343039/shlak-rubl-ugl-mramo.jpg";
+
+			case 'Стеновой камень рубленый угол серый':
+				return "https://static.tildacdn.com/tild3332-3465-4439-a638-353530366361/shlak-rubl-square.jpg";
+
+			case 'Стеновой камень рубленый угол красный':
+				return "https://static.tildacdn.com/tild3332-3465-4439-a638-353530366361/shlak-rubl-square.jpg";
+
+			case 'Стеновой камень рубленый угол фиолетовый':
+				return "https://static.tildacdn.com/tild3332-3465-4439-a638-353530366361/shlak-rubl-square.jpg";
+
+			case 'Стеновой камень рубленый угол желтый':
+				return "https://static.tildacdn.com/tild3332-3465-4439-a638-353530366361/shlak-rubl-square.jpg";
+
+			case 'Стеновой камень рубленый угол с мрамором серый':
+				return "https://static.tildacdn.com/tild3064-3262-4633-a562-313362636264/shlak-mramor-square.jpg";
+
+			case 'Стеновой камень рубленый угол с мрамором красный':
+				return "https://static.tildacdn.com/tild3064-3262-4633-a562-313362636264/shlak-mramor-square.jpg";
+
+			case 'Стеновой камень рубленый угол с мрамором желтый':
+				return "https://static.tildacdn.com/tild3064-3262-4633-a562-313362636264/shlak-mramor-square.jpg";
+		}
+	}
+
+	function getThickness() {
+		var x = document.getElementById("choose-type-2").value;
+
+		switch (x) {
+			case 'Перегородочный камень 90 мм серый':
+				return 9;
+
+			case 'Перегородочный камень 120 мм серый':
+				return 12;
+
+			case 'Стеновой камень 30% пустотности серый':
+				return 20;
+
+			case 'Стеновой камень 50% пустотности серый':
+				return 20;
+		}
+	}
+
+	if ($("section").is(".s-calc")) {
+		function change() {
+			var length, width, thickness, height, windows, result, cost;
+			length = parseFloat(document.getElementById("length").value);
+			width = parseFloat(document.getElementById("width").value);
+			thickness = parseInt(document.getElementById("thickness").value) / 100;
+			height = parseInt(document.getElementById("height").value) / 100;
+			windows = parseInt(document.getElementById("windows").value);
+
+			if (isNaN(windows)) {
+				windows = 0;
+			}
+
+			result = Math.ceil(2 * width * thickness * height + (length - 2 * thickness) * thickness * height * 2 - windows * 3 * thickness - 2 * thickness);
+
+			if (isNaN(result)) {
+				result = 0;
+			}
+
+			document.getElementById("result").innerText = result;
+			cost = getCost(document.getElementById("choose-type").value) * result;
+			document.getElementById("cost").innerText = cost;
+			var link = "#order:";
+			var type = document.getElementById("choose-type").value;
+			link = link + type + "=" + cost + ":::image=" + getImage(document.getElementById("choose-type").value);
+			var a = document.getElementById("add-cart-1");
+			a.href = link;
+		}
+
+		function change2() {
+			var length_2, thickness_2, height_2, doors, result_2, cost;
+			length_2 = parseFloat(document.getElementById("length-2").value);
+			thickness_2 = getThickness() / 100;
+			height_2 = parseInt(document.getElementById("height-2").value) / 100;
+			doors = parseInt(document.getElementById("doors").value);
+
+			if (isNaN(doors)) {
+				doors = 0;
+			}
+
+			result_2 = Math.ceil(length_2 * thickness_2 * height_2 - 2 * thickness_2 * doors);
+
+			if (isNaN(result_2)) {
+				result_2 = 0;
+			}
+
+			document.getElementById("result-2").innerText = result_2;
+			cost = getCost(document.getElementById("choose-type-2").value) * result_2;
+			document.getElementById("cost-2").innerText = cost;
+			var link = "#order:";
+			var type = document.getElementById("choose-type-2").value;
+			link = link + type + "=" + cost + ":::image=" + getImage(document.getElementById("choose-type-2").value);
+			var a = document.getElementById("add-cart-2");
+			a.href = link;
+		}
+
+		change();
+		change2();
+		$(".s-calc ").on('input change input cut copy paste', 'input, select', function () {
+			change();
+			change2();
+		});
+		$(".s-calc  .link-modal").click(function () {
+			function parentVal(value, value2, value3) {
+				$('#modal-order').find(value2).val(!value ? '' : $(value).val() + ' ' + value3);
+			}
+
+			function parentText(value, value2, value3) {
+				$('#modal-order').find(value2).val(!value ? '' : $(value).text() + ' ' + value3);
+			}
+
+			parentVal(".choose-type", ".choose-type", '');
+			parentText(".value-js", ".result", 'м3');
+			parentText(".cost", ".cost", 'рублей');
+			parentVal(".length", ".length", 'м');
+			parentVal(".height", ".height", 'cм');
+
+			if ($(this).is('#add-cart-1')) {
+				parentVal("#width", ".width", 'м');
+				parentVal("#thickness", ".thickness", 'cм');
+				parentVal("#windows", ".windows", '');
+				parentVal(null, ".doors", '');
+			}
+
+			if ($(this).is('#add-cart-2')) {
+				parentVal("#doors", ".doors", '');
+				parentVal(null, ".width", '');
+				parentVal(null, ".thickness", '');
+				parentVal(null, ".windows", '');
+			}
+		});
+	}
 
 	var gets = function () {
 		var a = window.location.search;
@@ -182,7 +387,7 @@ jQuery(document).ready(function ($) {
 		a = a.substring(1).split("&");
 
 		for (var i = 0; i < a.length; i++) {
-			c = a[i].split("=");
+			let c = a[i].split("=");
 			b[c[0]] = c[1];
 		}
 
@@ -190,30 +395,26 @@ jQuery(document).ready(function ($) {
 	}(); // form
 
 
-	$("form").submit(function () {
+	$("form").each(function () {
 		//Change
 		var th = $(this);
-		th.find('.utm_source').val(gets['utm_source']);
-		th.find('.utm_term').val(gets['utm_term']);
-		$.ajax({
-			type: "POST",
-			url: 'action.php',
-			//Change
-			data: th.serialize()
-		}).success(function () {
-			window.location.replace("/thanks.html");
-			setTimeout(function () {
-				th.trigger("reset"); // ym(53383120, 'reachGoal', 'zakaz');
-			}, 4000);
-		});
-		return false;
-	}); // /form
+		th.find('.utm_source').val(decodeURIComponent(gets['utm_source']));
+		th.find('.utm_term').val(decodeURIComponent(gets['utm_term']));
+		th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium']));
+		th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign']));
+	}); // $(".form-wrap__toggle").click(function () {
+	//     $(".form-wrap__toggle-block").toggle()
+	// })
 
-	$(".form-wrap__toggle").click(function () {
-		$(".form-wrap__toggle-block").toggle();
+	$(".s-catalog__btn--foot-js").click(function (e) {
+		e.preventDefault();
+		$(this).addClass("disabled").parents(".s-catalog--page").find(".s-catalog__col:hidden").fadeIn();
+	});
+	$(".s-prod-head .radio-input__input").change(function () {
+		$($(this).data("price")).show().siblings().hide();
 	});
 });
-JSCCommon = {
+const JSCCommon = {
 	// часть вызов скриптов здесь, для использования при AJAX
 	// функции для запуска lazy
 	// /LazyFunction
@@ -225,7 +426,7 @@ JSCCommon = {
 		$(".link-modal").fancybox({
 			arrows: false,
 			infobar: false,
-			touch: false // type : 'inline', 
+			touch: false // type : 'inline',
 
 		});
 		$(".modal-close-js").click(function () {
@@ -257,7 +458,7 @@ JSCCommon = {
 		});
 	},
 	// /mobileMenu
-	// табы  . 
+	// табы  .
 	tabscostume: function (tab) {
 		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
 			$(this).addClass('active').siblings().removeClass('active').closest('.' + tab).find('.' + tab + '__content').removeClass('active').hide(function () {
@@ -267,7 +468,7 @@ JSCCommon = {
 			});
 		});
 	},
-	// /табы  . 
+	// /табы  .
 	// /nlineSVG
 	CustomInputFile: function CustomInputFile() {
 		var file = $(".add-file input[type=file]");

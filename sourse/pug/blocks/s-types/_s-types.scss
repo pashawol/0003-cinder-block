@@ -6,6 +6,9 @@
 		padding-bottom: rem(40);
 	}
 	&__block{
+		@include media-breakpoint-up(md) {
+			margin-right: rem(80);
+		}
 		@include media-breakpoint-up(sm) {
 
 			&.visible{
@@ -16,7 +19,8 @@
 			background-size: cover;
 			background-repeat: no-repeat;
 			border-radius: rem(6);
-			margin-right: rem(80);
+			margin-right: rem(40);
+		
 			position: relative;
 			padding-top: rem(44);
 		}
@@ -43,7 +47,7 @@
 		// justify-content: space-between;
 
 		padding:  rem(10);
-		padding-top: rem(68);
+		padding-top: rem(78);
 		color: #5b5b5b;
 		margin-bottom: rem(33);
 		background-repeat: no-repeat;
@@ -65,7 +69,7 @@
 			height: 60%;
 			width: 100%;
 			z-index: -1;
-			box-shadow: 0 $h6-font-size rem(40px) rgba(255, 255, 255, 0.38);
+			// box-shadow: 0 $h6-font-size rem(40px) rgba(255, 255, 255, 0.38);
 		}
 	}
 	.icon{
@@ -76,17 +80,22 @@
 	&__title{
 		@extend .h6;
 		font-weight: 700;
-		letter-spacing: 1.44px;
+		line-height: 1.2;
+		// letter-spacing: 1.44px;
 		text-transform: uppercase;
-		padding-left: rem(18);
-		padding-right: rem(18);
+		padding-left: rem(8);
+		padding-right: rem(8);
+		margin-bottom: 0;
+	}
+	&__text{
+
 	}
 	&__head{
 		// margin-top: auto;
 		// margin-bottom: rem(-20);
 	}
 	&__price{
-		font-weight: 500;
+		font-weight: 600;
 	}
 	&__text-block{
 		width: rem(223px);

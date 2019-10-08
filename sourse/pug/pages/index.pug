@@ -18,10 +18,10 @@ include ../blocks/s-gal/_s-gal.pug
 block variables
 	- let  mainPage= null
 block title
-	title Главная
+	title АБлок, производство шлакоблока и тротуарной плитки
 
 block pagecontent
-	+mob-mnu()
+	//- +mob-mnu()
 	+header()
 		<picture class="lazy picture-bg"> 
 			<source srcset="#" data-srcset="img/@2x/webp/3-layers.webp" type="image/webp" media="(min-width:576px)">
@@ -41,8 +41,9 @@ block pagecontent
 	+s-form
 	+s-shipping
 	+s-about
-	+s-rew
+	//+s-rew
 	+s-gal
 	+s-contact()
 	+footer()
+	<script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(55587544, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/55587544" style="position:absolute; left:-9999px;" alt="" /></div></noscript> 
 

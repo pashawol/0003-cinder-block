@@ -1,6 +1,14 @@
-Сборка на основе pug. scss, Bootstrap 4.3.2
+Сборка на основе pug. scss, Bootstrap 4.3.3
 
 
+4.3.3.1
+1. Добавил block в миксину +input()
+2. Добавил миксину +select
+3. Добавил палгин gulp-tabify . Переводит отсупы в tabs
+4.3.3 
+1. Добавил babel
+2. в миксине pic  убрал переменную разширения.  По дефолту поставляется jpg  или прописывается в названии  - +pic("image.png")
+3. Вывел дефолтные значения слайдера в переменную, чтобы не дублировать
 4.3.2
 1. Перенес шрифты в файл _fonts.scss https://github.com/pashawol/mega-front-starter/blob/master/sourse/sass/_fonts.scss
 2. Перенес миксины в файл _mixin.scss https://github.com/pashawol/mega-front-starter/blob/master/sourse/sass/_mixin.scss

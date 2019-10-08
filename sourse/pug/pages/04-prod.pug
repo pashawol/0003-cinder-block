@@ -27,11 +27,15 @@ block title
 	title= title
 
 block pagecontent
-	+mob-mnu()
+	//- +mob-mnu()
 	+header()
 		+top-line()
 		.container
-			+breadcrumb("Главная","Каталог",'Шлакоблоки',title)
+			nav.breadcrumb
+				a.breadcrumb-item(href='/') Главная
+				a.breadcrumb-item(href='02-categories.html') Каталог
+				a.breadcrumb-item(href='03-catalog.html') Шлакоблок
+				span.breadcrumb-item.active= title 
 		//- +header-block()
 		//- +s-composition
 	//- +s-strength
@@ -41,42 +45,41 @@ block pagecontent
 	//- +s-stock
 	//- +s-form
 	+s-prod-head('prod',title,"В наличии")
-		.col
+		+e.col.col
 			+e.H1.title.d-none.d-md-block= title
 		
 			+e.group.row
-				.col-auto.h5.fw-600 1600 руб.*
+				.col-auto.h5.fw-600 
+					.first-price-js#price-1 1600 руб.*
+					.second-price-js#price-2 2600 руб.*
 				.col.text-secondary *Стоимость 
 					br
 					| за 1 поддон, 60 шт. 
 			+e.group.row
 				+e.title-group.col-auto Состав:
 				.col.fw-500
-					.row
-						.col-auto Гранитный отсев
-						.col-auto Вода
-						.col-auto Цемент ПЦ400
-						.col-auto Добавки
+					table
+						tr
+							td Гранитный отсев
+							td Вода
+						
+						tr
+							td Цемент ПЦ400
+							td Добавки
+						
+					//- .row
+					//- 	.col-auto
+					//- 	.col-auto
+					//- 	.col-auto
+					//- 	.col-auto
 			
-			+e.group.row
+			+e.group--size.row
 				+e.title-group.col-auto Размер:
 				.col.fw-500 390*190*188 мм
 			
-			+e.group.row.align-items-center
-				+e.title-group.col-auto Цвет:
-				+e.color.col
-					.row
-						+b.LABEL.radio-input
-							+e.INPUT.input(type="radio" name="color[]" value="Серый" checked)
-							+e.title Серый
-						
-						+b.LABEL.radio-input
-							+e.INPUT.input(type="radio" name="color[]" value="Красный")
-							+e.title Красный
-			+e.btn-wrap
-				+e.btn--one-click-js.btn-success.link-modal(  data-src="#modal-one-click" href="javascript:;" data-order=`Быстрый заказ- ${title}`) Купить в 1 клик
-				+e.btn.btn-primary.link-modal(  data-src="#modal-order" href="javascript:;" data-order=`Заказать ${title}`) заказать
-		.col-lg-auto
+			+group-change-color()
+			+group-btn(title)
+		+e.last-col.col-lg-auto
 			+e.shipping
 				+icon('tow-truck')
 				+e.shipping-text  В&nbsp;этом месяце отгружено 229 поддонов

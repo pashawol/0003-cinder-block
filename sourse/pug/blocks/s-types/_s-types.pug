@@ -15,15 +15,30 @@ mixin s-types()
 							.col-sm-auto
 								+e.item(data-bg=`img/@2x/s-type-${i}.png`)
 									+e.head
-										+e.title= t
-										+e.text= p
+										if pr
+											+e.title= t
+										
 										block
 										if pr
 											+e.price= pr
 							// /.col-sm-auto
-						+item("1",'Для коттеджей','с пустотностью',"30%")
-						+item("2",'для бань, хозпостроек','с пустотностью','50%')
-						+item("3",'Для заборов ','изготавливаем блоки с различной поверхностью')
+						+item("1")
+							+e.title Для
+								br
+								|  коттеджей
+
+							+e.text с пустотностью
+							+e.price 30% 
+						+item("2",'для бань, хозпостроек','','50%')
+							+e.text с пустотностью
+						+item("3",' ','')
+							+e.title Для 
+								br
+								| заборов
+
+							+e.text изготавливаем
+								br
+								|  блоки с&nbsp;различной поверхностью
 					+e.text-block.link-modal( data-src="#modal-know" href="javascript:;" )
 						+icon("info") 
 						span.link-tdu

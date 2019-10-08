@@ -1,0 +1,114 @@
+mixin option(t,value)
+	option(value= value )&attributes(attributes)= t
+mixin s-calc()
+	// start s-calc
+	+b.SECTION.s-calc.section#s-calc&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h1 Калькулятор
+				+e.text расчета стоимости строительного материала для дома, бани и&nbsp;хозпостроек
+			.row
+				+e.col.col-lg-6
+					+form-wrap()
+						+e.title-strong Внешние стены
+						+select('Выберите шлакоблок',"type")(id="choose-type" class="choose-type")
+							optgroup(label="Шлакоблок c пустотностью")
+								+option("Шлакоблок 30% серый","Стеновой камень 30% пустотности серый")(selected)
+								+option("Шлакоблок 30% красный","Стеновой камень 30% пустотности красный")
+								+option("Шлакоблок 50% серый","Стеновой камень 50% пустотности серый")
+								+option("Шлакоблок 50% красный","Стеновой камень 50% пустотности красный")
+							optgroup(label="Шлакоблок рубленый")
+								+option("Шлакоблок рубл. серый","Стеновой камень рубленый серый")
+								+option("Шлакоблок рубл. красный","Стеновой камень рубленый красный")
+							optgroup(label="Шлакоблок  с мрамором")
+								+option("Шлакоблок рубл. с мрам. серый","Стеновой камень рубленый с мрамором серый")
+								+option("Шлакоблок рубл. с мрам. красный","Стеновой камень рубленый с мрамором красный")
+								+option("Стеновой камень рубленый с мрамором желтый","Шлакоблок рубл. с мрам. желтый")
+						.row
+							.col-md-6
+								+input("0 м","number",'Длина стен постройки',"length")(id="length" class="length")
+							.col-md-6
+								+input("0 м","number",'Ширина стен постройки',"width")(id="width")
+							.col-md-6
+								+select('Толщина стен',"thickness")(id="thickness")
+									+option(" 20 см","20 ")(selected)
+									+option("40 см ","40 ")
+									+option("60 см ","60 ")
+							.col-md-6
+								+select('Высота стен ',"height")(id="height"  class="height")
+									+option("2,4 м ", "240 ")(selected)
+									+option("2,8 м ","280 "  )
+									+option(" 3 м", "300 " )
+									+option("3,2 м ","320 "  )
+									+option("3,5 м ","360 "  )
+									+option("6,5 м ", "660 " )
+									+option("7 м ","700 "  )
+									+option("7,5 м ","760 " )
+							.col-md-6
+								+input("0","number",'Количество окон в доме',"windows")(id="windows")
+						+e.total.row
+							.col-md-6
+								+e.input-wrap
+									+e.SPAN.title 
+										.fw-500 Вам понадобится
+										span.text-primary.fw-600
+											span.value-js(id="result" ) 0
+											| 
+											|
+											| поддонов
+										| 
+										|  шлакоблока
+							.col-md-6
+								+e.input-wrap
+									+e.SPAN.title 
+										.fw-500 Стоимостью
+										span.text-primary.fw-600.price-js.cost( id="cost")  0 
+										| 
+										|  рублей
+						+e.btn.link-modal(  data-src="#modal-order" href="javascript:;" data-order=`Заказать Внешние стены`  id="add-cart-1") Заказать
+	
+				+e.col.col-lg-6
+					+form-wrap()
+						+e.title-strong Внутренние перегородки
+						+select('Выберите шлакоблок',"type")(id="choose-type-2" class="choose-type")
+							optgroup(label="Перегородочный камень") 
+								<option value="Перегородочный камень 90 мм серый" selected>Перегород. камень 90 мм</option>
+								<option value="Перегородочный камень 120 мм серый">Перегород. камень 120 мм</option>
+							optgroup(label="Стеновой камень c пустотностью")  
+								<option value="Стеновой камень 30% пустотности серый">Шлакоблок 30% серый</option>
+								<option value="Стеновой камень 50% пустотности серый">Шлакоблок 50% серый</option>
+						.row
+							.col-md-6
+								+input("0 м","number",'Длина всех стен',"length")(id="length-2"  class="length")
+						
+							.col-md-6
+								+select('Высота стен ',"height")(id="height-2" class="height")
+									<option value="220" selected>2,2 м</option>
+									<option value="260">2,6 м</option>
+									<option value="300">3 м</option>
+									<option value="320">3,2 м</option>
+									<option value="360">3,5 м</option>
+							.col-md-6
+								+input("0","number",'Количество внутренних дверей',"doors")(id="doors")
+						+e.total.row
+							.col-md-6
+								+e.input-wrap
+									+e.SPAN.title 
+										.fw-500 Вам понадобится
+										span.text-primary.fw-600
+											span.value-js(id="result-2") 0
+											| 
+											|
+											| поддонов
+										| 
+										|  шлакоблока
+							.col-md-6
+								+e.input-wrap
+									+e.SPAN.title 
+										.fw-500 Стоимостью
+										span.text-primary.fw-600.price-js.cost(id="cost-2")  0 
+										| 
+										|  рублей
+						+e.btn.link-modal(  data-src="#modal-order" href="javascript:;" data-order=`Заказать Внутренние перегородки`   id="add-cart-2") Заказать
+	
+		// end s-calc

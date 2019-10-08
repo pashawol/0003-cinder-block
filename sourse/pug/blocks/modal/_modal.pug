@@ -11,7 +11,7 @@ mixin modal()
 				//- +e.text.h6 Администратор Ольга позвонит вам прямо сейчас или в&nbsp;другое рабочее время:
 				+e.text--sm Специалист компании &laquo;АБлок&raquo; Зоя позвонит  вам прямо сейчас или в&nbsp;другое рабочее время: мы&nbsp;работаем ежедневно с&nbsp;09:00 до&nbsp;20:00
 				 
-				input(type="hidden" class='order' name='order' value="")
+				input(type="hidden" name="formwithtime" value="formwithtime") 
 				+inputName()
 				+form-body()
 				+e.btn(type='submit') Перезвоните мне 
@@ -19,26 +19,34 @@ mixin modal()
 	// #modal-call
 	
 	+form-wrap()(id="modal-order" class="  modal-win modal-form" )
+		input(type="hidden" name="formorder" value="formorder") 
 		.row.no-gutters
 			.col-6.section-bg.d-none.d-lg-block(data-bg="img/@2x/modal-2.jpg")
 			.col
-				+e.top-title Укажите контактные данные 
-					+e.text--lg и&nbsp;удобное время для звонка
-				//- +e.text.h6 Администратор Ольга позвонит вам прямо сейчас или в&nbsp;другое рабочее время:
-				+e.text--sm Специалист компании &laquo;АБлок&raquo; Зоя позвонит  вам прямо сейчас или в&nbsp;другое рабочее время: мы&nbsp;работаем ежедневно с&nbsp;09:00 до&nbsp;20:00
-				 
-				input(type="hidden" class='order' name='order' value="")
-				input(type="hidden" class='color' name='color' value="") 
-				+inputName()
-				+form-tabs-modal()
-				.h6 Специалист компании &laquo;АБлок&raquo; Зоя позвонит  вам прямо сейчас или в&nbsp;другое рабочее время: мы&nbsp;работаем ежедневно с&nbsp;09:00 до&nbsp;20:00
-				+e.toggle 
-					span Напишите, что вам нужно, если хотите
-				+e.toggle-block
-					+input("Текст сообщения","textarea",'',"comment")(required)
-				+e.btn(type='submit') Обсудить заказ
-				+polite
+				+e.top-title Для оформления заказа оставьте Ваши контакты
+				+order-block("Оформить заказ")
+					input(type="hidden" class='choose-type' name='choose-type' value="") 
+					input(type="hidden" class='cost' name='cost' value="") 
+					input(type="hidden" class='result' name='result' value="") 
+					input(type="hidden" class='length' name='length' value="") 
+					input(type="hidden" class='width' name='width' value="") 
+					input(type="hidden" class='thickness' name='thickness' value="") 
+					input(type="hidden" class='windows' name='windows' value="") 
+					input(type="hidden" class='doors' name='doors' value="") 
+				
 	// #modal-order
+
+
+	//- +form-wrap()(id="modal-order-calc" class="  modal-win modal-form" )
+	//- 	input(type="hidden" name="formorder" value="formorder") 
+	//- 	.row.no-gutters
+	//- 		.col-6.section-bg.d-none.d-lg-block(data-bg="img/@2x/modal-2.jpg")
+	//- 		.col
+	//- 			+e.top-title Для оформления заказа оставьте ваши контакты
+	//- 			+order-block("Оформить заказ")
+	//- // #modal-order-calc
+
+
 	+b.modal-win--tech(id="modal-tech" class="text-center" )
 		.h3 Соблюдаем технологию
 			br
@@ -49,7 +57,7 @@ mixin modal()
 					+e.item
 						+pic('storage-'+ i,'png','','')
 						+e.title= t
-						p= p
+						p.fw-500= p
 			+item("1",'Строго соблюдаем пропорции материалов','чтобы получить шлакоблок с характеристиками, нужными при строительстве любых сооружений')
 			+item("2",'Пропариваем горячим паром при температуре 70-95°C —','шлакоблок достигает до 90% марочной прочности уже через сутки')
 			+item("3",'Храним шлакоблок на транспортных поддонах,','чтобы он не соприкасался с землей')
@@ -57,7 +65,7 @@ mixin modal()
 			.row
 				.col-auto
 					+icon('info')
-				.h6.text-left.col Как правило, заказчику отгружаем шлакоблок со&nbsp;100% марочной прочностью, которому больше 28&nbsp;суток. При срочных заказах возможна отгрузка блока через неделю после изготовления&nbsp;&mdash; на&nbsp;качество стройки это не&nbsp;влияет
+				.h6.text-left.col.fw-500 Как правило, заказчику отгружаем шлакоблок со&nbsp;100% марочной прочностью, которому больше 28&nbsp;суток. При срочных заказах возможна отгрузка блока через неделю после изготовления&nbsp;&mdash; на&nbsp;качество стройки это не&nbsp;влияет
 
 	// #modal-tech
 
@@ -81,11 +89,13 @@ mixin modal()
 			.h6.fw-500    Учитывая, что стоимость шлакоблока это всего лишь ~ 10% от стоимости  
 				| 
 				span.text-secondary  строительства всего дома, то экономить на качестве стен не имеет смысла
-		+pic('modal-know-img','png','','')
+		.d-none.d-sm-block
+			+pic('modal-know-img','png','','')
 
 	// #modal-know
 	+b.modal-win--sm(id="modal-pay" class="text-center" )
 		+pic('modal-pay','png','','',0)
+		br
 		.h5.text-center.strong Покупайте шлакоблок,
 
 			br
@@ -95,8 +105,9 @@ mixin modal()
 	// #modal-pay
 	
 	+form-wrap()(id="modal-one-click" class="modal-win--sm  modal-win modal-form" )
-		input(type="hidden" class='order' name='order' value="") 
+		 
 		input(type="hidden" class='color' name='color' value="") 
+		input(type="hidden" name="formorder" value="formorder") 
 		.h5.strong Введите номер телефона
 		.h6.fw-500 Специалист перезвонит и оформит заказ
 		.row.no-gutters
