@@ -141,7 +141,9 @@ mixin form-tabs()
 //- wrapper for form
 mixin form-wrap(order)
 	+b.form-wrap&attributes(attributes)
-		form(action="thanks.php" method="post")
+		form()
+			input(type='hidden',  name='order-varibles', value=`` ) 
+			input(type='hidden', class="order", name='order', value=`Заявка  с сайта` ) 
 			if !order 
 				input(type='hidden', class="order", name='order', value=`Заявка  с сайта` ) 
 			else

@@ -21,7 +21,7 @@
 	
 	
 		//Субъект
-				$mail->Subject = 'Заявка с сайта';
+				$mail->Subject = 'Заявка с сайта moibloki';
 	
 				$time = date('d.m.Y в H:i');
 				$html = '
@@ -142,6 +142,7 @@
 		// }
 	
 		//send the message, check for errors
+				if (empty($_POST['order-varibles'])) {
 				if (!$mail->send()) {
 		//        echo "Mailer Error: " . $mail->ErrorInfo;
 				} else {
@@ -150,12 +151,13 @@
 				if (isset($uploadfile))unlink($uploadfile);
 				if (isset($uploadfile2))unlink($uploadfile2);
 		}
+		}
 		?>
 </div><!DOCTYPE html>
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Спасибо</title><meta name="yandex-verification" content="4519a1dc44b9b5d6" />
+		<title>Спасибо</title><meta name="yandex-verification" content="6629478a5505d0cc" />
 <meta name="author" content="studiobars.ru">
 		<meta name="description" content="Ровный и крепкий шлакоблок от производителя в Магнитогорске"><meta name="keywords" content="калькулятор шлакоблока, купить шлакоблок, купить шлакоблок в магнитогорске, нужен шлакоблок, поддон шлакоблока, рассчитать шлакоблок, расчет шлакоблока, рубленный шлакоблок, сколько нужно шлакоблока, сколько стоит шлакоблок, стоимость шлакоблока, цена куба шлакоблока, шлакоблок, шлакоблок +в магнитогорске цена, шлакоблок куб, шлакоблок магнитогорск, шлакоблок магнитогорск цена +за куб, шлакоблок перегородочный, шлакоблок цена, шлакоблок цена за куб">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -389,7 +391,9 @@
 			</footer>
 		</div>
 		<div class="form-wrap modal-win modal-form" id="modal-call">
-			<form action="thanks.php" method="post">
+			<form>
+				<input type="hidden" name="order-varibles" value=""/>
+				<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
 				<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
 				<input class="utm_source" type="hidden" name="utm_source"/>
 				<input class="utm_term" type="hidden" name="utm_term"/>
@@ -432,7 +436,9 @@
 		</div>
 		<!-- #modal-call-->
 		<div class="form-wrap modal-win modal-form" id="modal-order">
-			<form action="thanks.php" method="post">
+			<form>
+				<input type="hidden" name="order-varibles" value=""/>
+				<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
 				<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
 				<input class="utm_source" type="hidden" name="utm_source"/>
 				<input class="utm_term" type="hidden" name="utm_term"/>
@@ -626,7 +632,9 @@
 		</div>
 		<!-- #modal-pay-->
 		<div class="form-wrap modal-win modal-win--sm modal-win modal-form" id="modal-one-click">
-			<form action="thanks.php" method="post">
+			<form>
+				<input type="hidden" name="order-varibles" value=""/>
+				<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
 				<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
 				<input class="utm_source" type="hidden" name="utm_source"/>
 				<input class="utm_term" type="hidden" name="utm_term"/>

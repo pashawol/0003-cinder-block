@@ -20,7 +20,7 @@ $mail->setFrom('info@info.com');
 
 
 //Субъект
-$mail->Subject = 'Заявка с сайта';
+$mail->Subject = 'Заявка с сайта moibloki';
 
 $time = date('d.m.Y в H:i');
 $html = '

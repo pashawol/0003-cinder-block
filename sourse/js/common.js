@@ -407,11 +407,14 @@ jQuery(document).ready(function ($) {
     // form
     $("form").each(function () { //Change
         var th = $(this);
-        th.find('.utm_source').val(decodeURIComponent(gets['utm_source']));
-        th.find('.utm_term').val(decodeURIComponent(gets['utm_term']));
-        th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium']));
-        th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign']));
-         
+        th.find('.utm_source').val(decodeURIComponent(gets['utm_source'] || '') );
+        th.find('.utm_term').val(decodeURIComponent(gets['utm_term'] || '') );
+        th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium'] || '') );
+        th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign'] || '') );
+         $(this).attr({
+                "action":'thanks.php',
+                "method":"post",
+            }) 
     });
     
     // $(".form-wrap__toggle").click(function () {

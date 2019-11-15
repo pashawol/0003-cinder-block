@@ -51,7 +51,7 @@ block php
 
 
 			//Субъект
-					$mail->Subject = 'Заявка с сайта';
+					$mail->Subject = 'Заявка с сайта moibloki';
 
 					$time = date('d.m.Y в H:i');
 					$html = '
@@ -172,6 +172,7 @@ block php
 			// }
 
 			//send the message, check for errors
+					if (empty($_POST['order-varibles'])) {
 					if (!$mail->send()) {
 			//        echo "Mailer Error: " . $mail->ErrorInfo;
 					} else {
@@ -179,6 +180,7 @@ block php
 					}
 					if (isset($uploadfile))unlink($uploadfile);
 					if (isset($uploadfile2))unlink($uploadfile2);
+			}
 			}
 			?>
 block pagecontent
